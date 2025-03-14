@@ -1,0 +1,79 @@
+p.word-category {
+	font-family: 'Times New Roman', Times, serif;
+	font-weight: bold;
+	color: rgb(77, 77, 77);
+	cursor: pointer;
+}
+
+ul.word {
+	font-family: SimSun;
+	font-size: 16px;
+	margin-top: -8px;
+	margin-bottom: 12px;
+	padding-left: 20px;
+	line-height: 1.5;
+	/* display: none; */
+}
+
+li:hover {
+	background-color: yellow;
+	cursor: pointer;
+}
+
+input[type=text] {
+	width: 90px;
+	font-size: 16px;
+}
+
+span.search {
+	font-size: 16px;
+	cursor: pointer;
+}
+
+div.search-word {
+	margin-left: -10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+p.search-error {
+	color: brown;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 12px;
+}
+
+.tooltip-container {
+	position: relative;
+	display: inline-block;
+	color: blue;
+	font-size: 16px;
+}
+
+.tooltip-text {
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 16px;
+	visibility: hidden;
+	width: 260px;
+	background-color: floralwhite;
+	text-align: left;
+	padding: 6px;
+	border-radius: 5px;
+	position: absolute;
+	bottom: 120%;
+	left: 40%;
+	transform: translateX(-50%);
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.tooltip-container:hover .tooltip-text {
+	visibility: visible;
+	opacity: 1;
+}
+
+.help-info {
+	padding-left: -10px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	list-style-type: none;
+}
