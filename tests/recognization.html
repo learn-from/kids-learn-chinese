@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech to Text</title>
+    <script>
+        const TRANSLATOR_URL = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=zh-CN&tl=en&dt=t&dt=rm&q=';
+        let recognizedText = null;
+
+        /** Recognites the input voice, converts it to text and gets the PinYin of the text */
+        function getRecognizedPinyin() {
+            console.log("Calling recognition...");
+            recognition();
+            let intervalId = setInterval(function () {
+                if (recognizedText != null) {
+                    clearInterval(intervalId);
+                    console.log("Calling getPinyin...");
+                    getPinyin("从前有座山", recognizedText);
+                }
+            }, 2000);
+        }
+
+        /** Converts the speech to text */
+        function recognition() {
+            if (!('webkitSpeechRecognition' in window)) {
+                alert("Your browser does not support Speech-to-Text.");
+                return;
+            }
+
+            console.log("Start recognition...");
+            let recognition = new webkitSpeechRecognition();
+            recognition.lang = "zh-Hans"; // Change language as needed
+            recognition.interimResults = false;
+            recognition.maxAlternatives = 1;
+
+            recognition.onresult = function (event) {
+                recognizedText = event.results[0][0].transcript;
+                console.log("Reconized text:", recognizedText);
+            };
+
+            recognition.onerror = function (event) {
+                console.error("Speech recognition error", event);
+            };
+
+            recognition.start();
+        }
+
+        /** Gets pinyin of a chinese text */
+        async function getPinyin(text1, text2) {
+            let encodedText1 = encodeURIComponent(text1);
+            let encodedText2 = encodeURIComponent(text2);
+            let url1 = TRANSLATOR_URL + encodedText1;
+            let url2 = TRANSLATOR_URL + encodedText2;
+
+            let response = await fetch(url1);
+            let data = await response.json();
+            let pinyin1 = data[0].map(sentence => sentence[3]).join(" ");
+
+            response = await fetch(url2);
+            data = await response.json();
+            let pinyin2 = data[0].map(sentence => sentence[3]).join(" ");
+            console.log("Pinyin1, Pinyin2:", pinyin1, ', ', pinyin2);
+
+            document.getElementById("output").innerText = text1 + ' - ' + pinyin1 + ', ' + text2 + ' - ' + pinyin2;
+            recognizedText = null;
+        }
+
+        function setMicrophone() {
+            navigator.mediaDevices.getUserMedia({ audio: true })
+                .then(stream => console.log("Microphone access granted!"))
+                .catch(error => console.error("Microphone access denied:", error));
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="getRecognizedPinyin()">Start Speech-to-Text</button>
+    <p id="output" />
+    <!-- <script>setMicrophone()</script> -->
+</body>
+
+</html>

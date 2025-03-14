@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Line Text to Base64 Image</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+	<script>
+		function convertToPDF() {
+			const { jsPDF } = window.jspdf;
+			const content = document.getElementById("content");
+
+			html2canvas(content).then(canvas => {
+				const imgData = canvas.toDataURL("image/png");
+				const pdf = new jsPDF("p", "mm", "a4");
+				const imgWidth =400; 
+				const imgHeight = (canvas.height * imgWidth) / canvas.width;
+				
+				pdf.addImage(imgData, "PNG", 1, 40, imgWidth, imgHeight);
+				pdf.save("webpage.pdf");
+			});
+		}
+		
+		function printPDF(id) {
+			let item = document.getElementById(id);
+			let body = document.getElementsByTagName('body')[0];
+			let origPage = body.innerHTML;
+			body.innerHTML = '';
+			body.appendChild(item);
+			
+			item = item.cloneNode(true);
+			item.removeAttribute("id");
+			body.appendChild(item);
+			window.print();
+			
+			body.innerHTML = origPage;
+			return;
+			}
+	</script>
+	</head>
+<body>
+
+<button onclick="convertToPDF()">Download PDF</button>
+<button onclick="printPDF('content')">Print Page</button>
+<div id="content">
+    <h1>Convert this HTML to PDF</h1>
+    <p>This is a test content that will be converted to a PDF file.</p>
+	<img src='https://lh3.googleusercontent.com/pw/AP1GczM3xDhKUUfoWcIhN86154kmZegdOFBzwuAEhZkvw_J-tPr_I5qQvYLKH28_7gbkrueTCplUvT2tFs_cRKbKumAXBC4a8n-bDX0rnXEqHQb9JOUc3o7_mCTOutgxRr8sCuTXz_7495yu6gVlar4LstvZSg=w1024-h1024-s-no-gm?authuser=0' width='400px'>
+</div>
+
+</body>
+</html>
