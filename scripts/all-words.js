@@ -8,18 +8,18 @@ let allWords =
 		"category": "Number",
 		"cname": "数字",
 		"words": [
-			{ "chinese": "一", "english": "One", "pinyin": "Yī", "phrase": ["一个", "一对", "一心一意"], "sentence": "你拍一，我拍一，一个小孩开飞机。", "image": "images/chars/number/number-1.png" },
-			{ "chinese": "二", "english": "Two", "pinyin": "Ér", "phrase": ["二人", "二斤", "合二为一"], "sentence": "你拍二，我拍二，两个小孩梳小辫儿。", "image": "images/chars/number/number-2.png" },
-			{ "chinese": "三", "english": "Three", "pinyin": "Sān", "phrase": ["三只", "三天", "三心二意"], "sentence": "你拍三，我拍三，三个小孩吃饼干。", "image": "images/chars/number/number-3.png" },
-			{ "chinese": "四", "english": "Four", "pinyin": "Sì", "phrase": ["四把", "四个月", "四平八稳"], "sentence": "你拍四，我拍四，四个小孩写大字。", "image": "images/chars/number/number-4.png" },
-			{ "chinese": "五", "english": "Five", "pinyin": "Wǔ", "phrase": ["五辆", "五台", "五谷丰登"], "sentence": "你拍五，我拍五，五个小孩烤白薯。", "image": "images/chars/number/number-5.png" },
-			{ "chinese": "六", "english": "Six", "pinyin": "Liù", "phrase": ["六条", "六周", "六六大顺"], "sentence": "你拍六，我拍六，六个小孩烧牛肉。", "image": "images/chars/number/number-6.png" },
-			{ "chinese": "七", "english": "Seven", "pinyin": "Qī", "phrase": ["七匹", "七头", "七上八下"], "sentence": "你拍七，我拍七，七个小孩穿新衣。", "image": "images/chars/number/number-7.png" },
-			{ "chinese": "八", "english": "Eight", "pinyin": "Bā", "phrase": ["八张", "八回", "四面八方"], "sentence": "你拍八，我拍八，八个小孩吹喇叭。", "image": "images/chars/number/number-8.png" },
-			{ "chinese": "九", "english": "Nine", "pinyin": "Jiǔ", "phrase": ["九块", "九磅", " 八九不离十"], "sentence": "你拍九，我拍九，九个小孩看杨柳。", "image": "images/chars/number/number-9.png" },
-			{ "chinese": "十", "english": "Ten", "pinyin": "Shí", "phrase": ["十双", "十章", "十拿九稳"], "sentence": "你拍十，我拍十，十个小孩不挑食。", "image": "images/chars/number/number-10.png" },
-			{ "chinese": "百", "english": "Hundred", "pinyin": "Bǎi", "phrase": ["三百", "百姓", "百发百中"], "sentence": "十个十就是一百。", "image": "images/chars/number/number-100.png" },
-			{ "chinese": "零", "english": "Zero", "pinyin": "Líng", "phrase": ["零钱", "零碎", "七零八碎"], "sentence": "计数，我们从零开始。", "image": "images/chars/number/number-0.png" }
+			{ "chinese": "一", "english": "One", "pinyin": "Yī", "phrase": ["一个", "一对", "一心一意"], "sentence": "你拍一，我拍一，一个小孩开飞机。", "image": "images/chars/Number/number-1.png" },
+			{ "chinese": "二", "english": "Two", "pinyin": "Ér", "phrase": ["二人", "二斤", "合二为一"], "sentence": "你拍二，我拍二，两个小孩梳小辫儿。", "image": "images/chars/Number/number-2.png" },
+			{ "chinese": "三", "english": "Three", "pinyin": "Sān", "phrase": ["三只", "三天", "三心二意"], "sentence": "你拍三，我拍三，三个小孩吃饼干。", "image": "images/chars/Number/number-3.png" },
+			{ "chinese": "四", "english": "Four", "pinyin": "Sì", "phrase": ["四把", "四个月", "四平八稳"], "sentence": "你拍四，我拍四，四个小孩写大字。", "image": "images/chars/Number/number-4.png" },
+			{ "chinese": "五", "english": "Five", "pinyin": "Wǔ", "phrase": ["五辆", "五台", "五谷丰登"], "sentence": "你拍五，我拍五，五个小孩烤白薯。", "image": "images/chars/Number/number-5.png" },
+			{ "chinese": "六", "english": "Six", "pinyin": "Liù", "phrase": ["六条", "六周", "六六大顺"], "sentence": "你拍六，我拍六，六个小孩烧牛肉。", "image": "images/chars/Number/number-6.png" },
+			{ "chinese": "七", "english": "Seven", "pinyin": "Qī", "phrase": ["七匹", "七头", "七上八下"], "sentence": "你拍七，我拍七，七个小孩穿新衣。", "image": "images/chars/Number/number-7.png" },
+			{ "chinese": "八", "english": "Eight", "pinyin": "Bā", "phrase": ["八张", "八回", "四面八方"], "sentence": "你拍八，我拍八，八个小孩吹喇叭。", "image": "images/chars/Number/number-8.png" },
+			{ "chinese": "九", "english": "Nine", "pinyin": "Jiǔ", "phrase": ["九块", "九磅", " 八九不离十"], "sentence": "你拍九，我拍九，九个小孩看杨柳。", "image": "images/chars/Number/number-9.png" },
+			{ "chinese": "十", "english": "Ten", "pinyin": "Shí", "phrase": ["十双", "十章", "十拿九稳"], "sentence": "你拍十，我拍十，十个小孩不挑食。", "image": "images/chars/Number/number-10.png" },
+			{ "chinese": "百", "english": "Hundred", "pinyin": "Bǎi", "phrase": ["三百", "百姓", "百发百中"], "sentence": "十个十就是一百。", "image": "images/chars/Number/number-100.png" },
+			{ "chinese": "零", "english": "Zero", "pinyin": "Líng", "phrase": ["零钱", "零碎", "七零八碎"], "sentence": "计数，我们从零开始。", "image": "images/chars/Number/number-0.png" }
 		]
 	},
 	{
