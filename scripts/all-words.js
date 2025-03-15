@@ -210,82 +210,82 @@ let allWords =
 		"category": "Animal",
 		"cname": "动物",
 		"words": [
-			{ "chinese": "牛", "english": "Cow", "pinyin": "Niú", "phrase": ["黄牛", "水牛", "九牛一毛"], "sentence": "山坡上，一头牛在吃草。", "image": "images/chars/Animal/something.png" },
-			{ "chinese": "狗", "english": "Dog", "pinyin": "Gǒu", "phrase": ["黄狗", "狗叫", "狗仗人势"], "sentence": "家里有一条大黄狗。", "image": "images/chars/Animal/something.png" },
-			{ "chinese": "虎", "english": "Tiger", "pinyin": "Hǔ", "phrase": ["老虎", "狐假虎威", "猛虎下山"], "sentence": "我爸爸是属老虎的。", "image": "images/chars/Animal/something.png" },
-			{ "chinese": "兔", "english": "Rabbit", "pinyin": "Tù", "phrase": ["兔子", "白兔", "龟兔赛跑"], "sentence": "我妈妈和弟弟都是属兔的。", "image": "images/chars/Animal/something.png" },
-			{ "chinese": "猴", "english": "Monkey", "pinyin": "Hóu", "phrase": ["猴子", "猴精", "猴年马月"], "sentence": "猴子很聪明，也很调皮。", "image": "images/chars/Animal/something.png" },
-			{ "chinese": "马", "english": "Horse", "pinyin": "Mǎ", "phrase": ["白马", "马车", "马到成功"], "sentence": "马跑得特别快。", "image": "images/chars/Animal/something.png" },
-			{ "chinese": "羊", "english": "Sheep", "pinyin": "Yáng", "phrase": ["山羊", "绵羊", "亡羊补牢"], "sentence": "早晨，他到山上去放羊。", "image": "images/chars/Animal/something.png" },
-			{ "chinese": "猫", "english": "Cat", "pinyin": "Māo", "phrase": ["花猫", "猫步", "照猫画虎"], "sentence": "我养了一只黑色的猫。", "image": "images/chars/Animal/something.png" },
-			{ "chinese": "鼠", "english": "Mouse", "pinyin": "Shǔ", "phrase": ["老鼠", "田鼠", "胆小如鼠"], "sentence": "我家里没有老鼠。", "image": "images/chars/Animal/something.png" },
-			{ "chinese": "鹿", "english": "Deer", "pinyin": "Lù", "phrase": ["小鹿", "梅花鹿", "指鹿为马"], "sentence": "有一只鹿在河边喝水。", "image": "images/chars/Animal/something.png" },
-			{ "chinese": "象", "english": "Elephant", "pinyin": "Xiàng", "phrase": ["大象", "象牙", "盲人摸象"], "sentence": "大象和它的孩子在河里玩水。", "image": "images/chars/Animal/something.png" },
-			{ "chinese": "猪", "english": "Pig", "pinyin": "Zhū", "phrase": ["猪肉", "肥猪", "猪狗不如"], "sentence": "猪很胖，也很懒。", "image": "images/chars/Animal/something.png" },
-			{ "chinese": "狼", "english": "Wolf", "pinyin": "Láng", "phrase": ["灰狼", "狼群", "狼子野心"], "sentence": "一只狼在雪地里跑。", "image": "images/chars/Animal/something.png" }
+			{ "chinese": "牛", "english": "Cow", "pinyin": "Niú", "phrase": ["黄牛", "水牛", "九牛一毛"], "sentence": "山坡上，一头牛在吃草。", "image": "images/chars/Mammal/cow.jpg" },
+			{ "chinese": "狗", "english": "Dog", "pinyin": "Gǒu", "phrase": ["黄狗", "狗叫", "狗仗人势"], "sentence": "家里有一条大黄狗。", "image": "images/chars/Mammal/dog.jpg" },
+			{ "chinese": "虎", "english": "Tiger", "pinyin": "Hǔ", "phrase": ["老虎", "狐假虎威", "猛虎下山"], "sentence": "我爸爸是属老虎的。", "image": "images/chars/Mammal/tiger.jpg" },
+			{ "chinese": "兔", "english": "Rabbit", "pinyin": "Tù", "phrase": ["兔子", "白兔", "龟兔赛跑"], "sentence": "我妈妈和弟弟都是属兔的。", "image": "images/chars/Mammal/rabbit.jpg" },
+			{ "chinese": "猴", "english": "Monkey", "pinyin": "Hóu", "phrase": ["猴子", "猴精", "猴年马月"], "sentence": "猴子很聪明，也很调皮。", "image": "images/chars/Mammal/monkey.jpg" },
+			{ "chinese": "马", "english": "Horse", "pinyin": "Mǎ", "phrase": ["白马", "马车", "马到成功"], "sentence": "马跑得特别快。", "image": "images/chars/Mammal/horse.jpg" },
+			{ "chinese": "羊", "english": "Sheep", "pinyin": "Yáng", "phrase": ["山羊", "绵羊", "亡羊补牢"], "sentence": "早晨，他到山上去放羊。", "image": "images/chars/Mammal/sheep.jpg" },
+			{ "chinese": "猫", "english": "Cat", "pinyin": "Māo", "phrase": ["花猫", "猫步", "照猫画虎"], "sentence": "我养了一只黑色的猫。", "image": "images/chars/Mammal/cat.jpg" },
+			{ "chinese": "鼠", "english": "Mouse", "pinyin": "Shǔ", "phrase": ["老鼠", "田鼠", "胆小如鼠"], "sentence": "我家里没有老鼠。", "image": "images/chars/Mammal/mouse.jpg" },
+			{ "chinese": "鹿", "english": "Deer", "pinyin": "Lù", "phrase": ["小鹿", "梅花鹿", "指鹿为马"], "sentence": "有一只鹿在河边喝水。", "image": "images/chars/Mammal/deer.jpg" },
+			{ "chinese": "象", "english": "Elephant", "pinyin": "Xiàng", "phrase": ["大象", "象牙", "盲人摸象"], "sentence": "大象和它的孩子在河里玩水。", "image": "images/chars/Mammal/elephant.jpg" },
+			{ "chinese": "猪", "english": "Pig", "pinyin": "Zhū", "phrase": ["猪肉", "肥猪", "猪狗不如"], "sentence": "猪很胖，也很懒。", "image": "images/chars/Mammal/pig.jpg" },
+			{ "chinese": "狼", "english": "Wolf", "pinyin": "Láng", "phrase": ["灰狼", "狼群", "狼子野心"], "sentence": "一只狼在雪地里跑。", "image": "images/chars/Mammal/wolf.jpg" }
 		]
 	},
 	{
 		"category": "Fish",
 		"cname": "鱼类",
 		"words": [
-			{ "chinese": "鱼", "english": "Fish", "pinyin": "Yú", "phrase": ["金鱼", "钓鱼", "如鱼得水"], "sentence": "一条红鲤鱼在河里游。", "image": "images/chars/Fish/something.png" },
-			{ "chinese": "虾", "english": "Shrimp", "pinyin": "Xiā", "phrase": ["河虾", "对虾", "虾兵蟹将"], "sentence": "水下有三只青色的虾。", "image": "images/chars/Fish/something.png" },
-			{ "chinese": "蟹", "english": "Crab", "pinyin": "Xiè", "phrase": ["螃蟹", "海蟹", "河蟹"], "sentence": "螃蟹有八条腿，横着走路。", "image": "images/chars/Fish/something.png" },
-			{ "chinese": "龟", "english": "Turtle", "pinyin": "Guī", "phrase": ["乌龟", "海龟", "龟兔赛跑"], "sentence": "河边有两只乌龟。", "image": "images/chars/Fish/something.png" },
-			{ "chinese": "蛙", "english": "Frog", "pinyin": "Wā", "phrase": ["青蛙", "牛蛙", "井底之蛙"], "sentence": "夜晚，池塘里青蛙在叫。", "image": "images/chars/Fish/something.png" },
-			{ "chinese": "鲨", "english": "Shark", "pinyin": "Shā", "phrase": ["鲨鱼", "大白鲨"], "sentence": "鲨鱼很大，非常凶猛。", "image": "images/chars/Fish/something.png" },
-			{ "chinese": "鲸", "english": "Whale", "pinyin": "Jīng", "phrase": ["鲸鱼", "蓝鲸", "虎头鲸"], "sentence": "鲸鱼在海里生活，非常大。", "image": "images/chars/Fish/something.png" }
+			{ "chinese": "鱼", "english": "Fish", "pinyin": "Yú", "phrase": ["金鱼", "钓鱼", "如鱼得水"], "sentence": "一条红鲤鱼在河里游。", "image": "images/chars/Fish/fish.jpg" },
+			{ "chinese": "虾", "english": "Shrimp", "pinyin": "Xiā", "phrase": ["河虾", "对虾", "虾兵蟹将"], "sentence": "水下有三只青色的虾。", "image": "images/chars/Fish/shrimp.jpg" },
+			{ "chinese": "蟹", "english": "Crab", "pinyin": "Xiè", "phrase": ["螃蟹", "海蟹", "河蟹"], "sentence": "螃蟹有八条腿，横着走路。", "image": "images/chars/Fish/crab.jpg" },
+			{ "chinese": "龟", "english": "Turtle", "pinyin": "Guī", "phrase": ["乌龟", "海龟", "龟兔赛跑"], "sentence": "河边有两只乌龟。", "image": "images/chars/Fish/turtle.jpg" },
+			{ "chinese": "蛙", "english": "Frog", "pinyin": "Wā", "phrase": ["青蛙", "牛蛙", "井底之蛙"], "sentence": "夜晚，池塘里青蛙在叫。", "image": "images/chars/OtherAnimal/frog.jpg" },
+			{ "chinese": "鲨", "english": "Shark", "pinyin": "Shā", "phrase": ["鲨鱼", "大白鲨"], "sentence": "鲨鱼很大，非常凶猛。", "image": "images/chars/Fish/shark.jpg" },
+			{ "chinese": "鲸", "english": "Whale", "pinyin": "Jīng", "phrase": ["鲸鱼", "蓝鲸", "虎头鲸"], "sentence": "鲸鱼在海里生活，非常大。", "image": "images/chars/Fish/whale.jpg" }
 		]
 	},
 	{
 		"category": "Bird",
 		"cname": "鸟类",
 		"words": [
-			{ "chinese": "鸟", "english": "Bird", "pinyin": "Niǎo", "phrase": ["小鸟", "鸟叫", "笨鸟先飞"], "sentence": "树上落着一只小鸟。", "image": "images/chars/Bird/something.png" },
-			{ "chinese": "鸡", "english": "Chicken", "pinyin": "Jī", "phrase": ["公鸡", "鸡蛋", "鸡犬升天"], "sentence": "公鸡早上会打鸣。", "image": "images/chars/Bird/something.png" },
-			{ "chinese": "鸭", "english": "Duck", "pinyin": "Yā", "phrase": ["鸭子", "鸭蛋", "赶鸭子上架"], "sentence": "鸡、鸭、鹅都是鸟，但都不会飞了。", "image": "images/chars/Bird/something.png" },
-			{ "chinese": "鹅", "english": "Goose", "pinyin": "É", "phrase": ["鹅蛋", "烤鹅", "鹅毛大雪"], "sentence": "鸡、鸭、鹅都是鸟，但都不会飞了。", "image": "images/chars/Bird/something.png" },
-			{ "chinese": "鹰", "english": "Eagle", "pinyin": "Yīng", "phrase": ["山鹰", "老鹰", "鹰击长空"], "sentence": "鹰是一种大鸟，飞得很高。", "image": "images/chars/Bird/something.png" },
-			{ "chinese": "燕", "english": "Swallow", "pinyin": "Yàn", "phrase": ["燕子", "雨燕", "莺歌燕舞"], "sentence": "燕子是一种小鸟，飞得很远。", "image": "images/chars/Bird/something.png" }
+			{ "chinese": "鸟", "english": "Bird", "pinyin": "Niǎo", "phrase": ["小鸟", "鸟叫", "笨鸟先飞"], "sentence": "树上落着一只小鸟。", "image": "images/chars/Bird/bird.jpg" },
+			{ "chinese": "鸡", "english": "Chicken", "pinyin": "Jī", "phrase": ["公鸡", "鸡蛋", "鸡犬升天"], "sentence": "公鸡早上会打鸣。", "image": "images/chars/Bird/roster.jpg" },
+			{ "chinese": "鸭", "english": "Duck", "pinyin": "Yā", "phrase": ["鸭子", "鸭蛋", "赶鸭子上架"], "sentence": "鸡、鸭、鹅都是鸟，但都不会飞了。", "image": "images/chars/Bird/duck.jpg" },
+			{ "chinese": "鹅", "english": "Goose", "pinyin": "É", "phrase": ["鹅蛋", "烤鹅", "鹅毛大雪"], "sentence": "鸡、鸭、鹅都是鸟，但都不会飞了。", "image": "images/chars/Bird/goose.jpg" },
+			{ "chinese": "鹰", "english": "Eagle", "pinyin": "Yīng", "phrase": ["山鹰", "老鹰", "鹰击长空"], "sentence": "鹰是一种大鸟，飞得很高。", "image": "images/chars/Bird/eagle.jpg" },
+			{ "chinese": "燕", "english": "Swallow", "pinyin": "Yàn", "phrase": ["燕子", "雨燕", "莺歌燕舞"], "sentence": "燕子是一种小鸟，飞得很远。", "image": "images/chars/Bird/swallow.jpg" }
 		]
 	},
 	{
 		"category": "Insect",
 		"cname": "昆虫",
 		"words": [
-			{ "chinese": "蝶", "english": "Butterfly", "pinyin": "Dié", "phrase": ["蝴蝶", "飞碟", "招蜂引蝶"], "sentence": "蝴蝶有很多种，颜色不一样。", "image": "images/chars/Insect/something.png" },
-			{ "chinese": "虫", "english": "Bug", "pinyin": "Chóng", "phrase": ["虫子", "瓢虫", "花鸟虫鱼"], "sentence": "瓢虫还有一个名字，叫屎壳郎。", "image": "images/chars/Insect/something.png" },
-			{ "chinese": "蜂", "english": "Bee", "pinyin": "Fēng", "phrase": ["蜜蜂", "马蜂", "蜂拥而至"], "sentence": "花丛中有好多蜜蜂在采蜜。", "image": "images/chars/Insect/something.png" },
-			{ "chinese": "蚊", "english": "Mosquito", "pinyin": "Wén", "phrase": ["蚊虫", "飞蚊", "蚊子腿也是肉"], "sentence": "蚊子一般在晚上出来。", "image": "images/chars/Insect/something.png" },
-			{ "chinese": "蝇", "english": "Fly", "pinyin": "Yíng", "phrase": ["苍蝇", "果蝇", "蝇头小利"], "sentence": "苍蝇到处落，很脏。", "image": "images/chars/Insect/something.png" }
+			{ "chinese": "蝶", "english": "Butterfly", "pinyin": "Dié", "phrase": ["蝴蝶", "飞碟", "招蜂引蝶"], "sentence": "蝴蝶有很多种，颜色不一样。", "image": "images/chars/Insect/butterfly.jpg" },
+			{ "chinese": "虫", "english": "Bug", "pinyin": "Chóng", "phrase": ["虫子", "瓢虫", "花鸟虫鱼"], "sentence": "瓢虫还有一个名字，叫屎壳郎。", "image": "images/chars/Insect/ladybug.jpg" },
+			{ "chinese": "蜂", "english": "Bee", "pinyin": "Fēng", "phrase": ["蜜蜂", "马蜂", "蜂拥而至"], "sentence": "花丛中有好多蜜蜂在采蜜。", "image": "images/chars/Insect/bee.jpg" },
+			{ "chinese": "蚊", "english": "Mosquito", "pinyin": "Wén", "phrase": ["蚊虫", "飞蚊", "蚊子腿也是肉"], "sentence": "蚊子一般在晚上出来。", "image": "images/chars/Insect/mosquito.jpg" },
+			{ "chinese": "蝇", "english": "Fly", "pinyin": "Yíng", "phrase": ["苍蝇", "果蝇", "蝇头小利"], "sentence": "苍蝇到处落，很脏。", "image": "images/chars/Insect/fly.jpg" }
 		]
 	},
 	{
 		"category": "Plant",
 		"cname": "植物",
 		"words": [
-			{ "chinese": "树", "english": "Tree", "pinyin": "Shù", "phrase": ["杨树", "树枝", "树大招风"], "sentence": "路边上有一棵大树。", "image": "images/chars/Plant/something.png" },
-			{ "chinese": "花", "english": "Flower", "pinyin": "Huā", "phrase": ["红花", "花脸", "花红柳绿"], "sentence": "房子前面有很多花。", "image": "images/chars/Plant/something.png" },
-			{ "chinese": "草", "english": "Grass", "pinyin": "Cǎo", "phrase": ["草地", "野草", "草木皆兵"], "sentence": "一条大河从草原上流过。", "image": "images/chars/Plant/something.png" },
-			{ "chinese": "菜", "english": "Vegetable", "pinyin": "Cài", "phrase": ["蔬菜", "种菜", "小菜一碟"], "sentence": "菜园里种的有西红柿。", "image": "images/chars/Plant/something.png" }
+			{ "chinese": "树", "english": "Tree", "pinyin": "Shù", "phrase": ["杨树", "树枝", "树大招风"], "sentence": "路边上有一棵大树。", "image": "images/chars/Plant/tree.webp" },
+			{ "chinese": "花", "english": "Flower", "pinyin": "Huā", "phrase": ["红花", "花脸", "花红柳绿"], "sentence": "房子前面有很多花。", "image": "images/chars/Plant/flower.jpg" },
+			{ "chinese": "草", "english": "Grass", "pinyin": "Cǎo", "phrase": ["草地", "野草", "草木皆兵"], "sentence": "一条大河从草原上流过。", "image": "images/chars/Plant/grass.jpg" },
+			{ "chinese": "菜", "english": "Vegetable", "pinyin": "Cài", "phrase": ["蔬菜", "种菜", "小菜一碟"], "sentence": "菜园里种的有西红柿。", "image": "images/chars/Plant/vegetable.jpg" }
 		]
 	},
 	{
 		"category": "Date-Time",
 		"cname": "时间",
 		"words": [
-			{ "chinese": "秒", "english": "Second", "pinyin": "Miǎo", "phrase": ["一秒钟", "秒表", "分秒必争"], "sentence": "一秒钟很短，滴答一声就是一秒。", "image": "images/chars/DateTime/something.png" },
-			{ "chinese": "分", "english": "Minute", "pinyin": "Fēn", "phrase": ["三分钟", "分开", "不分昼夜"], "sentence": "六十秒是一分钟。", "image": "images/chars/DateTime/something.png" },
-			{ "chinese": "时", "english": "Hour", "pinyin": "Shí", "phrase": ["小时", "时间", "时来运转"], "sentence": "六十分钟是一个小时。", "image": "images/chars/DateTime/something.png" },
-			{ "chinese": "天", "english": "Day", "pinyin": "Tiān", "phrase": ["每天", "天气", "天高气爽"], "sentence": "每天早上起来，要先涮牙、洗脸。", "image": "images/chars/DateTime/something.png" },
-			{ "chinese": "周", "english": "Week", "pinyin": "Zhōu", "phrase": ["一周", "周围", "细心周到"], "sentence": "一周有七天。", "image": "images/chars/ShaDateTimepe/something.png" },
-			{ "chinese": "月", "english": "Month", "pinyin": "Yuè", "phrase": ["月亮", "月饼", "月朗风清"], "sentence": "晚上可以看到天上的月亮。", "image": "images/chars/DateTime/something.png" },
-			{ "chinese": "年", "english": "Year", "pinyin": "Nián", "phrase": ["一年", "过年", "度日如年"], "sentence": "一年有十二个月，三百六十五天。", "image": "images/chars/DateTime/something.png" },
+			{ "chinese": "秒", "english": "Second", "pinyin": "Miǎo", "phrase": ["一秒钟", "秒表", "分秒必争"], "sentence": "一秒钟很短，滴答一声就是一秒。", "image": "images/chars/DateTime/second.gif" },
+			{ "chinese": "分", "english": "Minute", "pinyin": "Fēn", "phrase": ["三分钟", "分开", "不分昼夜"], "sentence": "六十秒是一分钟。", "image": "images/chars/DateTime/minute.gif" },
+			{ "chinese": "时", "english": "Hour", "pinyin": "Shí", "phrase": ["小时", "时间", "时来运转"], "sentence": "六十分钟是一个小时。", "image": "images/chars/DateTime/hour.gif" },
+			{ "chinese": "天", "english": "Day", "pinyin": "Tiān", "phrase": ["每天", "天气", "天高气爽"], "sentence": "每天早上起来，要先涮牙、洗脸。", "image": "images/chars/DateTime/day.gif" },
+			{ "chinese": "周", "english": "Week", "pinyin": "Zhōu", "phrase": ["一周", "周围", "细心周到"], "sentence": "一周有七天。", "image": "images/chars/DateTime/week.jpg" },
+			{ "chinese": "月", "english": "Month", "pinyin": "Yuè", "phrase": ["月亮", "月饼", "月朗风清"], "sentence": "晚上可以看到天上的月亮。", "image": "images/chars/DateTime/month.gif" },
+			{ "chinese": "年", "english": "Year", "pinyin": "Nián", "phrase": ["一年", "过年", "度日如年"], "sentence": "一年有十二个月，三百六十五天。", "image": "images/chars/DateTime/year.gif" },
 			{ "chinese": "今", "english": "Today", "pinyin": "Jīn", "phrase": ["今天", "今年", "古今中外"], "sentence": "今天是星期天，大家都休息。", "image": "" },
 			{ "chinese": "昨", "english": "Yesterday", "pinyin": "Zuó", "phrase": ["昨天", "昨晚", "昨日黄花"], "sentence": "昨天是星期六。", "image": "" },
 			{ "chinese": "明", "english": "Tomorrow", "pinyin": "Míng", "phrase": ["明天", "明年", "明知故问"], "sentence": "明天是星期一。", "image": "" },
-			{ "chinese": "现", "english": "Now", "pinyin": "Xiàn", "phrase": ["现在", "现金", "昙花一现"], "sentence": "现在十二点钟。", "image": "images/chars/DateTime/something.png" }
+			{ "chinese": "现", "english": "Now", "pinyin": "Xiàn", "phrase": ["现在", "现金", "昙花一现"], "sentence": "现在十二点钟。", "image": "images/chars/DateTime/now.png" }
 		]
 	},
 	{

@@ -26,7 +26,7 @@
 		<img class="binner" src="images/site/banner.jpg">
 	</header>
 
-	<section>
+	<div class='container'>
 		<nav>
 			<div id='word-search' class="search-word">
 				<input type="text" id="search-word" name="word" onkeypress="return enterKeyPressed(event)">
@@ -52,7 +52,7 @@
 
 		<article>
 			<!-- The word pannel (chinese, english, picture, and symbols)-->
-			<div id='character-row' class='row'>
+			<div id='character-row' class='row' style="min-height:350px">
 				<!-- The left card that is for the Chinese character and English word -->
 				<div class='col-sm-6'>
 					<div class="card border-0">
@@ -114,15 +114,15 @@
 					<div class='col-sm-3'>
 						<p>
 							<span id='chinese' class="chinese" onclick="speechCheck('zh-CN', 'chinese')"
-								title="Read aloud"></span>
+								title="Talk to App"></span>
 							&nbsp;&nbsp;【<span id='pinyin' class="pinyin"></span>】
 						</p>
 					</div>
 					<div class='col-sm-3'>
-						<p id="phrase" class="phrase" title="Read aloud" onclick="speechCheck('zh-CN', 'phrase')"></p>
+						<p id="phrase" class="phrase" title="Talk to App" onclick="speechCheck('zh-CN', 'phrase')"></p>
 					</div>
 					<div class='col-sm-6'>
-						<p id="sentence" class="sentence" title="Read aloud" onclick="speechCheck('zh-CN', 'sentence')">
+						<p id="sentence" class="sentence" title="Talk to App" onclick="speechCheck('zh-CN', 'sentence')">
 						</p>
 					</div>
 				</div>
@@ -152,7 +152,7 @@
 			<!-- For generating some image dynamically -->
 			<canvas id="textCanvas" class="card-body no-show"></canvas>
 		</article>
-	</section>
+	</div>
 
 	<footer id='category-row' class="category">
 	</footer>
