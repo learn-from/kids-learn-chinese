@@ -16,146 +16,193 @@
 
 	<link href='css/klc-style.css' rel='stylesheet' />
 	<link href='css/sidebar.css' rel='stylesheet' />
+	<!-- <link href='css/menu.css' rel='stylesheet' /> -->
 	<script src="scripts/all-words.js"></script>
 	<script src="scripts/content.js"></script>
 	<script src="scripts/sidebar.js"></script>
+
+	<script>
+		function showCategories() {
+			let category = document.getElementById('category-row');
+			if (category.style.display == 'block')
+				category.style.display = 'none';
+			else
+				category.style.display = 'block';
+		}
+		function showUsage() {
+			let usage = document.getElementById('usage-row');
+			if (usage.style.display == 'block')
+				usage.style.display = 'none';
+			else
+				usage.style.display = 'block';
+		}
+		function showPrint() {
+			let print = document.getElementById('print-row');
+			if (print.style.display == 'block')
+				print.style.display = 'none';
+			else
+				print.style.display = 'block';
+		}
+	</script>
 </head>
 
 <body>
 	<header>
-		<img class="binner" src="images/site/banner.jpg">
+		<img class="binner" src="images/site/banner.jpg" />
+		<nav class="nav justify-content-start" style='font-size: 14px; width: 90%; margin-top:-32px; margin-left:12%'>
+			<a class="nav-link link" href="#" onclick="showCategories()">🗃️ Categories</a>
+			<a class="nav-link link" href="#" onclick="showPrint()">🖨️ Print Cards</a>
+			<a class="nav-link link" href="#" onclick="showUsage()">🙋‍♂️ Usage</a>
+		</nav>
 	</header>
 
-	<div class='container'>
-		<nav>
-			<div id='word-search' class="search-word">
-				<input type="text" id="search-word" name="word" onkeypress="return enterKeyPressed(event)">
-				<span class='search' onclick="searchWord()">🔍</span>
-				<span class="tooltip-container">🙋‍♂️
-					<ul class="tooltip-text help-info">
-						<li>🖱️ character - redraw</li>
-						<li>🖱️ picture - show/hide</li>
-						<li>🖱️ word(s) - talk to App</li>
-						<li>🗣️ - speak Mandarin</li>
-						<li>🔈 - speak Cantonese</li>
-						<li>🔊 - speak English</li>
-						<li>🖨️ - print category cards</li>
-					</ul>
-				</span>
-				<p id="search-error" class="search-error"></p>
-			</div>
-			<div id="category-words">
-				<p id="" class="word-category"></p>
-				<ul id="" class="word"></ul>
-			</div>
-		</nav>
+	<div class='container' style="position: relative;">
+		<div id='category-row' class="category"></div>
+		<div id='print-row' class="print">
+			<p>Print 4x6 cards</p>
+			<ul>
+				<li>print current category</li>
+				<li>print all cards</li>
+			</ul>
+			<p>Print A4 cards</p>
+			<ul>
+				<li>print current category</li>
+				<li>print all cards</li>
+			</ul>
+		</div>
+		<ul id='usage-row' class="usage">
+			<li>🖱️ character - redraw</li>
+			<li>🖱️ picture - show/hide</li>
+			<li>🖱️ word(s) - talk to App</li>
+			<li>🗣️ - speak Mandarin</li>
+			<li>🔈 - speak Cantonese</li>
+			<li>🔊 - speak English</li>
+		</ul>
 
-		<article>
-			<!-- The word pannel (chinese, english, picture, and symbols)-->
-			<div id='character-row' class='row' style="min-height:350px">
-				<!-- The left card that is for the Chinese character and English word -->
-				<div class='col-sm-6'>
-					<div class="card border-0">
-						<div class="card-body">
+		<div class="contents" style="position: absolute;z-index: 1;">
+			<div class="sidebar">
+				<div id='word-search' class="search-word">
+					<input type="text" id="search-word" name="word" onkeypress="return enterKeyPressed(event)">
+					<span class='search' onclick="searchWord()">🔍</span>
+					<p id="search-error" class="search-error"></p>
+				</div>
+				<div id="category-words">
+					<p id="" class="word-category"></p>
+					<ul id="" class="word"></ul>
+				</div>
+			</div>
+
+			<article>
+				<!-- The word pannel (chinese, english, picture, and symbols)-->
+				<div id='character-row' class='row' style="min-height:350px">
+					<!-- The left card that is for the Chinese character and English word -->
+					<div class='col-sm-6'>
+						<div class="card border-0">
+							<div class="card-body">
+								<div class='row'>
+									<div class='col-sm-12 high-item'>
+										<span id='character' onclick="redraw()"
+											title="click to redraw the character"></span>
+									</div>
+								</div>
+								<div class='row mt-2'>
+									<div class='col-sm-12 center-item'>
+										<span id='english' class='english'></span>
+										<span class="symbol" title="English" onclick="say('en-US', 'english')">🔊</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- The right card that is a picture and the source of the picture is assigned dynamicallly -->
+					<div class='col-sm-6'>
+						<div id='picture-card' class="card-body">
 							<div class='row'>
-								<div class='col-sm-12 high-item'>
-									<span id='character' onclick="redraw()"
-										title="click to redraw the character"></span>
-								</div>
-							</div>
-							<div class='row mt-2'>
-								<div class='col-sm-12 center-item'>
-									<span id='english' class='english'></span>
-									<span class="symbol" title="English" onclick="say('en-US', 'english')">🔊</span>
+								<div class='col-sm-12'>
+									<img id="picture-default" src="" class="picture-default no-show"
+										onclick="showPicture()" />
+									<img id="picture" src="" class="picture no-show" onclick="showPicture()" />
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- The right card that is a picture and the source of the picture is assigned dynamicallly -->
-				<div class='col-sm-6'>
-					<div id='picture-card' class="card-body">
-						<div class='row'>
-							<div class='col-sm-12'>
-								<img id="picture-default" src="" class="picture-default no-show"
-									onclick="showPicture()" />
-								<img id="picture" src="" class="picture no-show" onclick="showPicture()" />
-							</div>
+				<!-- The bottom item that is for pinyin, phrases and sentence -->
+				<div id='word-card'>
+					<div class='row'>
+						<div class='col-sm-3'>
+							<p class="item-name">Char/Pinyin
+								<span class="symbol" title="Mandarin" onclick="say('zh-CN', 'chinese')">🗣️</span>
+								<span class="symbol" title="Cantonese" onclick="say('yue-HK', 'chinese')">🔈</span>
+							</p>
+						</div>
+						<div class='col-sm-3'>
+							<p class="item-name">Phrase
+								<span class="symbol" title="Mandarin" onclick="say('zh-CN', 'phrase')">🗣️</span>
+								<span class="symbol" title="Cantonese" onclick="say('yue-HK', 'phrase')">🔈</span>
+							</p>
+						</div>
+						<div class='col-sm-6'>
+							<p class="item-name">Sentence
+								<span class="symbol" title="Mandarin" onclick="say('zh-CN', 'sentence')">🗣️</span>
+								<span class="symbol" title="Cantonese" onclick="say('yue-HK', 'sentence')">🔈</span>
+							</p>
+						</div>
+					</div>
+
+					<div class='row'>
+						<div class='col-sm-3'>
+							<p>
+								<span id='chinese' class="chinese" onclick="speechCheck('zh-CN', 'chinese')"
+									title="Talk to App"></span>
+								&nbsp;&nbsp;【<span id='pinyin' class="pinyin"></span>】
+							</p>
+						</div>
+						<div class='col-sm-3'>
+							<p id="phrase" class="phrase" title="Talk to App" onclick="speechCheck('zh-CN', 'phrase')">
+							</p>
+						</div>
+						<div class='col-sm-6'>
+							<p id="sentence" class="sentence" title="Talk to App"
+								onclick="speechCheck('zh-CN', 'sentence')">
+							</p>
 						</div>
 					</div>
 				</div>
-			</div>
 
-			<!-- The bottom item that is for pinyin, phrases and sentence -->
-			<div id='word-card'>
-				<div class='row'>
-					<div class='col-sm-3'>
-						<p class="item-name">Char/Pinyin
-							<span class="symbol" title="Mandarin" onclick="say('zh-CN', 'chinese')">🗣️</span>
-							<span class="symbol" title="Cantonese" onclick="say('yue-HK', 'chinese')">🔈</span>
-						</p>
-					</div>
-					<div class='col-sm-3'>
-						<p class="item-name">Phrase
-							<span class="symbol" title="Mandarin" onclick="say('zh-CN', 'phrase')">🗣️</span>
-							<span class="symbol" title="Cantonese" onclick="say('yue-HK', 'phrase')">🔈</span>
-						</p>
-					</div>
-					<div class='col-sm-6'>
-						<p class="item-name">Sentence
-							<span class="symbol" title="Mandarin" onclick="say('zh-CN', 'sentence')">🗣️</span>
-							<span class="symbol" title="Cantonese" onclick="say('yue-HK', 'sentence')">🔈</span>
-						</p>
+				<!-- This card is for getting voice and check pronunciation -->
+				<div id='speech-check' class="speech-check no-show">
+					<div class='row p-2'>
+						<div class='col-sm-4' onclick="clearSpeechSection()">
+							<img id='recording' class="recording" title='recording'
+								src="images/site/talk-recording.jpg" />
+							<img id='try-again' class='recording no-show' title='try again'
+								src="images/site/talk-try-again.jpg" />
+							<img id='great' class='recording no-show' title='great' src="images/site/talk-great.jpg" />
+						</div>
+						<div id='recognization' class='col-sm-8 sentence no-show'>
+							<span class="sentence">你说的是：</span>
+							<span id="input-text" class="sentence"></span><br>【
+							<span id="input-pinyin" class="pinyin"></span>】
+						</div>
 					</div>
 				</div>
 
-				<div class='row'>
-					<div class='col-sm-3'>
-						<p>
-							<span id='chinese' class="chinese" onclick="speechCheck('zh-CN', 'chinese')"
-								title="Talk to App"></span>
-							&nbsp;&nbsp;【<span id='pinyin' class="pinyin"></span>】
-						</p>
-					</div>
-					<div class='col-sm-3'>
-						<p id="phrase" class="phrase" title="Talk to App" onclick="speechCheck('zh-CN', 'phrase')"></p>
-					</div>
-					<div class='col-sm-6'>
-						<p id="sentence" class="sentence" title="Talk to App" onclick="speechCheck('zh-CN', 'sentence')">
-						</p>
-					</div>
+				<!-- This is for error messages -->
+				<div id='error-message' class="error-message" onclick="showError('')"
+					title="Click to hide the error message">
 				</div>
-			</div>
 
-			<!-- This card is for getting voice and check pronunciation -->
-			<div id='speech-check' class="speech-check no-show">
-				<div class='row p-2'>
-					<div class='col-sm-4' onclick="clearSpeechSection()">
-						<img id='recording' class="recording" title='recording' src="images/site/talk-recording.jpg" />
-						<img id='try-again' class='recording no-show' title='try again'
-							src="images/site/talk-try-again.jpg" />
-						<img id='great' class='recording no-show' title='great' src="images/site/talk-great.jpg" />
-					</div>
-					<div id='recognization' class='col-sm-8 sentence no-show'>
-						<span class="sentence">你说的是：</span>
-						<span id="input-text" class="sentence"></span><br>【
-						<span id="input-pinyin" class="pinyin"></span>】
-					</div>
-				</div>
-			</div>
-
-			<!-- This is for error messages -->
-			<div id='error-message' class="error-message" onclick="showError('')"
-				title="Click to hide the error message"></div>
-
-			<!-- For generating some image dynamically -->
-			<canvas id="textCanvas" class="card-body no-show"></canvas>
-		</article>
+				<!-- For generating some image dynamically -->
+				<canvas id="textCanvas" class="card-body no-show"></canvas>
+			</article>
+		</div>
 	</div>
 
-	<footer id='category-row' class="category">
-	</footer>
+	<!-- <footer id='category-row' class="category">
+	</footer> -->
 
 	<script>
 		updatePage('1-1');

@@ -1,3 +1,17 @@
+
+/* sidebar */
+div.sidebar {
+	float: right;
+	width: 19%;
+	padding: 8px;
+}
+
+/* Style the list inside the menu */
+div.sidebar ul {
+	list-style-type: none;
+	padding: 0;
+}
+
 p.word-category {
 	font-family: 'Times New Roman', Times, serif;
 	font-weight: bold;
@@ -8,9 +22,9 @@ p.word-category {
 ul.word {
 	font-family: SimSun;
 	font-size: 16px;
-	margin-top: -4px;
+	margin-top: -6px;
 	margin-bottom: 12px;
-	margin-left: -4px;
+	margin-left: -px;
 	line-height: 1.7;
 	/* display: none; */
 }
@@ -71,9 +85,17 @@ p.search-error {
 	opacity: 1;
 }
 
-.help-info {
-	padding-left: -10px;
-	padding-top: 8px;
-	padding-bottom: 8px;
+.usage {
+	position: absolute;
+	z-index: 2;
 	list-style-type: none;
+	display: none;
+	width: 200px;
+	margin-top: -16px;
+	margin-left: 360px;
+	padding: 4px;
+	text-align: left;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 14px;
+	background-color: antiquewhite;
 }

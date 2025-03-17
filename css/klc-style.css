@@ -12,28 +12,16 @@ body {
 /* Style the header */
 header {
 	/* background-color: #666; */
+	width: 100%;
 	padding: 10px;
-	text-align: center;
+	/* text-align: center;
 	font-size: 35px;
-	color: white;
+	color: white; */
 }
 
 img.binner {
 	width: 92%;
 	margin: 0 auto;
-}
-
-/* Create two columns/boxes that floats next to each other */
-nav {
-	float: right;
-	width: 20%;
-	padding: 10px;
-}
-
-/* Style the list inside the menu */
-nav ul {
-	list-style-type: none;
-	padding: 0;
 }
 
 article {
@@ -171,17 +159,42 @@ footer {
 }
 
 .category {
+	position: absolute;
+	z-index: 2;
+	display: none;
+	width: 90%;
+	margin-top: -16px;
+	margin-left: -5px;
+	padding: 4px;
+	text-align: left;
+	font-size: 14px;
+	background-color: antiquewhite;
+}
+
+.print {
+	position: absolute;
+	z-index: 2;
+	display: none;
+	width: 240px;
+	margin-top: -16px;
+	margin-left: 240px;
+	padding: 4px;
+	text-align: left;
+	font-size: 14px;
+	background-color: antiquewhite;
+}
+/* 
+.category {
 	position: fixed;
 	bottom: 10px;
 	width: 1000px;
 	margin-left: -60px;
 	padding: 6px 0px 6px 4px;
 	background-color: antiquewhite;
-}
+} */
 
 .clickable {
 	font-family: SimSun;
-	font-size: 15px;
 	color: rgb(77, 77, 77);
 }
 

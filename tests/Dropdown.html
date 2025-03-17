@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Menu with Hover Dropdown</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Banner Image */
+        .banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Horizontal Menu Bar */
+        .menu-bar {
+            background-color: #333;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .menu-item {
+            position: relative;
+            margin: 0 15px;
+        }
+
+        .menu-item a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            list-style: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            padding: 0;
+            margin: 0;
+            display: none;
+            min-width: 150px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .dropdown li {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .dropdown li:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown li a {
+            color: black;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .dropdown li a:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Show Dropdown on Hover */
+        .menu-item:hover .dropdown {
+            display: block;
+        }
+    </style>>
+</head>
+
+<body>
+
+    <!-- Banner Image -->
+    <div class="banner">
+        <img src="banner.jpg" alt="Banner Image">
+    </div>
+
+    <!-- Horizontal Menu Bar -->
+    <nav class="menu-bar">
+        <ul class="menu">
+            <li class="menu-item">
+                <a href="#">Menu 1</a>
+                <ul class="dropdown">
+                    <li><a href="#">Option 1.1</a></li>
+                    <li><a href="#">Option 1.2</a></li>
+                    <li><a href="#">Option 1.3</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#">Menu 2</a>
+                <ul class="dropdown">
+                    <li><a href="#">Option 2.1</a></li>
+                    <li><a href="#">Option 2.2</a></li>
+                    <li><a href="#">Option 2.3</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#">Menu 3</a>
+                <ul class="dropdown">
+                    <li><a href="#">Option 3.1</a></li>
+                    <li><a href="#">Option 3.2</a></li>
+                    <li><a href="#">Option 3.3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+</body>
+
+</html>

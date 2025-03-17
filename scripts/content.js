@@ -262,7 +262,7 @@ function buildCategories() {
 			// build HTML elements for the clickable categories
 			let id, cname, row, col;
 			let colIdx = 0;
-			let numCol = 6;
+			let numCol = 4;
 			let div = document.getElementById('category-row');
 			div.innerHTML = '';
 			for (let i = 0; i < allWords.length; i += numCol) {
@@ -275,7 +275,7 @@ function buildCategories() {
 					cname = category.cname;
 					col = document.createElement('div');
 					col.id = id;
-					col.className = 'col-sm-2 clickable';
+					col.className = 'col-sm-3 clickable';
 					col.textContent = cname + ' - ' + id;
 					// col.textContent = id;
 					col.onclick = function () { setCategory(this.id); };
