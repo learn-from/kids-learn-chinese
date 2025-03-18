@@ -1,0 +1,85 @@
+div.book-cover {
+	width: 100%;
+	padding: 8px 8px 10px 8px;
+	min-height: 140mm;
+	display: none;
+}
+
+div.cover-header {
+	position: relative;
+	display: inline-block;
+}
+
+.cover-header img {
+	display: block;
+	width: 84%;
+	margin-left: 8px;
+	margin-top: 14px;
+}
+
+.overlay-text {
+	position: absolute;
+	bottom: -20px;
+	left: 715px;
+	transform: translate(-50%, -50%);
+	font-size: 32px;
+}
+
+.header-chinese {
+	font-family: SimSun;
+	font-size: 26px;
+}
+
+.header-english {
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 24px;
+}
+
+div.cover-chinese {
+	width: 100%;
+	font-family: KaiTi;
+	font-size: 22px;
+	text-indent: 44px;
+}
+
+.cover-english {
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 20px;
+}
+
+img.cover-picture {
+	width: 68%;
+	margin-left: 60px;
+}
+
+@media print {
+	@page {
+		size: 6in 4in;
+		margin: 0;
+	}
+
+	/* Force new page */
+	.page-break {
+		break-before: page;
+	}
+
+	/** 2 characters a page. The A4 paper is 297 mm in height */
+	.char-item {
+		max-height: 148mm;
+		overflow: hidden;
+	}
+
+	.book-cover {
+		background-color: antiquewhite !important;
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+	}
+
+	.page-footer {
+		position: fixed;
+		bottom: 6px;
+		right: 6px;
+		font-family: SimSun;
+		font-size: 12px;
+	}
+}

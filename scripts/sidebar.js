@@ -43,7 +43,7 @@ function buildWordList() {
 		li.id = word.chinese + '-' + word.english;
 		li.textContent = word.chinese + ' - ' + word.english;
 		li.onclick = function () { updatePage(this.id); };
-		console.log(li.innerHTML);
+		// console.log(li.innerHTML);
 		ul.appendChild(li);
 	}
 	div.appendChild(p);

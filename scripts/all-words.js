@@ -116,94 +116,94 @@ let allWords =
 		"category": "Food",
 		"cname": "食物",
 		"words": [
-			{ "chinese": "米", "english": "Rice", "pinyin": "Mǐ", "phrase": ["米饭", "米粉", "无米之炊"], "sentence": "今天中午吃米饭。", "image": "images/chars/Food/something.png" },
-			{ "chinese": "面", "english": "Bread", "pinyin": "Miàn", "phrase": ["面包", "面条", "面红耳赤"], "sentence": "刚刚烤好的面包，很好吃。", "image": "images/chars/Food/something.png" },
-			{ "chinese": "糖", "english": "Sugar", "pinyin": "Táng", "phrase": ["白糖", "糖果", "糖衣炮弹"], "sentence": "别吃太多的糖，对牙齿不好。", "image": "images/chars/Food/something.png" },
-			{ "chinese": "奶", "english": "Milk", "pinyin": "Nǎi", "phrase": ["牛奶", "豆奶", "奶声奶气"], "sentence": "你每天早上喝牛奶吗？", "image": "images/chars/Food/something.png" },
-			{ "chinese": "菜", "english": "Vegetable", "pinyin": "Cài", "phrase": ["蔬菜", "做菜", "面有菜色"], "sentence": "要吃肉，也要吃蔬菜和水果。", "image": "images/chars/Food/something.png" },
-			{ "chinese": "果", "english": "Fruit", "pinyin": "Guǒ", "phrase": ["水果", "果实", "前因后果"], "sentence": "桌子上摆的水果有苹果，香蕉和葡萄。", "image": "images/chars/Food/something.png" },
-			{ "chinese": "肉", "english": "Meat", "pinyin": "Ròu", "phrase": ["鸡肉", "牛肉", "心惊肉跳"], "sentence": "今天的晚饭有肉，也有菜。", "image": "images/chars/Food/something.png" }
+			{ "chinese": "米", "english": "Rice", "pinyin": "Mǐ", "phrase": ["米饭", "米粉", "无米之炊"], "sentence": "今天中午吃米饭。", "image": "images/chars/Food/rice.jpg" },
+			{ "chinese": "面", "english": "Flour", "pinyin": "Miàn", "phrase": ["面包", "面条", "面红耳赤"], "sentence": "刚刚烤好的面包，很好吃。", "image": "images/chars/Food/flour.jpg" },
+			{ "chinese": "糖", "english": "Sugar", "pinyin": "Táng", "phrase": ["白糖", "糖果", "糖衣炮弹"], "sentence": "别吃太多的糖，对牙齿不好。", "image": "images/chars/Food/suger.jpg" },
+			{ "chinese": "奶", "english": "Milk", "pinyin": "Nǎi", "phrase": ["牛奶", "豆奶", "奶声奶气"], "sentence": "你每天早上喝牛奶吗？", "image": "images/chars/Food/Milk.jpg" },
+			{ "chinese": "菜", "english": "Vegetable", "pinyin": "Cài", "phrase": ["蔬菜", "做菜", "面有菜色"], "sentence": "要吃肉，也要吃蔬菜和水果。", "image": "images/chars/Food/vegitable.jpg" },
+			{ "chinese": "果", "english": "Fruit", "pinyin": "Guǒ", "phrase": ["水果", "果实", "前因后果"], "sentence": "桌子上摆的水果有苹果，香蕉和葡萄。", "image": "images/chars/Food/fruit.jpg" },
+			{ "chinese": "肉", "english": "Meat", "pinyin": "Ròu", "phrase": ["鸡肉", "牛肉", "心惊肉跳"], "sentence": "今天的晚饭有肉，也有菜。", "image": "images/chars/Food/meat.jpg" }
 		]
 	},
 	{
 		"category": "Tableware",
 		"cname": "餐具",
 		"words": [
-			{ "chinese": "刀", "english": "Knife", "pinyin": "Dāo", "phrase": ["刀子", "剪刀", "一刀两段"], "sentence": "桌上放着好几把刀。", "image": "images/chars/Tableware/something.png" },
-			{ "chinese": "叉", "english": "Fork", "pinyin": "Chā", "phrase": ["叉子", "钢叉", "四仰八叉"], "sentence": "那里有三把叉子。", "image": "images/chars/Tableware/something.png" },
-			{ "chinese": "勺", "english": "Spoon", "pinyin": "Sháo", "phrase": ["汤勺", "瓷勺", "一勺烩"], "sentence": "喝汤的时候，要用勺子。", "image": "images/chars/Tableware/something.png" },
-			{ "chinese": "筷", "english": "Chopstick", "pinyin": "Kuài", "phrase": ["筷子", "竹筷"], "sentence": "三双竹筷子和两双木筷子。", "image": "images/chars/Tableware/something.png" },
-			{ "chinese": "碗", "english": "Bowl", "pinyin": "Wǎn", "phrase": ["饭碗", "大碗", "一碗水端平"], "sentence": "我们家有瓷碗和木碗。", "image": "images/chars/Tableware/something.png" },
-			{ "chinese": "盘", "english": "Plate", "pinyin": "Pán", "phrase": ["盘子", "算盘", "杯盘狼藉"], "sentence": "饭桌上有盘子，还有碗。", "image": "images/chars/Tableware/something.png" },
-			{ "chinese": "锅", "english": "Pot", "pinyin": "Guō", "phrase": ["铁锅", "炒菜锅", "一锅端"], "sentence": "晚上我们熬了一锅粥。", "image": "images/chars/Tableware/something.png" },
-			{ "chinese": "瓶", "english": "Bottle", "pinyin": "Píng", "phrase": ["瓶子", "水瓶", "守口如瓶"], "sentence": "出去玩的时候，带上两瓶水。", "image": "images/chars/Tableware/something.png" },
-			{ "chinese": "杯", "english": "Cup", "pinyin": "Bēi", "phrase": ["杯子", "酒杯", "杯水车薪"], "sentence": "口渴了吧，先喝杯水。", "image": "images/chars/Tableware/something.png" },
-			{ "chinese": "纸", "english": "Napkin", "pinyin": "Zhǐ", "phrase": ["纸巾", "餐巾纸", "白纸黑字"], "sentence": "请递给我一张餐巾纸。", "image": "images/chars/Tableware/something.png" }
+			{ "chinese": "刀", "english": "Knife", "pinyin": "Dāo", "phrase": ["刀子", "剪刀", "一刀两段"], "sentence": "桌上放着好几把刀。", "image": "images/chars/Tableware/knife.jpg" },
+			{ "chinese": "叉", "english": "Fork", "pinyin": "Chā", "phrase": ["叉子", "钢叉", "四仰八叉"], "sentence": "那里有三把叉子。", "image": "images/chars/Tableware/fork.jpg" },
+			{ "chinese": "勺", "english": "Spoon", "pinyin": "Sháo", "phrase": ["汤勺", "瓷勺", "一勺烩"], "sentence": "喝汤的时候，要用勺子。", "image": "images/chars/Tableware/spoon.jpg" },
+			{ "chinese": "筷", "english": "Chopstick", "pinyin": "Kuài", "phrase": ["筷子", "竹筷"], "sentence": "三双竹筷子和两双木筷子。", "image": "images/chars/Tableware/chopstick.jpg" },
+			{ "chinese": "碗", "english": "Bowl", "pinyin": "Wǎn", "phrase": ["饭碗", "大碗", "一碗水端平"], "sentence": "我们家有瓷碗和木碗。", "image": "images/chars/Tableware/bowl.jpg" },
+			{ "chinese": "盘", "english": "Plate", "pinyin": "Pán", "phrase": ["盘子", "算盘", "杯盘狼藉"], "sentence": "饭桌上有盘子，还有碗。", "image": "images/chars/Tableware/plate.jpg" },
+			{ "chinese": "锅", "english": "Pot", "pinyin": "Guō", "phrase": ["铁锅", "炒菜锅", "一锅端"], "sentence": "晚上我们熬了一锅粥。", "image": "images/chars/Tableware/pot.jpg" },
+			{ "chinese": "瓶", "english": "Bottle", "pinyin": "Píng", "phrase": ["瓶子", "水瓶", "守口如瓶"], "sentence": "出去玩的时候，带上两瓶水。", "image": "images/chars/Tableware/bottle.jpg" },
+			{ "chinese": "杯", "english": "Glass", "pinyin": "Bēi", "phrase": ["杯子", "酒杯", "杯水车薪"], "sentence": "口渴了吧，先喝杯水。", "image": "images/chars/Tableware/glass.jpg" },
+			{ "chinese": "纸", "english": "Napkin", "pinyin": "Zhǐ", "phrase": ["纸巾", "餐巾纸", "白纸黑字"], "sentence": "请递给我一张餐巾纸。", "image": "images/chars/Tableware/napkin.jpg" }
 		]
 	},
 	{
 		"category": "Furniture",
 		"cname": "家具",
 		"words": [
-			{ "chinese": "门", "english": "Door", "pinyin": "Mén", "phrase": ["大门", "开门", "门庭若市"], "sentence": "家里有一扇玻璃门。", "image": "images/chars/Furniture/something.png" },
-			{ "chinese": "窗", "english": "Window", "pinyin": "Chuāng", "phrase": ["窗户", "天窗", "窗明几净"], "sentence": "窗户上挂着窗帘。", "image": "images/chars/Furniture/something.png" },
-			{ "chinese": "床", "english": "Bed", "pinyin": "Chuáng", "phrase": ["大床", "温床", "同床异梦"], "sentence": "早上起来要把床收拾整齐。", "image": "images/chars/Furniture/something.png" },
-			{ "chinese": "桌", "english": "Table", "pinyin": "Zhuō", "phrase": ["饭桌", "书桌", "圆桌会议"], "sentence": "书桌上有一些笔和纸。", "image": "images/chars/Furniture/something.png" },
-			{ "chinese": "椅", "english": "Chair", "pinyin": "Yǐ", "phrase": ["椅子", "躺椅", "桌椅板凳"], "sentence": "书桌旁边有两把椅子。", "image": "images/chars/Furniture/something.png" },
-			{ "chinese": "凳", "english": "Stool", "pinyin": "Dèng", "phrase": ["凳子", "高凳", "坐冷板凳"], "sentence": "厨房里有几个木头凳子。", "image": "images/chars/Furniture/something.png" },
-			{ "chinese": "柜", "english": "Cabinet", "pinyin": "Guì", "phrase": ["书柜", "碗柜", "翻箱倒柜"], "sentence": "厨房的碗柜里有好多碗和盘子。", "image": "images/chars/Furniture/something.png" },
-			{ "chinese": "灯", "english": "Light", "pinyin": "Dēng", "phrase": ["台灯", "路灯", "万家灯火"], "sentence": "桌子上放着一盏台灯。", "image": "images/chars/Furniture/something.png" },
-			{ "chinese": "画", "english": "Painting", "pinyin": "Huà", "phrase": ["油画", "国画", "画龙点睛"], "sentence": "墙上挂着两幅画。", "image": "images/chars/Furniture/something.png" }
+			{ "chinese": "门", "english": "Door", "pinyin": "Mén", "phrase": ["大门", "开门", "门庭若市"], "sentence": "家里有一扇玻璃门。", "image": "images/chars/Furniture/door.jpg" },
+			{ "chinese": "窗", "english": "Window", "pinyin": "Chuāng", "phrase": ["窗户", "天窗", "窗明几净"], "sentence": "窗户上挂着窗帘。", "image": "images/chars/Furniture/window.jpg" },
+			{ "chinese": "床", "english": "Bed", "pinyin": "Chuáng", "phrase": ["大床", "温床", "同床异梦"], "sentence": "早上起来要把床收拾整齐。", "image": "images/chars/Furniture/bed.jpg" },
+			{ "chinese": "桌", "english": "Table", "pinyin": "Zhuō", "phrase": ["饭桌", "书桌", "圆桌会议"], "sentence": "书桌上有一些笔和纸。", "image": "images/chars/Furniture/table.jpg" },
+			{ "chinese": "椅", "english": "Chair", "pinyin": "Yǐ", "phrase": ["椅子", "躺椅", "桌椅板凳"], "sentence": "书桌旁边有两把椅子。", "image": "images/chars/Furniture/chair.jpg" },
+			{ "chinese": "凳", "english": "Stool", "pinyin": "Dèng", "phrase": ["凳子", "高凳", "坐冷板凳"], "sentence": "厨房里有几个木头凳子。", "image": "images/chars/Furniture/stool.jpg" },
+			{ "chinese": "柜", "english": "Cabinet", "pinyin": "Guì", "phrase": ["书柜", "碗柜", "翻箱倒柜"], "sentence": "厨房的碗柜里有好多碗和盘子。", "image": "images/chars/Furniture/cabinet.jpg" },
+			{ "chinese": "灯", "english": "Light", "pinyin": "Dēng", "phrase": ["台灯", "路灯", "万家灯火"], "sentence": "桌子上放着一盏台灯。", "image": "images/chars/Furniture/light.jpg" },
+			{ "chinese": "画", "english": "Painting", "pinyin": "Huà", "phrase": ["油画", "国画", "画龙点睛"], "sentence": "墙上挂着两幅画。", "image": "images/chars/Furniture/painting.jpg" }
 		]
 	},
 	{
 		"category": "Clothes",
 		"cname": "衣服",
 		"words": [
-			{ "chinese": "衣", "english": "Clothes", "pinyin": "Yī", "phrase": ["衣服", "上衣", "丰衣足食"], "sentence": "我把衣服都叠好了。", "image": "images/chars/Clothes/something.png" },
-			{ "chinese": "裤", "english": "Pants", "pinyin": "Kù", "phrase": ["裤子", "长裤", "纨绔子弟"], "sentence": "墙上挂着几条裤子。", "image": "images/chars/Clothes/something.png" },
-			{ "chinese": "裙", "english": "Skirt", "pinyin": "Qún", "phrase": ["裙子", "短裙", "裙带关系"], "sentence": "这几条裙子真好看。", "image": "images/chars/Clothes/something.png" },
-			{ "chinese": "帽", "english": "Cap", "pinyin": "Mào", "phrase": ["帽子", "草帽", "乌纱帽"], "sentence": "出去时，要带上草帽。", "image": "images/chars/Clothes/something.png" },
-			{ "chinese": "鞋", "english": "Shoe", "pinyin": "Xié", "phrase": ["皮鞋", "凉鞋", "踏破铁鞋"], "sentence": "到夏天了，出门可以穿凉鞋。", "image": "images/chars/Clothes/something.png" },
-			{ "chinese": "袜", "english": "Socks", "pinyin": "Wà", "phrase": ["袜子", "长袜", "青鞋布袜"], "sentence": "我有好几双花袜子。", "image": "images/chars/Clothes/something.png" },
-			{ "chinese": "被", "english": "Comforter", "pinyin": "Bèi", "phrase": ["被子", "被动", "一朝被蛇咬"], "sentence": "睡觉时要盖好被子。", "image": "images/chars/Clothes/something.png" },
-			{ "chinese": "毯", "english": "Blanket", "pinyin": "Tǎn", "phrase": ["毯子", "毛毯", "绿茵如毯"], "sentence": "毯子比被子薄一些。", "image": "images/chars/Clothes/something.png" },
-			{ "chinese": "枕", "english": "Pillow", "pinyin": "Zhěn", "phrase": ["枕头", "枕巾", "高枕无忧"], "sentence": "这个粉色的枕头太高了。", "image": "images/chars/Clothes/something.png" }
+			{ "chinese": "衣", "english": "Clothes", "pinyin": "Yī", "phrase": ["衣服", "上衣", "丰衣足食"], "sentence": "我把衣服都叠好了。", "image": "images/chars/Clothes/clothes.jpg" },
+			{ "chinese": "裤", "english": "Pants", "pinyin": "Kù", "phrase": ["裤子", "长裤", "纨绔子弟"], "sentence": "墙上挂着几条裤子。", "image": "images/chars/Clothes/pants.jpg" },
+			{ "chinese": "裙", "english": "Skirt", "pinyin": "Qún", "phrase": ["裙子", "短裙", "裙带关系"], "sentence": "这几条裙子真好看。", "image": "images/chars/Clothes/skirt.jpg" },
+			{ "chinese": "帽", "english": "Hat", "pinyin": "Mào", "phrase": ["帽子", "草帽", "乌纱帽"], "sentence": "出去时，要带上草帽。", "image": "images/chars/Clothes/hat.jpg" },
+			{ "chinese": "鞋", "english": "Shoe", "pinyin": "Xié", "phrase": ["皮鞋", "凉鞋", "踏破铁鞋"], "sentence": "到夏天了，出门可以穿凉鞋。", "image": "images/chars/Clothes/shoe.jpg" },
+			{ "chinese": "袜", "english": "Socks", "pinyin": "Wà", "phrase": ["袜子", "长袜", "青鞋布袜"], "sentence": "我有好几双花袜子。", "image": "images/chars/Clothes/socks.jpg" },
+			{ "chinese": "被", "english": "Comforter", "pinyin": "Bèi", "phrase": ["被子", "被动", "一朝被蛇咬"], "sentence": "睡觉时要盖好被子。", "image": "images/chars/Clothes/comforter.jpg" },
+			{ "chinese": "毯", "english": "Blanket", "pinyin": "Tǎn", "phrase": ["毯子", "毛毯", "绿茵如毯"], "sentence": "毯子比被子薄一些。", "image": "images/chars/Clothes/blanket.jpg" },
+			{ "chinese": "枕", "english": "Pillow", "pinyin": "Zhěn", "phrase": ["枕头", "枕巾", "高枕无忧"], "sentence": "这个粉色的枕头太高了。", "image": "images/chars/Clothes/pillow.jpg" }
 		]
 	},
 	{
 		"category": "Toiletry",
 		"cname": "洗漱",
 		"words": [
-			{ "chinese": "盆", "english": "Bath", "pinyin": "Pén", "phrase": ["澡盆", "脸盆", "倾盆大雨"], "sentence": "大澡盆里面有只小鸭子。", "image": "images/chars/Toiletry/something.png" },
-			{ "chinese": "巾", "english": "Towel", "pinyin": "Jīn", "phrase": ["毛巾", "浴巾", "巾帼英雄"], "sentence": "洗完澡后，用毛巾把身上擦干。", "image": "images/chars/Toiletry/something.png" },
-			{ "chinese": "油", "english": "Cream", "pinyin": "Yóu", "phrase": ["擦脸油", "春雨贵如油"], "sentence": "要经常在手上、脸上擦点油。", "image": "images/chars/Toiletry/something.png" },
-			{ "chinese": "梳", "english": "Comb", "pinyin": "Shū", "phrase": ["梳子", "梳头", "梳洗打扮"], "sentence": "吃早饭前，要把头发梳好。", "image": "images/chars/Toiletry/something.png" },
-			{ "chinese": "刷", "english": "Brush", "pinyin": "Shuā", "phrase": ["牙刷", "刷子"], "sentence": "起床后，先把牙刷干净。", "image": "images/chars/Toiletry/something.png" },
-			{ "chinese": "膏", "english": "Paste", "pinyin": "Gāo", "phrase": ["牙膏", "唇膏"], "sentence": "刷牙时要用牙膏。", "image": "images/chars/Toiletry/something.png" }
+			{ "chinese": "盆", "english": "Bath", "pinyin": "Pén", "phrase": ["澡盆", "脸盆", "倾盆大雨"], "sentence": "大澡盆里面有只小鸭子。", "image": "images/chars/Toiletry/bath.jpg" },
+			{ "chinese": "巾", "english": "Towel", "pinyin": "Jīn", "phrase": ["毛巾", "浴巾", "巾帼英雄"], "sentence": "洗完澡后，用毛巾把身上擦干。", "image": "images/chars/Toiletry/towel.jpg" },
+			{ "chinese": "油", "english": "Cream", "pinyin": "Yóu", "phrase": ["擦脸油", "春雨贵如油"], "sentence": "要经常在手上、脸上擦点油。", "image": "images/chars/Toiletry/cream.jpg" },
+			{ "chinese": "梳", "english": "Comb", "pinyin": "Shū", "phrase": ["梳子", "梳头", "梳洗打扮"], "sentence": "吃早饭前，要把头发梳好。", "image": "images/chars/Toiletry/comb.jpg" },
+			{ "chinese": "刷", "english": "Brush", "pinyin": "Shuā", "phrase": ["牙刷", "刷子"], "sentence": "起床后，先把牙刷干净。", "image": "images/chars/Toiletry/toothbrush.jpg" },
+			{ "chinese": "膏", "english": "Paste", "pinyin": "Gāo", "phrase": ["牙膏", "唇膏"], "sentence": "刷牙时要用牙膏。", "image": "images/chars/Toiletry/toothpaste.jpg" }
 		]
 	},
 	{
 		"category": "Stationery",
 		"cname": "文具",
 		"words": [
-			{ "chinese": "书", "english": "Book", "pinyin": "Shū", "phrase": ["读书", "书法", "博览群书"], "sentence": "桌上放着好几本书。", "image": "images/chars/Stationery/something.png" },
-			{ "chinese": "本", "english": "Notebook", "pinyin": "Běn", "phrase": ["书本", "根本", "本来面目"], "sentence": "你可以在本子上写字。", "image": "images/chars/Stationery/something.png" },
-			{ "chinese": "笔", "english": "Pen", "pinyin": "Bǐ", "phrase": ["铅笔", "钢笔", "生花妙笔"], "sentence": "用笔可以画画，也可以写字。", "image": "images/chars/Stationery/something.png" },
-			{ "chinese": "纸", "english": "Paper", "pinyin": "Zhǐ", "phrase": ["白纸", "手纸", "纸上谈兵"], "sentence": "在白纸写字、画画。", "image": "images/chars/Stationery/something.png" },
-			{ "chinese": "电", "english": "Electricity", "pinyin": "Diàn", "phrase": ["电脑", "电话", "电视"], "sentence": "电脑很有用。", "image": "images/chars/Stationery/something.png" },
-			{ "chinese": "机", "english": "Machine", "pinyin": "Jī", "phrase": ["手机", "机器", "机不可失"], "sentence": "出门要带上手机。", "image": "images/chars/Stationery/something.png" }
+			{ "chinese": "书", "english": "Book", "pinyin": "Shū", "phrase": ["读书", "书法", "博览群书"], "sentence": "桌上放着好几本书。", "image": "images/chars/Stationery/book.jpg" },
+			{ "chinese": "本", "english": "Notebook", "pinyin": "Běn", "phrase": ["书本", "根本", "本来面目"], "sentence": "你可以在本子上写字。", "image": "images/chars/Stationery/notebook.jpg" },
+			{ "chinese": "笔", "english": "Pen", "pinyin": "Bǐ", "phrase": ["铅笔", "钢笔", "生花妙笔"], "sentence": "用笔可以画画，也可以写字。", "image": "images/chars/Stationery/pen.jpg" },
+			{ "chinese": "纸", "english": "Paper", "pinyin": "Zhǐ", "phrase": ["白纸", "手纸", "纸上谈兵"], "sentence": "在白纸写字、画画。", "image": "images/chars/Stationery/paper.jpg" },
+			{ "chinese": "电", "english": "Electricity", "pinyin": "Diàn", "phrase": ["电脑", "电话", "电视"], "sentence": "电脑很有用。", "image": "images/chars/Stationery/smartphone.jpg" },
+			{ "chinese": "机", "english": "Machine", "pinyin": "Jī", "phrase": ["手机", "机器", "机不可失"], "sentence": "出门要带上手机。", "image": "images/chars/Stationery/computer.jpg" }
 		]
 	},
 	{
 		"category": "Toy",
 		"cname": "玩具",
 		"words": [
-			{ "chinese": "娃", "english": "Doll", "pinyin": "Wá", "phrase": ["洋娃娃", "小娃娃"], "sentence": "她有好多的洋娃娃。", "image": "images/chars/Toy/something.png" },
-			{ "chinese": "泥", "english": "Doh", "pinyin": "Ní", "phrase": ["橡皮泥", "泥土"], "sentence": "用橡皮泥捏小玩意。", "image": "images/chars/Toy/something.png" },
-			{ "chinese": "牌", "english": "Card", "pinyin": "Pái", "phrase": ["扑克牌", "纸牌"], "sentence": "我和弟弟玩扑克牌。", "image": "images/chars/Toy/something.png" },
-			{ "chinese": "木", "english": "Block", "pinyin": "Mù", "phrase": ["积木", "木头", "草木皆兵"], "sentence": "她从小就喜欢搭积木。", "image": "images/chars/Toy/something.png" },
-			{ "chinese": "乐", "english": "Happy", "pinyin": "Lè", "phrase": ["乐高", "快乐", "安居乐业"], "sentence": "乐高是一种很好玩的玩具。", "image": "images/chars/Toy/something.png" }
+			{ "chinese": "娃", "english": "Doll", "pinyin": "Wá", "phrase": ["洋娃娃", "小娃娃"], "sentence": "她有好多的洋娃娃。", "image": "images/chars/Toy/Nora.jepg" },
+			{ "chinese": "泥", "english": "Doh", "pinyin": "Ní", "phrase": ["橡皮泥", "泥土"], "sentence": "用橡皮泥捏小玩意。", "image": "images/chars/Toy/playdoh.jpg" },
+			{ "chinese": "牌", "english": "Card", "pinyin": "Pái", "phrase": ["扑克牌", "纸牌"], "sentence": "我和弟弟玩扑克牌。", "image": "images/chars/Toy/card.jpg" },
+			{ "chinese": "木", "english": "Block", "pinyin": "Mù", "phrase": ["积木", "木头", "草木皆兵"], "sentence": "她从小就喜欢搭积木。", "image": "images/chars/Toy/block.jpg" },
+			{ "chinese": "乐", "english": "Happy", "pinyin": "Lè", "phrase": ["乐高", "快乐", "安居乐业"], "sentence": "乐高是一种很好玩的玩具。", "image": "images/chars/Toy/lego.jpg" }
 		]
 	},
 	{

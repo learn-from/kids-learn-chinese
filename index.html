@@ -14,63 +14,43 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.5/dist/hanzi-writer.min.js"></script>
 
-	<link href='css/klc-style.css' rel='stylesheet' />
+	<link href='css/contents.css' rel='stylesheet' />
 	<link href='css/sidebar.css' rel='stylesheet' />
-	<!-- <link href='css/menu.css' rel='stylesheet' /> -->
+	<link href='css/menu.css' rel='stylesheet' />
+	<link href='css/print.css' rel='stylesheet' />
+
 	<script src="scripts/all-words.js"></script>
 	<script src="scripts/content.js"></script>
 	<script src="scripts/sidebar.js"></script>
-
-	<script>
-		function showCategories() {
-			let category = document.getElementById('category-row');
-			if (category.style.display == 'block')
-				category.style.display = 'none';
-			else
-				category.style.display = 'block';
-		}
-		function showUsage() {
-			let usage = document.getElementById('usage-row');
-			if (usage.style.display == 'block')
-				usage.style.display = 'none';
-			else
-				usage.style.display = 'block';
-		}
-		function showPrint() {
-			let print = document.getElementById('print-row');
-			if (print.style.display == 'block')
-				print.style.display = 'none';
-			else
-				print.style.display = 'block';
-		}
-	</script>
+	<script src="scripts/menu.js"></script>
+	<script src="scripts/print.js"></script>
 </head>
 
 <body>
-	<header>
+	<header id="header">
 		<img class="binner" src="images/site/banner.jpg" />
-		<nav class="nav justify-content-start" style='font-size: 14px; width: 90%; margin-top:-32px; margin-left:12%'>
-			<a class="nav-link link" href="#" onclick="showCategories()">🗃️ Categories</a>
-			<a class="nav-link link" href="#" onclick="showPrint()">🖨️ Print Cards</a>
-			<a class="nav-link link" href="#" onclick="showUsage()">🙋‍♂️ Usage</a>
+		<nav class="nav justify-content-start menu-bar">
+			<a id='category-btn' class="nav-link link menu-btn" href="#">🗃️ Categories</a>
+			<a id='print-btn' class="nav-link link menu-btn" href="#"
+				title="Print 4x6 cards of the current category to a printer or a PDF file">🖨️ Cards</a>
+			<a id='usage-btn' class="nav-link link menu-btn" href="#">🙋‍♂️ Usage</a>
 		</nav>
 	</header>
 
-	<div class='container' style="position: relative;">
+	<div class='container container-position'>
+
+		<!-- The next three rows are for menu selections (categories, print cards, usage)-->
 		<div id='category-row' class="category"></div>
-		<div id='print-row' class="print">
-			<p>Print 4x6 cards</p>
+		<!-- <div id='print-row' class="print">
+			<p onclick="pagesToPDF(false);">Print 4x6 cards of the current category to a printer or a PDF file</p>
 			<ul>
-				<li>print current category</li>
-				<li>print all cards</li>
+				<li onclick="pagesToPDF(false);">Current category</li>
+				<li onclick="pagesToPDF(true);">All cards (it takes a while)</li>
 			</ul>
-			<p>Print A4 cards</p>
-			<ul>
-				<li>print current category</li>
-				<li>print all cards</li>
-			</ul>
-		</div>
+		</div> -->
 		<ul id='usage-row' class="usage">
+			<li>🗃️ categories - select a category</li>
+			<li>🖨️ cards - print cards to PDF</li>
 			<li>🖱️ character - redraw</li>
 			<li>🖱️ picture - show/hide</li>
 			<li>🖱️ word(s) - talk to App</li>
@@ -79,7 +59,8 @@
 			<li>🔊 - speak English</li>
 		</ul>
 
-		<div class="contents" style="position: absolute;z-index: 1;">
+		<!-- The main contents section -->
+		<div class="contents content-position">
 			<div class="sidebar">
 				<div id='word-search' class="search-word">
 					<input type="text" id="search-word" name="word" onkeypress="return enterKeyPressed(event)">
@@ -94,7 +75,7 @@
 
 			<article>
 				<!-- The word pannel (chinese, english, picture, and symbols)-->
-				<div id='character-row' class='row' style="min-height:350px">
+				<div id='character-row' class='row row-height'>
 					<!-- The left card that is for the Chinese character and English word -->
 					<div class='col-sm-6'>
 						<div class="card border-0">
@@ -200,9 +181,40 @@
 			</article>
 		</div>
 	</div>
+	<!-- The book cover for each book -->
+	<div id="book-cover" class="book-cover mx-auto">
+		<!-- header (banner image) -->
+		<div class="cover-header">
+			<img src="images/site/banner.jpg">
+			<div id='page-name' class="overlay-text">
+				<span id='cname' class='header-chinese'>组名</span>
+				<span id='ename' class='header-english'> (Name)</span>
+			</div>
+		</div>
+		<div id='cover-body' class='row mt-4 p-3'>
+			<!-- two columns (50%, 50%)
+			right column: words to the kids.
+			left column: image of the grand parents and grand kids -->
+			<div class='col-sm-6 cover-chinese'>
+				<p>
+					亲爱的胡清，胡文思：
+				</p>
+				<p>
+					爷爷奶奶专门给你们编写了一套学中文的小册子《字儿》，希望你们能喜欢。这套小册子里有两百多个最常用的中国字，还有很多用这些字组成的词和句子。如果你们能用这套小册子很愉快地学到一些最基础的中文，那就是让爷爷奶奶和爸爸妈妈最高兴的事了。
+				</p>
+				<p>
+					爱你们的爷爷、奶奶
+				</p>
+			</div>
+			<div class='col-sm-5'>
+				<img id="cover-picture" class="cover-picture" src="images/site/grandkids.jpg" />
+			</div>
+		</div>
+	</div>
 
-	<!-- <footer id='category-row' class="category">
-	</footer> -->
+	<div class='page-footer'>
+		<p id="page-footer"></p>
+	</div>
 
 	<script>
 		updatePage('1-1');

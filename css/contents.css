@@ -1,12 +1,20 @@
-
 * {
 	box-sizing: border-box;
 }
 
 body {
-	width:960px;
-	margin:0 auto;
-	min-height:700px;
+	width: 960px;
+	margin: 0 auto;
+	min-height: 700px;
+}
+
+.container-position {
+	position: relative;
+}
+
+.content-position {
+	position: absolute;
+	z-index: 1;
 }
 
 /* Style the header */
@@ -37,27 +45,7 @@ section::after {
 	clear: both;
 }
 
-/* Style the footer */
-footer {
-	position: fixed;
-	bottom: 10px;
-	width: 1000px;
-	line-height: 1.0;
-	margin: 0 auto;
-	padding: 6px 0px 6px 4px;
-	background-color: antiquewhite;
-}
-
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
-	nav,
-	article {
-		width: 100%;
-		height: auto;
-	}
-}
-
-/** the original styles */
+/** the contents styles */
 .chinese {
 	font-family: KaiTi;
 	font-size: 20px;
@@ -148,6 +136,10 @@ footer {
 	justify-content: center;
 }
 
+.row-height {
+	min-height: 360px;
+}
+
 .high-item {
 	min-height: 180px;
 	cursor: pointer;
@@ -156,51 +148,4 @@ footer {
 .speech-check {
 	border: 2px solid lightgray;
 	border-radius: 15px;
-}
-
-.category {
-	position: absolute;
-	z-index: 2;
-	display: none;
-	width: 90%;
-	margin-top: -16px;
-	margin-left: -5px;
-	padding: 4px;
-	text-align: left;
-	font-size: 14px;
-	background-color: antiquewhite;
-}
-
-.print {
-	position: absolute;
-	z-index: 2;
-	display: none;
-	width: 240px;
-	margin-top: -16px;
-	margin-left: 240px;
-	padding: 4px;
-	text-align: left;
-	font-size: 14px;
-	background-color: antiquewhite;
-}
-/* 
-.category {
-	position: fixed;
-	bottom: 10px;
-	width: 1000px;
-	margin-left: -60px;
-	padding: 6px 0px 6px 4px;
-	background-color: antiquewhite;
-} */
-
-.clickable {
-	font-family: SimSun;
-	color: rgb(77, 77, 77);
-}
-
-.clickable:hover {
-	color: brown;
-	text-decoration: underline;
-	font-weight: bold;
-	cursor: pointer;
 }

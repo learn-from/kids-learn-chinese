@@ -249,45 +249,6 @@ function findWord(chinese, english) {
 }
 
 /**
- * Builds a category list from the allWords object as a clickable category selector
- */
-function buildCategories() {
-	const intervalId = setInterval(() => {
-		if (allWords.length > 0) {
-			clearInterval(intervalId);
-			let word = null;
-			let category = null;
-			console.log('Start building categories');
-
-			// build HTML elements for the clickable categories
-			let id, cname, row, col;
-			let colIdx = 0;
-			let numCol = 4;
-			let div = document.getElementById('category-row');
-			div.innerHTML = '';
-			for (let i = 0; i < allWords.length; i += numCol) {
-				row = document.createElement('div');
-				row.className = 'row';
-				for (let j = 0; (j < numCol && colIdx < (allWords.length - 1)); j++) {
-					colIdx = i + j;
-					category = allWords[colIdx];
-					id = category.category;
-					cname = category.cname;
-					col = document.createElement('div');
-					col.id = id;
-					col.className = 'col-sm-3 clickable';
-					col.textContent = cname + ' - ' + id;
-					// col.textContent = id;
-					col.onclick = function () { setCategory(this.id); };
-					row.appendChild(col);
-				}
-				div.appendChild(row);
-			}
-		}
-	}, 100);
-}
-
-/**
  * Sets the current catagory, rebuild the word entry and side bar
  */
 function setCategory(category) {
