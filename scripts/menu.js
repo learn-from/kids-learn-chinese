@@ -1,50 +1,45 @@
 
 document.addEventListener('DOMContentLoaded', initMenuRows);
-let categoryRow, usageRow //; printRow;
 
+/**
+ * Adds listeners to the menu bar buttons
+ */
 function initMenuRows() {
-	categoryRow = document.getElementById('category-row');
-	// printRow = document.getElementById('print-row');
-	usageRow = document.getElementById('usage-row');
-
-	addEvents(categoryRow);
-	// addEvents(printRow);
-	addEvents(usageRow);
 
 	let categoryBtn = document.getElementById('category-btn');
-	let printBtn = document.getElementById('print-btn');
 	let usageBtn = document.getElementById('usage-btn');
-	categoryBtn.addEventListener("click", function () { showMenuRow('category-row'); });
-	printBtn.addEventListener("click", function () { pagesToPDF(false); });
-	usageBtn.addEventListener("click", function () { showMenuRow('usage-row'); });
-	// categoryBtn.addEventListener("mouseleave", function () { showMenuRow('category-row'); });
-	// printBtn.addEventListener("mouseleave", function () { showMenuRow('print-row'); });
-	// usageBtn.addEventListener("mouseleave", function () { showMenuRow('usage-row'); });
-}
+	let printBtn = document.getElementById('print-btn');
+	categoryBtn.addEventListener("mouseover", function () {
+		showMenuRow('category-row');
+	});
+	usageBtn.addEventListener("mouseover", function () {
+		showMenuRow('usage-row');
+	});
+	printBtn.addEventListener("click", function () {
+		pagesToPDF(false);
+	});
 
-function addEvents(row) {
-	row.addEventListener("mouseleave", function () {
+	// add a hideMenuRows event to the document to hide menu when click on anywhere of the page.
+	document.addEventListener("click", function () {
 		hideMenuRows();
 	});
-	row.addEventListener("click", function () {
-		hideMenuRows();
-	});
 }
 
+/**
+ * Hides all meun rows and shows the specified one.
+ * @param {*} id 
+ */
 function showMenuRow(id) {
-	let row = document.getElementById(id);
-	let display = row.style.display;
 	hideMenuRows();
-	if (display == 'block')
-		row.style.display = 'none';
-	else
-		row.style.display = 'block';
+	document.getElementById(id).style.display = 'block';
 }
 
+/**
+ * Hides all menu rows.
+ */
 function hideMenuRows() {
-	categoryRow.style.display = 'none';
-	// printRow.style.display = 'none';
-	usageRow.style.display = 'none';
+	document.getElementById('category-row').style.display = 'none';
+	document.getElementById('usage-row').style.display = 'none';
 }
 
 /**
@@ -54,7 +49,6 @@ function buildCategories() {
 	const intervalId = setInterval(() => {
 		if (allWords.length > 0) {
 			clearInterval(intervalId);
-			let word = null;
 			let category = null;
 			console.log('Start building categories');
 
@@ -76,7 +70,6 @@ function buildCategories() {
 					col.id = id;
 					col.className = 'col-sm-3 clickable';
 					col.textContent = cname + ' - ' + id;
-					// col.textContent = id;
 					col.onclick = function () { setCategory(this.id); };
 					row.appendChild(col);
 				}

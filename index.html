@@ -27,6 +27,7 @@
 </head>
 
 <body>
+	<!-- The header with a binner and a herizontal menu bar -->
 	<header id="header">
 		<img class="binner" src="images/site/banner.jpg" />
 		<nav class="nav justify-content-start menu-bar">
@@ -39,15 +40,9 @@
 
 	<div class='container container-position'>
 
-		<!-- The next three rows are for menu selections (categories, print cards, usage)-->
+		<!-- The next two rows are for menu selections (categories and usage)
+		 The menu area overlaps the main content area -->
 		<div id='category-row' class="category"></div>
-		<!-- <div id='print-row' class="print">
-			<p onclick="pagesToPDF(false);">Print 4x6 cards of the current category to a printer or a PDF file</p>
-			<ul>
-				<li onclick="pagesToPDF(false);">Current category</li>
-				<li onclick="pagesToPDF(true);">All cards (it takes a while)</li>
-			</ul>
-		</div> -->
 		<ul id='usage-row' class="usage">
 			<li>🗃️ categories - select a category</li>
 			<li>🖨️ cards - print cards to PDF</li>
@@ -61,7 +56,9 @@
 
 		<!-- The main contents section -->
 		<div class="contents content-position">
-			<div class="sidebar">
+
+			<!-- the navigation sidebar -->
+			<div id='sidebar' class="sidebar">
 				<div id='word-search' class="search-word">
 					<input type="text" id="search-word" name="word" onkeypress="return enterKeyPressed(event)">
 					<span class='search' onclick="searchWord()">🔍</span>
@@ -73,10 +70,11 @@
 				</div>
 			</div>
 
-			<article>
-				<!-- The word pannel (chinese, english, picture, and symbols)-->
+			<!-- the content area -->
+			<article id="article">
+				<!-- The character row with two side by side cards -->
 				<div id='character-row' class='row row-height'>
-					<!-- The left card that is for the Chinese character and English word -->
+					<!-- The left card for the Chinese character and English word -->
 					<div class='col-sm-6'>
 						<div class="card border-0">
 							<div class="card-body">
@@ -96,7 +94,7 @@
 						</div>
 					</div>
 
-					<!-- The right card that is a picture and the source of the picture is assigned dynamicallly -->
+					<!-- The right card for a picture and the source of the picture is assigned dynamicallly -->
 					<div class='col-sm-6'>
 						<div id='picture-card' class="card-body">
 							<div class='row'>
@@ -110,7 +108,7 @@
 					</div>
 				</div>
 
-				<!-- The bottom item that is for pinyin, phrases and sentence -->
+				<!-- The word card for pinyin, phrases and sentence -->
 				<div id='word-card'>
 					<div class='row'>
 						<div class='col-sm-3'>
@@ -153,7 +151,7 @@
 					</div>
 				</div>
 
-				<!-- This card is for getting voice and check pronunciation -->
+				<!-- This element is for getting voice and check pronunciation -->
 				<div id='speech-check' class="speech-check no-show">
 					<div class='row p-2'>
 						<div class='col-sm-4' onclick="clearSpeechSection()">
@@ -171,17 +169,23 @@
 					</div>
 				</div>
 
-				<!-- This is for error messages -->
+				<!-- This is for the error messages -->
 				<div id='error-message' class="error-message" onclick="showError('')"
 					title="Click to hide the error message">
 				</div>
 
-				<!-- For generating some image dynamically -->
+				<!-- This is for generating some image dynamically -->
 				<canvas id="textCanvas" class="card-body no-show"></canvas>
+
+				<!-- This is the printing page footer -->
+				<div class='page-footer'>
+					<p id="page-footer"></p>
+				</div>
 			</article>
 		</div>
 	</div>
-	<!-- The book cover for each book -->
+
+	<!-- The book cover for printing -->
 	<div id="book-cover" class="book-cover mx-auto">
 		<!-- header (banner image) -->
 		<div class="cover-header">
@@ -212,16 +216,12 @@
 		</div>
 	</div>
 
-	<div class='page-footer'>
-		<p id="page-footer"></p>
-	</div>
-
+	<!-- Scripts to populate the page contents -->
 	<script>
 		updatePage('1-1');
 		createSidebar();
 		buildCategories();
 	</script>
-
 </body>
 
 </html>

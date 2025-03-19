@@ -42,6 +42,12 @@ div.cover-chinese {
 	text-indent: 44px;
 }
 
+div.card-margin {
+	width: 75%;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
 .cover-english {
 	font-family: 'Times New Roman', Times, serif;
 	font-size: 20px;
@@ -63,9 +69,8 @@ img.cover-picture {
 		break-before: page;
 	}
 
-	/** 2 characters a page. The A4 paper is 297 mm in height */
+	/** A character item */
 	.char-item {
-		max-height: 148mm;
 		overflow: hidden;
 	}
 
@@ -77,8 +82,8 @@ img.cover-picture {
 
 	.page-footer {
 		position: fixed;
-		bottom: 6px;
-		right: 6px;
+		bottom: 2px;
+		right: 40px;
 		font-family: SimSun;
 		font-size: 12px;
 	}

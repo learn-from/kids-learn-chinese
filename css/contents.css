@@ -17,14 +17,9 @@ body {
 	z-index: 1;
 }
 
-/* Style the header */
 header {
-	/* background-color: #666; */
 	width: 100%;
 	padding: 10px;
-	/* text-align: center;
-	font-size: 35px;
-	color: white; */
 }
 
 img.binner {
@@ -86,15 +81,6 @@ section::after {
 	cursor: pointer;
 }
 
-.error-message {
-	margin-top: 20px;
-	font-family: 'Times New Roman', Times, serif;
-	font-size: 16px;
-	color: brown;
-	display: none;
-	cursor: pointer;
-}
-
 .symbol {
 	font-family: 'Times New Roman', Times, serif;
 	font-size: 18x;
@@ -124,6 +110,14 @@ section::after {
 	margin-left: 20%;
 	width: 50%;
 	cursor: pointer;
+}
+
+.error-message {
+	margin-top: 20px;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 16px;
+	color: brown;
+	display: none;
 }
 
 .no-show {

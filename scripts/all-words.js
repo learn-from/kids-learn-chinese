@@ -1,6 +1,5 @@
 /**
- * Add this JSON array is used to store all the words and it is read by an init function to load them up for the App.
- * This is populated in a page file: all-words.
+ * This JSON array is used to store all the words for the App.
  */
 let allWords =
 [

@@ -7,11 +7,11 @@ function createSidebar() {
 			clearInterval(intervalId);
 			buildWordList();
 		}
-	}, 200);
+	}, 100);
 }
 
 /**
- * Builds a word list for the current category
+ * Builds a word list of the current category
  */
 function buildWordList() {
 	let word = null;
@@ -30,7 +30,7 @@ function buildWordList() {
 	// create a P element as the category title
 	p = document.createElement('p');
 	p.className = 'word-category';
-	p.textContent = id + ' (' + category.words.length + ') 🖨️'; // 🖶 doesn't work '🖨️';
+	p.textContent = id + ' (' + category.words.length + ')';
 	p.onclick = function () { pagesToPDF(); };
 
 	// create a UL element and a list of LI elements for the word list
@@ -84,6 +84,9 @@ function searchWord() {
 	}
 }
 
+/**
+ * Uses RETURN key instead of button for searching
+ */
 function enterKeyPressed(event) {
 	if (event.keyCode == 13) {
 		searchWord();
