@@ -15,11 +15,14 @@ function initMenuRows() {
 	usageBtn.addEventListener("mouseover", function () {
 		showMenuRow('usage-row');
 	});
+	usageBtn.addEventListener("mouseleave", function () {
+		hideMenuRows('usage-row');
+	});
 	printBtn.addEventListener("click", function () {
 		pagesToPDF(false);
 	});
 
-	// add a hideMenuRows event to the document to hide menu when click on anywhere of the page.
+	// add a hideMenuRows event to the document to hide any open menu when click on anywhere of the page.
 	document.addEventListener("click", function () {
 		hideMenuRows();
 	});

@@ -18,7 +18,7 @@
 	z-index: 2;
 	display: none;
 	width: 90%;
-	margin-top: -18px;
+	margin-top: 2px;
 	margin-left: -5px;
 	padding: 4px;
 	text-align: left;
@@ -26,18 +26,18 @@
 	background-color: antiquewhite;
 }
 
-.print {
+/* .print {
 	position: absolute;
 	z-index: 2;
 	display: none;
 	width: 240px;
-	margin-top: -18px;
+	margin-top: 2px;
 	margin-left: 240px;
 	padding: 4px;
 	text-align: left;
 	font-size: 14px;
 	background-color: antiquewhite;
-}
+} */
 
 .usage {
 	position: absolute;
@@ -45,7 +45,7 @@
 	list-style-type: none;
 	display: none;
 	width: 220px;
-	margin-top: -18px;
+	margin-top: 2px;
 	margin-left: 360px;
 	padding: 4px;
 	text-align: left;

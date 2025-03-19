@@ -10,9 +10,10 @@ body {
 
 .container-position {
 	position: relative;
+	margin-top: -20px;
 }
 
-.content-position {
+.contents {
 	position: absolute;
 	z-index: 1;
 }
