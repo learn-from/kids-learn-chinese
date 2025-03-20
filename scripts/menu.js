@@ -22,9 +22,9 @@ function initMenuRows() {
 		pagesToPDF(false);
 	});
 
-	// add a hideMenuRows event to the document to hide any open menu when click on anywhere of the page.
+	// add a hideMenuRows event to the document to hide the category menu when click on anywhere of the page.
 	document.addEventListener("click", function () {
-		hideMenuRows();
+		document.getElementById('category-row').style.display = 'none';
 	});
 }
 

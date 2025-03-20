@@ -52,7 +52,7 @@ function buildWordEntry(word) {
 	english.textContent = word.english.trim();
 	buildPicture(word);
 	buildWordCard('word-card', word);
-	showError("");
+	clearSpeechSection();
 }
 
 /**
