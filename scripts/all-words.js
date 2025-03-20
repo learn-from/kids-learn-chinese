@@ -241,10 +241,10 @@ let allWords =
 		"category": "Bird",
 		"cname": "鸟类",
 		"words": [
-			{ "chinese": "鸟", "english": "Bird", "pinyin": "Niǎo", "phrase": ["小鸟", "鸟叫", "笨鸟先飞"], "sentence": "树上落着一只小鸟。", "image": "images/chars/Bird/bird.jpg" },
+			{ "chinese": "鸟", "english": "Bird", "pinyin": "Niǎo", "phrase": ["小鸟", "鸟叫", "笨鸟先飞"], "sentence": "树上落着一只小鸟。", "image": "images/chars/Bird/birds.jpg" },
 			{ "chinese": "鸡", "english": "Chicken", "pinyin": "Jī", "phrase": ["公鸡", "鸡蛋", "鸡犬升天"], "sentence": "公鸡早上会打鸣。", "image": "images/chars/Bird/roster.jpg" },
 			{ "chinese": "鸭", "english": "Duck", "pinyin": "Yā", "phrase": ["鸭子", "鸭蛋", "赶鸭子上架"], "sentence": "鸡、鸭、鹅都是鸟，但都不会飞了。", "image": "images/chars/Bird/duck.jpg" },
-			{ "chinese": "鹅", "english": "Goose", "pinyin": "É", "phrase": ["鹅蛋", "烤鹅", "鹅毛大雪"], "sentence": "鸡、鸭、鹅都是鸟，但都不会飞了。", "image": "images/chars/Bird/goose.jpg" },
+			{ "chinese": "鹅", "english": "Goose", "pinyin": "É", "phrase": ["鹅蛋", "烤鹅", "鹅毛大雪"], "sentence": "鸡、鸭、鹅都是鸟，但都不会飞了。", "image": "images/chars/Bird/gooses.jpg" },
 			{ "chinese": "鹰", "english": "Eagle", "pinyin": "Yīng", "phrase": ["山鹰", "老鹰", "鹰击长空"], "sentence": "鹰是一种大鸟，飞得很高。", "image": "images/chars/Bird/eagle.jpg" },
 			{ "chinese": "燕", "english": "Swallow", "pinyin": "Yàn", "phrase": ["燕子", "雨燕", "莺歌燕舞"], "sentence": "燕子是一种小鸟，飞得很远。", "image": "images/chars/Bird/swallow.jpg" }
 		]
