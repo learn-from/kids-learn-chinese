@@ -34,13 +34,6 @@ article {
 	width: 80%;
 }
 
-/* Clear floats after the columns */
-section::after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
 /** the contents styles */
 .chinese {
 	font-family: KaiTi;
@@ -87,12 +80,6 @@ section::after {
 	font-size: 18x;
 	margin-left: 12px;
 	color: darkgreen;
-	cursor: pointer;
-}
-
-.big-symbol {
-	font-family: 'Times New Roman', Times, serif;
-	font-size: 36px;
 	cursor: pointer;
 }
 

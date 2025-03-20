@@ -26,19 +26,6 @@
 	background-color: antiquewhite;
 }
 
-/* .print {
-	position: absolute;
-	z-index: 2;
-	display: none;
-	width: 240px;
-	margin-top: 2px;
-	margin-left: 240px;
-	padding: 4px;
-	text-align: left;
-	font-size: 14px;
-	background-color: antiquewhite;
-} */
-
 .usage {
 	position: absolute;
 	z-index: 2;
