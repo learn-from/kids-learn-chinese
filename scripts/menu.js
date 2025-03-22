@@ -14,7 +14,8 @@ async function isMobile() {
 	let iPad = await isIpad();
 
 	// return (/iphone|ipad|ipod/.test(userAgent) || /android/.test(userAgent) || isTouch && width <= 768 || isTouch && width > 768);
-	return (mobile && !iPad);
+	// return (mobile && !iPad);
+	return false;
 
 }
 
