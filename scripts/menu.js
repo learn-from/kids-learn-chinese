@@ -13,8 +13,8 @@ function isMobile() {
 	// let mobile = (/iphone/.test(userAgent) || /android/.test(userAgent));
 	// let isMobile = (/iphone|ipod/.test(userAgent) || /android/.test(userAgent) || isTouch && width <= 768 || isTouch && width > 768);
 
-	console.log("userAgent", userAgent, "isTouch", isTouch, "width", width);
-	// console.log("userAgentData", ipad, "iphone|ipod", (/iphone|ipod/.test(userAgent)), "android", /android/.test(userAgent));
+	// console.log("userAgent", userAgent, "isTouch", isTouch, "width", width);
+	console.log("userAgent", userAgent, "iphone|ipod", (/iphone|ipod/.test(userAgent)), "android", /android/.test(userAgent));
 
 	return (/iphone|ipod/.test(userAgent) || /android/.test(userAgent));
 	// return (/iphone|ipod/.test(userAgent) || /android/.test(userAgent) || isTouch && width <= 768 || isTouch && width > 768);
