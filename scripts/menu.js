@@ -4,14 +4,14 @@ document.addEventListener('DOMContentLoaded', initMenuRows);
 /**
  * Checks the device
  */
-async function isMobile() {
+function isMobile() {
 	const userAgent = navigator.userAgent.toLowerCase();
 	const isTouch = 'ontouchstart' in window;
 	const width = window.innerWidth;
 
 
-	let mobile = (/iphone/.test(userAgent) || /android/.test(userAgent));
-	let iPad = await isIpad();
+	// let mobile = (/iphone/.test(userAgent) || /android/.test(userAgent));
+	// let iPad = await isIpad();
 
 	// return (/iphone|ipad|ipod/.test(userAgent) || /android/.test(userAgent) || isTouch && width <= 768 || isTouch && width > 768);
 	// return (mobile && !iPad);
