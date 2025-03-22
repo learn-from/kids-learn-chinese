@@ -6,27 +6,38 @@ document.addEventListener('DOMContentLoaded', initMenuRows);
  */
 function isMobile() {
 	const userAgent = navigator.userAgent.toLowerCase();
-	const isTouch = 'ontouchstart' in window;
-	const width = window.innerWidth;
+	// const isTouch = 'ontouchstart' in window;
+	// const width = window.innerWidth;
 
-
+	// let ipad = isIpad();
 	// let mobile = (/iphone/.test(userAgent) || /android/.test(userAgent));
-	// let iPad = await isIpad();
+	// let isMobile = (/iphone|ipod/.test(userAgent) || /android/.test(userAgent) || isTouch && width <= 768 || isTouch && width > 768);
 
-	// return (/iphone|ipad|ipod/.test(userAgent) || /android/.test(userAgent) || isTouch && width <= 768 || isTouch && width > 768);
+	console.log("userAgent", userAgent, "isTouch", isTouch, "width", width);
+	// console.log("userAgentData", ipad, "iphone|ipod", (/iphone|ipod/.test(userAgent)), "android", /android/.test(userAgent));
+
+	return (/iphone|ipod/.test(userAgent) || /android/.test(userAgent));
+	// return (/iphone|ipod/.test(userAgent) || /android/.test(userAgent) || isTouch && width <= 768 || isTouch && width > 768);
 	// return (mobile && !iPad);
-	return false;
-
+	// return false;
 }
 
-async function isIpad() {
-    if (navigator.userAgentData) {
-        const data = await navigator.userAgentData.getHighEntropyValues(['platform', 'model']);
-        if (data.platform === 'iOS' && data.model === 'iPad') {
-            console.log("This is an iPad (userAgentData)");
-            return true;
-        }
-    }
+function isIpad() {
+	if (navigator.userAgentData) {
+		navigator.userAgentData.getHighEntropyValues(['platform', 'model']).then((data) => {
+			if (data.platform === 'iOS' && data.model === 'iPad') {
+				console.log("This is an iPad (userAgentData)");
+				return true;
+			}
+		});
+	}
+    // if (navigator.userAgentData) {
+    //     const data = await navigator.userAgentData.getHighEntropyValues(['platform', 'model']);
+    //     if (data.platform === 'iOS' && data.model === 'iPad') {
+    //         console.log("This is an iPad (userAgentData)");
+    //         return true;
+    //     }
+    // }
 
     // Fallback for browsers without userAgentData
     const ua = navigator.userAgent;
