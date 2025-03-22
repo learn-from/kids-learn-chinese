@@ -4,12 +4,36 @@ document.addEventListener('DOMContentLoaded', initMenuRows);
 /**
  * Checks the device
  */
-function isMobile() {
+async function isMobile() {
 	const userAgent = navigator.userAgent.toLowerCase();
 	const isTouch = 'ontouchstart' in window;
 	const width = window.innerWidth;
 
-	return (/iphone|ipad|ipod/.test(userAgent) || /android/.test(userAgent) || isTouch && width <= 768 || isTouch && width > 768);
+
+	let mobile = (/iphone/.test(userAgent) || /android/.test(userAgent));
+	let iPad = await isIpad();
+
+	// return (/iphone|ipad|ipod/.test(userAgent) || /android/.test(userAgent) || isTouch && width <= 768 || isTouch && width > 768);
+	return (mobile && !iPad);
+
+}
+
+async function isIpad() {
+    if (navigator.userAgentData) {
+        const data = await navigator.userAgentData.getHighEntropyValues(['platform', 'model']);
+        if (data.platform === 'iOS' && data.model === 'iPad') {
+            console.log("This is an iPad (userAgentData)");
+            return true;
+        }
+    }
+
+    // Fallback for browsers without userAgentData
+    const ua = navigator.userAgent;
+    if (ua.includes('iPad') || (ua.includes('Macintosh') && 'ontouchend' in document)) {
+        console.log("This is an iPad (userAgent fallback)");
+		return true;
+    }
+    return false;
 }
 
 /**
@@ -122,7 +146,7 @@ function buildMobildCategories() {
 	for (n = 0; n < cols; n++) {
 		ulid = 'category-list' + (n + 1);
 		// ul = document.getElementById(ulid);
-		ul = document.querySelector('ul[data-list=' + ulid +']');
+		ul = document.querySelector('ul[data-list=' + ulid + ']');
 		ul.innerHTML = '';
 		ul.id = id;
 		for (let i = start; i < colLength; i++) {

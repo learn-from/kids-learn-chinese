@@ -54,7 +54,8 @@ p.search-error {
 	font-size: 12px;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+/* @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) { */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 	div.sidebar {
 		width: 100%;
 	}
