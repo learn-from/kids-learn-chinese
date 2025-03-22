@@ -23,31 +23,40 @@ function buildWordList() {
 
 	// build HTML elements for categories and their words
 	let id, p, ul, li;
-	let div = document.getElementById('category-words');
-	div.innerHTML = '';
+	// let div = document.getElementById('category-words');
+	// div.innerHTML = '';
 	id = category.category;
 
 	// create a P element as the category title
-	p = document.createElement('p');
-	p.className = 'word-category';
+	p = document.getElementsByClassName('word-category');
 	p.textContent = id + ' (' + category.words.length + ')';
-	p.onclick = function () { pagesToPDF(); };
+	// p.onclick = function () { pagesToPDF(); };
+	// div.appendChild(p);
 
 	// create a UL element and a list of LI elements for the word list
-	ul = document.createElement('ul');
-	ul.id = id;
-	ul.className = 'word';
-	for (let j = 0; j < category.words.length; j++) {
-		word = category.words[j];
-		li = document.createElement('li');
-		li.id = word.chinese + '-' + word.english;
-		li.textContent = word.chinese + ' - ' + word.english;
-		li.onclick = function () { updatePage(this.id); };
-		// console.log(li.innerHTML);
-		ul.appendChild(li);
+	let cols = (isMobile() ? 2 : 1);
+	let colLength = (isMobile() ? (category.words.length / cols) : category.words.length);
+	let start = 0;
+	let ulid = null;
+	for (n = 0; n < cols; n++) {
+		ulid = 'sidebar-list' + (n + 1);
+		ul = document.querySelector('ul[data-list=' + ulid + ']');
+		ul.innerHTML = '';
+		ul.id = id;
+		// ul.className = 'word';
+		for (let i = start; i < colLength; i++) {
+			word = category.words[(colLength * n) + i];
+			if (word) {
+				li = document.createElement('li');
+				li.id = word.chinese + '-' + word.english;
+				li.textContent = word.chinese + ' - ' + word.english;
+				li.onclick = function () { updatePage(this.id); };
+				// console.log(li.innerHTML);
+				ul.appendChild(li);
+			}
+		}
+		// div.appendChild(ul);
 	}
-	div.appendChild(p);
-	div.appendChild(ul);
 	return category.words[0].chinese;
 }
 

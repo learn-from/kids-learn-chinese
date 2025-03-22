@@ -1,9 +1,8 @@
-
 .menu-bar {
-	font-size: 14px; 
-	width: 90%; 
-	margin-top:-32px; 
-	margin-left:12%;
+	font-size: 14px;
+	width: 90%;
+	margin-top: -32px;
+	margin-left: 12%;
 }
 
 .menu-btn {
@@ -40,6 +39,7 @@
 	font-size: 14px;
 	background-color: antiquewhite;
 }
+
 .clickable {
 	font-family: SimSun;
 	color: rgb(77, 77, 77);
@@ -48,4 +48,18 @@
 .clickable:hover {
 	background-color: yellow;
 	cursor: pointer;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+	div.mobile-category ul {
+		list-style-type: none;
+		padding: 0;
+	}
+	
+	.mobile-category {
+		width: 100%;
+		margin-left: 4px;
+		font-family: SimSun;
+		font-size: 14px;
+	}
 }

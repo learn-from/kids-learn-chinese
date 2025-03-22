@@ -175,22 +175,9 @@ async function draw(word) {
 	return new Promise(resolve => {
 		setTimeout(() => {
 			let character = document.getElementById('character');
-			let charSize = 32;
 			character.textContent = '';
 			character.value = word.chinese.trim();
-			switch (character.value.length) {
-				case 1:
-					charSize = 250;
-					break;
-				case 2:
-					charSize = 130;
-					break;
-				case 3:
-					charSize = 85;
-					break;
-				default:
-					charSize = 32;
-			};
+			let charSize = getCharSize(character.value.length);
 
 			let chars = Array.from(character.value);
 			let writer;
@@ -211,6 +198,40 @@ async function draw(word) {
 			resolve();
 		}, 300);
 	});
+}
+
+function getCharSize(charLength) {
+	let charSize = 32;
+	if (isMobile()) {
+		switch (charLength) {
+			case 1:
+				charSize = 360;
+				break;
+			case 2:
+				charSize = 180;
+				break;
+			case 3:
+				charSize = 120;
+				break;
+			default:
+				charSize = 32;
+		};
+	} else {
+		switch (charLength) {
+			case 1:
+				charSize = 250;
+				break;
+			case 2:
+				charSize = 130;
+				break;
+			case 3:
+				charSize = 85;
+				break;
+			default:
+				charSize = 32;
+		};
+	}
+	return charSize;
 }
 
 /**
@@ -579,20 +600,3 @@ function showError(message) {
 	error.textContent = message;
 }
 
-
-/**
- * Checks the device
- */
-function isMobile() {
-	const userAgent = navigator.userAgent.toLowerCase();
-	const isTouch = 'ontouchstart' in window;
-	const width = window.innerWidth;
-
-	return (/iphone|ipad|ipod/.test(userAgent) || /android/.test(userAgent) || isTouch && width <= 768 || isTouch && width > 768);
-}
-
-// Add event listeners for mouseup and keyup to detect text selection
-if (!isMobile()) {
-	document.addEventListener('mouseup', sayHighlighted);
-	document.addEventListener('keyup', sayHighlighted);
-}

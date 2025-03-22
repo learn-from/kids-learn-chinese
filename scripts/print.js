@@ -65,7 +65,7 @@ function setFontSizes() {
 	let sentence = document.getElementById('sentence');
 	
 	// import! the following settings on 'article' make the page fit the 6x4 printing page size
-	article.style.width = '84%'; 
+	article.style.width = '82%'; 
 	article.style.marginLeft = '4px';
 
 	// make those text larger for printing
