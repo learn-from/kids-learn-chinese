@@ -37,7 +37,7 @@ article {
 /** the contents styles */
 .chinese {
 	font-family: KaiTi;
-	font-size: 20px;
+	font-size: 24px;
 	color: darkgreen;
 	cursor: pointer;
 }
@@ -63,7 +63,7 @@ article {
 
 .phrase {
 	font-family: KaiTi;
-	font-size: 20px;
+	font-size: 24px;
 	color: darkgreen;
 	cursor: pointer;
 }
@@ -84,7 +84,7 @@ article {
 }
 
 .recording {
-	height: 70px;
+	height: 80px;
 	cursor: pointer;
 }
 

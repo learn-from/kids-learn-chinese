@@ -409,12 +409,15 @@ function checkPinyin(pinyin) {
 	// TODO improve the comparison method
 	// check tones
 	let img = null;
+	let greatImage = '';
 	let textPinyin = removePuntuciation(pinyin.textPinyin);
 	let inputTextPinyin = removePuntuciation(pinyin.inputTextPinyin);
 	img = document.getElementById('recording');
 	img.style.display = 'none';
 	if (textPinyin.localeCompare(inputTextPinyin, undefined, { sensitivity: 'accent' }) === 0) {
 		img = document.getElementById('great');
+		greatImage = getGreatImage();
+		img.src = greatImage;
 		img.style.display = 'block';
 	} else {
 		img = document.getElementById('try-again');
@@ -423,6 +426,14 @@ function checkPinyin(pinyin) {
 	document.getElementById('recognization').style.display = 'block'
 	document.getElementById('input-text').textContent = pinyin.inputText;
 	document.getElementById('input-pinyin').textContent = pinyin.inputTextPinyin;
+	document.getElementById('rec-error').textContent = '';
+}
+
+function getGreatImage() {
+	let min = Math.ceil(1);
+	let max = Math.floor(3);
+	let num = Math.floor(Math.random() * (max - min + 1) + min);
+	return 'images/site/talk-great' + num + '.png';
 }
 
 /**
@@ -488,7 +499,7 @@ async function recognizeSpeech(text) {
 		}, waitTime);
 	} catch (error) {
 		console.error("Error accessing microphone:", error);
-		showError("Error accessing microphone: " + error.errorText);
+		showRecError("Error accessing microphone: " + error.errorText);
 	}
 }
 
@@ -539,7 +550,7 @@ async function transcribeAudio(text, base64Audio) {
 			// Get raw response for debugging
 			let errorText = await response.text();
 			console.error("Speech-to-text error response:", errorText);
-			showError("Speech-to-text error response:" + errorText);
+			showRecError("Speech-to-text error response:" + errorText);
 			throw new Error(`HTTP error! Status: ${response.status}`);
 		}
 
@@ -552,11 +563,11 @@ async function transcribeAudio(text, base64Audio) {
 			getPinyin(text, inputText);
 		} else {
 			console.error("No speech detected!");
-			showError("No speech detected!");
+			showRecError("No speech detected!");
 		}
 	} catch (error) {
 		console.error("Error transcribing audio:", error);
-		showError("Speech-to-text error transcribing audio:" + error.errorText);
+		showRecError("Speech-to-text error transcribing audio:" + error.errorText);
 	}
 }
 
@@ -598,5 +609,15 @@ function showError(message) {
 		error.style.display = 'block';
 	}
 	error.textContent = message;
+}
+
+/**
+ * Displays a recognization error message
+ */
+function showRecError(message) {
+	document.getElementById('recognization').style.display = 'block';
+	document.getElementById('input-text').textContent = '';
+	document.getElementById('input-pinyin').textContent = '';
+	document.getElementById('rec-error').textContent = message;
 }
 
