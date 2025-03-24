@@ -118,7 +118,7 @@ let allWords =
 			{ "chinese": "米", "english": "Rice", "pinyin": "Mǐ", "phrase": ["米饭", "米粉", "无米之炊"], "sentence": "今天中午吃米饭。", "image": "images/chars/Food/rice.jpg" },
 			{ "chinese": "面", "english": "Flour", "pinyin": "Miàn", "phrase": ["面包", "面条", "面红耳赤"], "sentence": "刚刚烤好的面包，很好吃。", "image": "images/chars/Food/flour.jpg" },
 			{ "chinese": "糖", "english": "Sugar", "pinyin": "Táng", "phrase": ["白糖", "糖果", "糖衣炮弹"], "sentence": "别吃太多的糖，对牙齿不好。", "image": "images/chars/Food/suger.jpg" },
-			{ "chinese": "奶", "english": "Milk", "pinyin": "Nǎi", "phrase": ["牛奶", "豆奶", "奶声奶气"], "sentence": "你每天早上喝牛奶吗？", "image": "images/chars/Food/Milk.jpg" },
+			{ "chinese": "奶", "english": "Milk", "pinyin": "Nǎi", "phrase": ["牛奶", "豆奶", "奶声奶气"], "sentence": "你每天早上喝牛奶吗？", "image": "images/chars/Food/milk.jpg" },
 			{ "chinese": "菜", "english": "Vegetable", "pinyin": "Cài", "phrase": ["蔬菜", "做菜", "面有菜色"], "sentence": "要吃肉，也要吃蔬菜和水果。", "image": "images/chars/Food/vegitable.jpg" },
 			{ "chinese": "果", "english": "Fruit", "pinyin": "Guǒ", "phrase": ["水果", "果实", "前因后果"], "sentence": "桌子上摆的水果有苹果，香蕉和葡萄。", "image": "images/chars/Food/fruit.jpg" },
 			{ "chinese": "肉", "english": "Meat", "pinyin": "Ròu", "phrase": ["鸡肉", "牛肉", "心惊肉跳"], "sentence": "今天的晚饭有肉，也有菜。", "image": "images/chars/Food/meat.jpg" }
