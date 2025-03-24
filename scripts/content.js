@@ -416,7 +416,7 @@ function checkPinyin(pinyin) {
 	img.style.display = 'none';
 	if (textPinyin.localeCompare(inputTextPinyin, undefined, { sensitivity: 'accent' }) === 0) {
 		img = document.getElementById('great');
-		greatImage = getGreatImage();
+		greatImage = getRandomImage();
 		img.src = greatImage;
 		img.style.display = 'block';
 	} else {
@@ -429,11 +429,12 @@ function checkPinyin(pinyin) {
 	document.getElementById('rec-error').textContent = '';
 }
 
-function getGreatImage() {
-	let min = Math.ceil(1);
-	let max = Math.floor(3);
+function getRandomImage() {
+	const imageURLs = ['images/site/talk-yellow.jpg', 'images/site/talk-purple.jpg', 'images/site/talk-pink.jpg']
+	let min = Math.ceil(0);
+	let max = Math.floor(2);
 	let num = Math.floor(Math.random() * (max - min + 1) + min);
-	return 'images/site/talk-great' + num + '.png';
+	return imageURLs[num];
 }
 
 /**
