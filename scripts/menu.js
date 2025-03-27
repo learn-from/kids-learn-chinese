@@ -159,16 +159,20 @@ function enterKeyPressed(event) {
  * Shows the siderar
  */
 function toggleMenu() {
-	let sidebar = document.getElementById("sidebar");
-	let isOn = sidebar.style.display == 'block';
-	sidebar.style.display = (isOn ? 'none' : 'block');
+	if (isMobile()) {
+		let sidebar = document.getElementById("sidebar");
+		let isOn = sidebar.style.display == 'block';
+		sidebar.style.display = (isOn ? 'none' : 'block');
+	}
 }
 
 // Close menu if user clicks outside
 window.onclick = function (event) {
-	if (!event.target.matches('.hamburger')) {
-		let sidebar = document.getElementById("sidebar");
-		let isOn = sidebar.style.display = 'block';
-		sidebar.style.display = (isOn ? 'none' : 'block');
+	if (isMobile()) {
+		if (!event.target.matches('.hamburger')) {
+			let sidebar = document.getElementById("sidebar");
+			let isOn = sidebar.style.display = 'block';
+			sidebar.style.display = (isOn ? 'none' : 'block');
+		}
 	}
 }
