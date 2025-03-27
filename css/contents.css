@@ -1,20 +1,22 @@
-* {
-	box-sizing: border-box;
-}
-
 body {
 	width: 960px;
 	margin: 0 auto;
 	min-height: 700px;
 }
 
-.container-position {
+div.container-position {
 	position: relative;
 	margin-top: -20px;
 }
 
-.contents {
+div.picture-row {
+	align-items: stretch;
+}
+
+div.contents {
 	position: absolute;
+	width: 100%;
+	margin-top: 20px;
 	z-index: 1;
 }
 
@@ -25,19 +27,74 @@ header {
 
 img.binner {
 	width: 92%;
-	margin: 0 auto;
+	margin-left: 10px;
 }
 
-article {
+div.character-card {
 	float: left;
-	padding: 8px;
-	width: 80%;
+	width: 40%;
+	margin-top: 20px;
+}
+
+div.picture-card {
+	float: left;
+	width: 40%;
+	padding-right: 20px;
+}
+
+div.speech-sign-card {
+	float: left;
+	width: 25%;
+}
+
+div.speech-check-card {
+	float: left;
+	width: 75%;
+}
+
+/* Sidebar */
+div.sidebar {
+	margin-top: -20px;
+	float: left;
+	width: 20%;
+	padding-left: 8px;
+}
+
+/* Style the list inside the menu */
+div.sidebar ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+p.word-category {
+	font-family: 'Times New Roman', Times, serif;
+	font-weight: bold;
+	color: rgb(77, 77, 77);
+	cursor: pointer;
+	margin-bottom: 0px;
+}
+
+ul.word {
+	font-family: SimSun;
+	font-size: 16px;
+}
+
+li:hover {
+	background-color: yellow;
+	cursor: pointer;
+}
+
+/* Clear floats after the columns */
+.picture-row:after {
+	content: "";
+	display: table;
+	clear: both;
 }
 
 /** the contents styles */
 .chinese {
 	font-family: KaiTi;
-	font-size: 24px;
+	font-size: 36px;
 	color: darkgreen;
 	cursor: pointer;
 }
@@ -46,13 +103,8 @@ article {
 	font-family: 'Times New Roman', Times, serif;
 	font-size: 32px;
 	font-weight: bold;
+	margin-left: 64px;
 	color: darkgreen;
-}
-
-.item-name {
-	font-family: 'Times New Roman', Times, serif;
-	font-size: 16px;
-	color: brown;
 }
 
 .pinyin {
@@ -75,11 +127,24 @@ article {
 	cursor: pointer;
 }
 
-.symbol {
-	font-family: 'Times New Roman', Times, serif;
-	font-size: 18x;
-	margin-left: 12px;
+.speaker {
+	font-size: 20px;
 	color: darkgreen;
+	margin-left: 12px;
+	cursor: pointer;
+}
+
+.mandarin {
+	font-size: 18px;
+	color: darkblue;
+	margin-left: 12px;
+	cursor: pointer;
+}
+
+.cantonese {
+	font-size: 20px;
+	color: darkgreen;
+	margin-left: 12px;
 	cursor: pointer;
 }
 
@@ -94,9 +159,9 @@ article {
 }
 
 .picture-default {
-	margin-top: 25%;
+	margin-top: 20%;
 	margin-left: 20%;
-	width: 50%;
+	width: 60%;
 	cursor: pointer;
 }
 
@@ -112,65 +177,110 @@ article {
 	display: none;
 }
 
-.indent-item {
-	text-indent: 64px;
-}
-
-.row-height {
-	min-height: 360px;
-}
-
-.high-item {
-	min-height: 180px;
-	cursor: pointer;
-}
-
 .speech-check {
+	width: 80%;
 	border: 2px solid lightgray;
 	border-radius: 15px;
+	min-height: 96px;
+	padding: 4px;
 }
 
-/* @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) { */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+.speech-check:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.break-line {
+	display: inline;
+}
+
+.hamburger {
+	display: none;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+
+	/* @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { */
 	body {
 		width: 100%;
-		min-height: 700px;
 	}
 
-	img.binner {
+	div.container-position {
+		position: relative;
+	}
+
+	div.picture-row {
+		align-items: stretch;
+	}
+
+	div.contents {
 		width: 100%;
-		/* padding-right: 20px; */
 	}
 
-	article {
-		/* padding: 8px; */
-		width: 100%;
+	div.character-card {
+		float: left;
+		width: 50%;
 	}
 
-	.picture {
-		margin: 0 auto;
+	div.picture-card {
+		float: left;
+		width: 50%;
+	}
+
+	div.speech-sign-card {
+		float: left;
+		width: 40%;
+	}
+
+	div.speech-check-card {
+		float: left;
+		width: 60%;
+	}
+
+	.speech-check {
 		width: 98%;
+		border: 2px solid lightgray;
+		border-radius: 15px;
+		min-height: 84px;
+		padding: 4px;
+	}
+	
+	.recording {
+		height: 60px;
 		cursor: pointer;
 	}
-
-	.picture-default {
-		margin: 0 auto;
-		width: 98%;
-		cursor: pointer;
+	
+	.break-line::before {
+		content: "\A";
+		/* \A represents a line break */
+		white-space: pre;
 	}
 
-	.item-name {
-		font-family: 'Times New Roman', Times, serif;
-		font-size: 14px;
-		margin-right: 0px;
-		color: brown;
+	/* Hamburger Button */
+	.hamburger {
+		font-size: 30px;
+		cursor: pointer;
+		background: none;
+		border: none;
+		position: absolute;
+		top: -50px;
+		left: 80px;
 	}
 
-	.symbol {
-		font-family: 'Times New Roman', Times, serif;
-		font-size: 14px;
-		margin-right: 2px;
-		color: darkgreen;
-		cursor: pointer;
+	/* Sidebar */
+	div.sidebar {
+		display: none;
+		position: absolute;
+		top: 0px;
+		left: 60px;
+		background-color: white;
+		box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+		border-radius: 5px;
+		width: 200px;
+	}
+
+	div.sidebar li:last-child {
+		border-bottom: none;
 	}
 }

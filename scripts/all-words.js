@@ -190,8 +190,8 @@ let allWords =
 			{ "chinese": "本", "english": "Notebook", "pinyin": "Běn", "phrase": ["书本", "根本", "本来面目"], "sentence": "你可以在本子上写字。", "image": "images/chars/Stationery/notebook.jpg" },
 			{ "chinese": "笔", "english": "Pen", "pinyin": "Bǐ", "phrase": ["铅笔", "钢笔", "生花妙笔"], "sentence": "用笔可以画画，也可以写字。", "image": "images/chars/Stationery/pen.jpg" },
 			{ "chinese": "纸", "english": "Paper", "pinyin": "Zhǐ", "phrase": ["白纸", "手纸", "纸上谈兵"], "sentence": "在白纸写字、画画。", "image": "images/chars/Stationery/paper.jpg" },
-			{ "chinese": "电", "english": "Electricity", "pinyin": "Diàn", "phrase": ["电脑", "电话", "电视"], "sentence": "电脑很有用。", "image": "images/chars/Stationery/smartphone.jpg" },
-			{ "chinese": "机", "english": "Machine", "pinyin": "Jī", "phrase": ["手机", "机器", "机不可失"], "sentence": "出门要带上手机。", "image": "images/chars/Stationery/computer.jpg" }
+			{ "chinese": "电", "english": "Electricity", "pinyin": "Diàn", "phrase": ["电脑", "电话", "电视"], "sentence": "电脑很有用。", "image": "images/chars/Stationery/computer.jpg" },
+			{ "chinese": "机", "english": "Machine", "pinyin": "Jī", "phrase": ["手机", "机器", "机不可失"], "sentence": "出门要带上手机。", "image": "images/chars/Stationery/smartphone.jpg" }
 		]
 	},
 	{

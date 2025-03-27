@@ -7,7 +7,7 @@ async function pagesToPDF() {
 
 	let category = allWords.find(item => item.category == currentCategory);
 	let pdfHolder = document.createElement('div');
-	let word, div, article = null;
+	let word, div, contents = null;
 
 	// Create a page name and page footer with the category info
 	let pageName = document.getElementById('page-name');
@@ -33,9 +33,9 @@ async function pagesToPDF() {
 		buildWordEntry(word);
 		await draw(word);
 		await showPicture();
-		article = document.getElementById('article').parentElement.cloneNode(true);
+		contents = document.getElementById('contents').parentElement.cloneNode(true);
 		div = document.createElement('div');
-		div.replaceChildren(...article.children);
+		div.replaceChildren(...contents.children);
 		div.className = 'char-item page-break';
 		pdfHolder.appendChild(div);
 	}
@@ -55,24 +55,35 @@ async function pagesToPDF() {
 }
 
 /**
- * Sets the font sizes for printing
+ * Sets the font sizes for printing.
+ * IMPORTANT! the following settings on 'contents' make the page fit the 6x4 printing page siz
  */
 function setFontSizes() {
-	let article = document.getElementById('article');
+
+	// set some elements' position for printing
+	let contents = document.getElementById('contents');
+	let sidebar = document.getElementById('sidebar');
+	let characterCard = document.getElementById('character-card');
+	let pictureCard = document.getElementById('picture-card');
+	let wordCard = document.getElementById('word-card');
+	contents.style.width = '98%'; 
+	contents.style.padding = '4px';
+	if (sidebar) sidebar.remove();
+	characterCard.style.width = '50%';
+	pictureCard.style.width = '50%';
+	wordCard.style.marginTop = '16px';
+	wordCard.style.marginLeft = '24px';
+
+	// make those text larger for printing
 	let chinese = document.getElementById('chinese');
 	let pinyin = document.getElementById('pinyin');
 	let phrase = document.getElementById('phrase');
 	let sentence = document.getElementById('sentence');
 	
-	// import! the following settings on 'article' make the page fit the 6x4 printing page size
-	article.style.width = '82%'; 
-	article.style.marginLeft = '4px';
-
-	// make those text larger for printing
 	pinyin.style.fontSize = '24px';
-	chinese.style.fontSize = '36px';
-	sentence.style.fontSize = '36px';
-	phrase.style.fontSize = '36px';
+	chinese.style.fontSize = '32px';
+	sentence.style.fontSize = '32px';
+	phrase.style.fontSize = '32px';
 	phrase.style.color = 'blue';
 }
 
@@ -80,7 +91,7 @@ function setFontSizes() {
  * Hides some elements so that they will not be printed.
  */
 function hideSymbols() {
-	const classNames = ['symbol', 'sidebar'];
+	const classNames = ['speaker', 'mandarin', 'cantonese', 'sidebar'];
 	const iDs = ['header', 'category-words', 'word-search', 'category-row', 'usage-row', 'speech-check', 'error-message', 'textCanvas'];
 
 	let element = null;

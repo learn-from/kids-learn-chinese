@@ -3,7 +3,6 @@
  * animal, people, plant, thing, etc. The data is stored in a global variable allWords.
  */
 
-
 // The Google Project API key
 const API_KEY = 'AIzaSyCaC2KBiX526c7b214OG65G8fJXYINT3Rk';
 
@@ -205,13 +204,13 @@ function getCharSize(charLength) {
 	if (isMobile()) {
 		switch (charLength) {
 			case 1:
-				charSize = 360;
+				charSize = 200;
 				break;
 			case 2:
-				charSize = 180;
+				charSize = 100;
 				break;
 			case 3:
-				charSize = 120;
+				charSize = 60;
 				break;
 			default:
 				charSize = 32;
@@ -219,7 +218,7 @@ function getCharSize(charLength) {
 	} else {
 		switch (charLength) {
 			case 1:
-				charSize = 250;
+				charSize = 280;
 				break;
 			case 2:
 				charSize = 130;
@@ -391,7 +390,7 @@ function sayHighlighted() {
  * input text and the selected text, and finally checks if they are same. This is
  * used to practice pronunciation.
  */
-async function speechCheck(lang, id) {
+async function speechCheck(id) {
 	clearSpeechSection();
 	document.getElementById('speech-check').style.display = 'block';
 	document.getElementById('recording').style.display = 'block';
@@ -564,7 +563,7 @@ async function transcribeAudio(text, base64Audio) {
 			getPinyin(text, inputText);
 		} else {
 			console.error("No speech detected!");
-			showRecError("No speech detected!");
+			showRecError("No speech detected, try again and speak louder.");
 		}
 	} catch (error) {
 		console.error("Error transcribing audio:", error);
@@ -620,5 +619,8 @@ function showRecError(message) {
 	document.getElementById('input-text').textContent = '';
 	document.getElementById('input-pinyin').textContent = '';
 	document.getElementById('rec-error').textContent = message;
+	document.getElementById('rec-error').style.display = 'block';
+	document.getElementById('great').style.display = 'none';
+	document.getElementById('recording').style.display = 'none';
+	document.getElementById('try-again').style.display = 'block';
 }
-
