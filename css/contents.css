@@ -199,9 +199,9 @@ li:hover {
 	display: none;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+/* @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) { */
 
-	/* @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 	body {
 		width: 100%;
 	}
@@ -221,6 +221,7 @@ li:hover {
 	div.character-card {
 		float: left;
 		width: 50%;
+		margin-top: -10px;
 	}
 
 	div.picture-card {
@@ -245,12 +246,12 @@ li:hover {
 		min-height: 84px;
 		padding: 4px;
 	}
-	
+
 	.recording {
 		height: 60px;
 		cursor: pointer;
 	}
-	
+
 	.break-line::before {
 		content: "\A";
 		/* \A represents a line break */

@@ -31,12 +31,11 @@ function initMenuRows() {
 	// Use some mobile specific elements
 	if (isMobile()) {
 		document.getElementById('hamburger').style.display = 'block';
+		document.getElementById('mobile-category-row').style.display = 'block';
 		return;
 	}
 
-	// document.getElementById('mobile-header').remove();
-	// document.getElementById('mobile-container').remove();
-
+	// for desktop only
 	let categoryBtn = document.getElementById('category-btn');
 	categoryBtn.addEventListener("mouseover", function () {
 		showMenuRow('category-row');
@@ -82,29 +81,42 @@ function hideMenuRows() {
  * Builds a category list from the allWords object as a clickable category selector
  */
 function buildCategories() {
-	let category = null;
+
 	console.log('Start building categories');
+	let category = null;
+	let categoryTagId, rowTagName, rowTagClass, colTagName, colTagClass, numCol;
+	if (isMobile()) {
+		categoryTagId = 'mobile-category-row';
+		rowTagName = 'tr';
+		rowTagClass = '';
+		colTagName = 'td';
+		colTagClass = 'clickable';
+		numCol = 2;
+	} else {
+		categoryTagId = 'category-row';
+		rowTagName = 'div';
+		rowTagClass = 'row';
+		colTagName = 'div';
+		colTagClass = 'col-sm-3 clickable'
+		numCol = 4;
+	}
 
 	// build HTML elements for the clickable categories
-	// if (isMobile()) {
-	// 	buildMobildCategories();
-	// } else {
 	let id, cname, row, col;
 	let colIdx = 0;
-	let numCol = 4;
-	let div = document.getElementById('category-row');
+	let div = document.getElementById(categoryTagId);
 	div.innerHTML = '';
 	for (let i = 0; i < allWords.length; i += numCol) {
-		row = document.createElement('div');
-		row.className = 'row';
+		row = document.createElement(rowTagName);
+		row.className = rowTagClass;
 		for (let j = 0; (j < numCol && colIdx < (allWords.length - 1)); j++) {
 			colIdx = i + j;
 			category = allWords[colIdx];
 			id = category.category;
 			cname = category.cname;
-			col = document.createElement('div');
+			col = document.createElement(colTagName);
 			col.id = id;
-			col.className = 'col-sm-3 clickable';
+			col.className = colTagClass;
 			col.textContent = cname + ' - ' + id;
 			col.onclick = function () { setCategory(this.id); };
 			row.appendChild(col);
@@ -156,7 +168,7 @@ function enterKeyPressed(event) {
 }
 
 /**
- * Shows the siderar
+ * Shows/hides the hamburger siderar for mobile devices
  */
 function toggleMenu() {
 	if (isMobile()) {

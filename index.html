@@ -23,6 +23,8 @@
 
 	<script src="scripts/all-words.js"></script>
 	<script src="scripts/content.js"></script>
+	<script src="scripts/draw.js"></script>
+	<script src="scripts/talk.js"></script>
 	<script src="scripts/sidebar.js"></script>
 	<script src="scripts/menu.js"></script>
 	<script src="scripts/print.js"></script>
@@ -73,8 +75,8 @@
 					</p>
 					<p>
 						<span id='english' class='english'></span>
-						<!-- <span class="symbol" title="English" onclick="say('en-US', 'english')">🔊</span> -->
-						<span class="fa-solid fa-play speaker" title="Speak English" onclick="say('en-US', 'english')"></span>
+						<span class="fa-solid fa-play speaker" title="Speak English"
+							onclick="say('en-US', 'english')"></span>
 					</p>
 				</div>
 
@@ -142,17 +144,11 @@
 			</div>
 
 			<!-- The category selector for mobile -->
-			<div id='mobile-category-row' class="category">
-				<p>Categories</p>
-				<div class="list-row">
-					<div class="column">
-						<ul data-list="category-list1" class="word"></ul>
-					</div>
-					<div class="column">
-						<ul data-list="category-list2" class="word"></ul>
-					</div>
-				</div>
-			</div>
+			<table id='mobile-category-row' class="category">
+				<tr>
+					<td class="word"></td>
+				</tr>
+			</table>
 		</div>
 
 		<!-- This is for generating some image dynamically -->

@@ -31,10 +31,7 @@ function buildWordList() {
 
 	// update the UL element by creating a list of LI elements for the word list
 	let ul = document.getElementById('word-list');
-	// ul.innerHTML = '';
-	while (ul.lastElementChild) {
-		ul.removeChild(ul.lastElementChild);
-	}
+	ul.innerHTML = '';
 	// ul.id = id;
 	for (let i = 0; i < category.words.length; i++) {
 		word = category.words[i];

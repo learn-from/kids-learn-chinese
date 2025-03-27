@@ -41,6 +41,11 @@
 	background-color: antiquewhite;
 }
 
+.column {
+	float: left;
+	width: 50%;
+}
+
 .mouse-color {
 	color: rgb(29, 28, 28);
 }
@@ -91,6 +96,8 @@ p.search-error {
 	font-size: 14px;
 }
 
+/* @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) { */
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 	.menu-bar {
 		display: none;
@@ -124,8 +131,16 @@ p.search-error {
 		font-size: 14px;
 	}
 
-	.category {
-		display: none;
+	table.category {
+		width: 96%;
+		margin-top: 20px;
+		padding: 4px;
+		font-size: 14px;
 		background-color: antiquewhite;
+		table-layout: fixed;
 	}
+
+	td {
+		width: 200px;
 	}
+}
