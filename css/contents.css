@@ -71,12 +71,13 @@ p.word-category {
 	font-weight: bold;
 	color: rgb(77, 77, 77);
 	cursor: pointer;
-	margin-bottom: 0px;
+	margin-bottom: 6px;
 }
 
 ul.word {
 	font-family: SimSun;
 	font-size: 16px;
+	line-height: 1.6;
 }
 
 li:hover {
