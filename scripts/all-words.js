@@ -18,7 +18,8 @@ let allWords =
 			{ "chinese": "九", "english": "Nine", "pinyin": "Jiǔ", "phrase": ["九块", "九磅", " 八九不离十"], "sentence": "你拍九，我拍九，九个小孩看杨柳。", "image": "images/chars/Number/number-9.png" },
 			{ "chinese": "十", "english": "Ten", "pinyin": "Shí", "phrase": ["十双", "十章", "十拿九稳"], "sentence": "你拍十，我拍十，十个小孩不挑食。", "image": "images/chars/Number/number-10.png" },
 			{ "chinese": "百", "english": "Hundred", "pinyin": "Bǎi", "phrase": ["三百", "百姓", "百发百中"], "sentence": "十个十就是一百。", "image": "images/chars/Number/number-100.png" },
-			{ "chinese": "零", "english": "Zero", "pinyin": "Líng", "phrase": ["零钱", "零碎", "七零八碎"], "sentence": "计数，我们从零开始。", "image": "images/chars/Number/number-0.png" }
+			{ "chinese": "零", "english": "Zero", "pinyin": "Líng", "phrase": ["零钱", "零碎", "七零八碎"], "sentence": "计数，我们从零开始。", "image": "images/chars/Number/number-0.png" },
+			{ "chinese": "数", "english": "Number", "pinyin": "Shù", "phrase": ["一二三四五", "数字", "数不胜数"], "sentence": "六七八九十", "image": "images/chars/Number/number.png" }
 		]
 	},
 	{
