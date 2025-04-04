@@ -172,11 +172,11 @@ p.search-error {
 	/* Hamburger Button */
 	.hamburger {
 		position: absolute;
-		font-size: 30px;
+		font-size: 24px;
 		cursor: pointer;
 		background: none;
 		border: none;
-		top: -50px;
-		left: 80px;
+		top: 20px;
+		left: 70px;
 	}
 }
