@@ -37,6 +37,10 @@ async function initPages() {
 	if (isMobile()) {
 		document.getElementById('hamburger').style.display = 'block';
 		document.getElementById('mobile-category-row').style.display = 'block';
+
+		updatePage('1-1');
+		createSidebar();
+		buildCategories();
 		return;
 	}
 

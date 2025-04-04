@@ -247,17 +247,6 @@ li:hover {
 		white-space: pre;
 	}
 
-	/* Hamburger Button */
-	.hamburger {
-		font-size: 30px;
-		cursor: pointer;
-		background: none;
-		border: none;
-		position: absolute;
-		top: -50px;
-		left: 80px;
-	}
-
 	/* Sidebar */
 	div.sidebar {
 		display: none;
