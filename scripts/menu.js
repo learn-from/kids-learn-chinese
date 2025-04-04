@@ -1,19 +1,19 @@
 
-document.addEventListener('DOMContentLoaded', initMenuRows);
+document.addEventListener('DOMContentLoaded', initPages);
 
 /**
  * Checks the device is a mobile device (iPhone or Android phone)
  */
 function isMobile() {
 	const userAgent = navigator.userAgent.toLowerCase();
-	const isTouch = 'ontouchstart' in window;
-	const width = window.innerWidth;
+	// const isTouch = 'ontouchstart' in window;
+	// const width = window.innerWidth;
 
 	// let ipad = isIpad();
 	// let mobile = (/iphone/.test(userAgent) || /android/.test(userAgent));
 	// let isMobile = (/iphone|ipod/.test(userAgent) || /android/.test(userAgent) || isTouch && width <= 768 || isTouch && width > 768);
 
-	console.log("isTouch", isTouch, "width", width);
+	// console.log("isTouch", isTouch, "width", width);
 	console.log("userAgent", userAgent, "android", /android/.test(userAgent),
 		"iphone|ipod", (/iphone|ipod/.test(userAgent)), "ipad", /ipad/.test(userAgent));
 
@@ -24,9 +24,14 @@ function isMobile() {
 }
 
 /**
- * Adds listeners to the menu bar buttons
+ * Initializes the header, listeners and the content pages.
  */
-function initMenuRows() {
+async function initPages() {
+
+	await fetch("htmls/header.html")
+		.then(response => response.text())
+		.then(data => document.getElementById("header").innerHTML = data)
+		.catch(error => console.error("Error loading header:", error));
 
 	// Use some mobile specific elements
 	if (isMobile()) {
@@ -57,6 +62,10 @@ function initMenuRows() {
 	document.addEventListener("click", function () {
 		document.getElementById('category-row').style.display = 'none';
 	});
+
+	updatePage('1-1');
+	createSidebar();
+	buildCategories();
 }
 
 /**
@@ -84,31 +93,27 @@ function buildCategories() {
 
 	console.log('Start building categories');
 	let category = null;
-	let categoryTagId, rowTagName, rowTagClass, colTagName, colTagClass, numCol;
+	let categoryTagId;
+	let rowTagName = 'tr';
+	let colTagName = 'td';
+	let colTagClass = 'clickable';
+	let numCol;
 	if (isMobile()) {
 		categoryTagId = 'mobile-category-row';
-		rowTagName = 'tr';
-		rowTagClass = '';
-		colTagName = 'td';
-		colTagClass = 'clickable';
 		numCol = 2;
 	} else {
 		categoryTagId = 'category-row';
-		rowTagName = 'div';
-		rowTagClass = 'row';
-		colTagName = 'div';
-		colTagClass = 'col-sm-3 clickable'
-		numCol = 4;
+		numCol = 6;
 	}
 
 	// build HTML elements for the clickable categories
 	let id, cname, row, col;
 	let colIdx = 0;
-	let div = document.getElementById(categoryTagId);
+	let table = document.getElementById(categoryTagId);
+	let div = table.getElementsByTagName('tbody')[0];
 	div.innerHTML = '';
 	for (let i = 0; i < allWords.length; i += numCol) {
 		row = document.createElement(rowTagName);
-		row.className = rowTagClass;
 		for (let j = 0; (j < numCol && colIdx < (allWords.length - 1)); j++) {
 			colIdx = i + j;
 			category = allWords[colIdx];
@@ -123,6 +128,7 @@ function buildCategories() {
 		}
 		div.appendChild(row);
 	}
+	// console.log(div.outerHTML);
 }
 
 /**

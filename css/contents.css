@@ -5,7 +5,7 @@ body {
 }
 
 div.container-position {
-	position: relative;
+	position: absolute;
 	margin-top: -20px;
 }
 
@@ -14,20 +14,8 @@ div.picture-row {
 }
 
 div.contents {
-	position: absolute;
-	width: 100%;
-	margin-top: 20px;
-	z-index: 1;
-}
-
-header {
-	width: 100%;
-	padding: 10px;
-}
-
-img.binner {
 	width: 92%;
-	margin-left: 10px;
+	z-index: 1;
 }
 
 div.character-card {
@@ -54,7 +42,7 @@ div.speech-check-card {
 
 /* Sidebar */
 div.sidebar {
-	margin-top: -20px;
+	margin-top: -4px;
 	float: left;
 	width: 20%;
 	padding-left: 8px;

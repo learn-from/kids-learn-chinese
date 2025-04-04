@@ -48,7 +48,7 @@ async function pagesToPDF() {
 
 	// restore the original page
 	body.innerHTML = origPage;
-	initMenuRows();
+	initPages();
 	setAnimation(true);
 	buildCategories();
 	buildWordList();
@@ -66,11 +66,14 @@ function setFontSizes() {
 	let characterCard = document.getElementById('character-card');
 	let pictureCard = document.getElementById('picture-card');
 	let wordCard = document.getElementById('word-card');
-	contents.style.width = '98%'; 
+	contents.style.width = '98%';
 	contents.style.padding = '4px';
-	if (sidebar) sidebar.remove();
-	characterCard.style.width = '50%';
-	pictureCard.style.width = '50%';
+	if (sidebar)
+		sidebar.remove();
+	characterCard.style.width = '48%';
+	pictureCard.style.width = '44%';
+	pictureCard.style.marginTop = '20px';
+	pictureCard.style.marginLeft = '-40px';
 	wordCard.style.marginTop = '16px';
 	wordCard.style.marginLeft = '24px';
 
@@ -79,7 +82,7 @@ function setFontSizes() {
 	let pinyin = document.getElementById('pinyin');
 	let phrase = document.getElementById('phrase');
 	let sentence = document.getElementById('sentence');
-	
+
 	pinyin.style.fontSize = '24px';
 	chinese.style.fontSize = '32px';
 	sentence.style.fontSize = '32px';
