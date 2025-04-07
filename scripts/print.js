@@ -5,7 +5,7 @@ async function pagesToPDF() {
 	let body = document.body;
 	let origPage = body.innerHTML;
 
-	let category = allWords.find(item => item.category == currentCategory);
+	let category = ALL_WORDS.find(item => item.category == currentCategory);
 	let pdfHolder = document.createElement('div');
 	let word, div, contents = null;
 

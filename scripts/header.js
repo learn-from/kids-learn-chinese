@@ -87,7 +87,7 @@ function hideMenuRows() {
 }
 
 /**
- * Builds a category list from the allWords object as a clickable category selector
+ * Builds a category list from the ALL_WORDS object as a clickable category selector
  */
 function buildCategories() {
 
@@ -113,11 +113,11 @@ function buildCategories() {
 	let table = document.getElementById(categoryTagId);
 	let div = table.getElementsByTagName('tbody')[0];
 	div.innerHTML = '';
-	for (let i = 0; i < allWords.length; i += numCol) {
+	for (let i = 0; i < ALL_WORDS.length; i += numCol) {
 		row = document.createElement(rowTagName);
-		for (let j = 0; (j < numCol && colIdx < (allWords.length - 1)); j++) {
+		for (let j = 0; (j < numCol && colIdx < (ALL_WORDS.length - 1)); j++) {
 			colIdx = i + j;
-			category = allWords[colIdx];
+			category = ALL_WORDS[colIdx];
 			id = category.category;
 			cname = category.cname;
 			col = document.createElement(colTagName);
@@ -146,12 +146,12 @@ function searchWord() {
 	error.textContent = '';
 
 	let category, words, word;
-	if (allWords.length == 0) {
+	if (ALL_WORDS.length == 0) {
 		error.textContent = 'Refresh the page.';
 		return null;
 	}
-	for (let i = 0; i < allWords.length; i++) {
-		category = allWords[i];
+	for (let i = 0; i < ALL_WORDS.length; i++) {
+		category = ALL_WORDS[i];
 		words = category.words;
 		word = words.find(item => (item.chinese == value || item.english.toLowerCase() == value.toLowerCase()));
 		if (word != null) {

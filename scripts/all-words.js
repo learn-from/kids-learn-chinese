@@ -1,7 +1,7 @@
 /**
  * This JSON array is used to store all the words for the App.
  */
-let allWords =
+const ALL_WORDS =
 [
 	{
 		"category": "Number",
@@ -361,4 +361,51 @@ let allWords =
 			{ "chinese": "臭", "english": "Smelly", "pinyin": "Chòu", "phrase": ["臭味", "臭小子", "臭味相投"], "sentence": "上完厕所把门开着，放放臭味。", "image": "images/chars/Adjective/smelly.png" }
 		]
 	}
-]
+];
+
+// The greeting images for each category
+const GREETING_IMG_DIR = 'images/greetings/';
+const GREETING_IMAGES = [
+	{
+		category: 'All',
+		wrong: 'try-again-1.jpg',
+		ok: 'try-again-1.jpg',
+		great: ['two-thumbs-up-yellow.jpg', 'two-thumbs-up-purple.jpg', 'two-thumbs-up-pink.jpg']
+	},
+	{
+		category: 'Number',
+		wrong: 'try-again-1.jpg',
+		ok: 'try-again-1.jpg',
+		great: ['two-thumbs-up-yellow.jpg', 'two-thumbs-up-purple.jpg', 'two-thumbs-up-pink.jpg']
+	},
+	{
+		category: 'Family',
+		wrong: 'try-again-1.jpg',
+		ok: 'try-again-1.jpg',
+		great: ['bluey-bluey.jpg', 'bluey-bingo.jpg', 'bluey-bendit.jpg', 'bluey-chilli.jpg', 'bluey-bingo-bluey.jpg']
+	},
+	{
+		category: 'Body',
+		wrong: 'try-again-1.jpg',
+		ok: 'try-again-1.jpg',
+		great: ['cocomelon-jj', 'cocolemon-tomtom.jpg', 'cocolemon-yoyo.jpg', 'cocolemon-cece.jpg']
+	},
+	{
+		category: 'Food',
+		wrong: 'try-again-1.jpg',
+		ok: 'try-again-1.jpg',
+		great: ['cats-1.jpg', 'cats-2.jpg', 'cats-3.jpg']
+	},
+	{
+		category: 'Toy',
+		wrong: 'try-again-1.jpg',
+		ok: 'try-again-1.jpg',
+		great: ['dogs-1.jpg', 'dogs-2.jpg', 'dogs-3.jpg']
+	},
+	{
+		category: 'Stationery',
+		wrong: 'try-again-1.jpg',
+		ok: 'try-again-1.jpg',
+		great: ['disney-chinerella.jpg', 'disney-jasmine.jpg', 'disney-mulan.jpg', 'disney-snowwhite.jpg']
+	},
+];

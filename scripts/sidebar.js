@@ -16,7 +16,7 @@ function createSidebar() {
 function buildWordList() {
 	let word = null;
 	console.log('Start building a word list');
-	let category = allWords.find(item => item.category == currentCategory);
+	let category = ALL_WORDS.find(item => item.category == currentCategory);
 	if (category == null) {
 		return;
 	}

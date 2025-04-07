@@ -13,6 +13,7 @@ const TRANSLATOR_URL = 'https://translate.googleapis.com/translate_a/single?clie
 // The URL of the default image
 const DEFAULT_IMG = 'images/site/question-mark.png';
 
+
 // Global variables
 let currentCategory = '';
 let recognizedText = null;
@@ -28,7 +29,7 @@ function updatePage(id) {
 	let chinese = names[0];
 	let english = names[1];
 	const intervalId = setInterval(() => {
-		if (allWords.length > 0) {
+		if (ALL_WORDS.length > 0) {
 			clearInterval(intervalId);
 			clearSpeechSection();
 			let word = findWord(chinese, english);
@@ -144,11 +145,11 @@ function buildWordCard(cardId, word) {
  * Finds the Chinese character from the current category object
  */
 function findWord(chinese, english) {
-	if (allWords.length == 0) {
+	if (ALL_WORDS.length == 0) {
 		return null;
 	}
 
-	let category = allWords.find(item => item.category == currentCategory);
+	let category = ALL_WORDS.find(item => item.category == currentCategory);
 	if (category) {
 		let word = category.words.find(item => item.chinese == chinese && item.english == english);
 		if (word != null) {
@@ -156,8 +157,8 @@ function findWord(chinese, english) {
 			return word;
 		}
 	}
-	currentCategory = allWords[0].category;
-	return allWords[0].words[0];
+	currentCategory = ALL_WORDS[0].category;
+	return ALL_WORDS[0].words[0];
 }
 
 /**
@@ -165,7 +166,7 @@ function findWord(chinese, english) {
  */
 function setCategory(category) {
 	currentCategory = category;
-	let categoryObject = allWords.find(item => item.category == currentCategory);
+	let categoryObject = ALL_WORDS.find(item => item.category == currentCategory);
 	let id = categoryObject.words[0].chinese + '-' + categoryObject.words[0].english;
 	updatePage(id);
 	buildWordList();
@@ -179,18 +180,18 @@ function checkPinyin(pinyin) {
 	// TODO improve the comparison method
 	// check tones
 	let img = null;
-	let greatImage = '';
 	let textPinyin = removePuntuciation(pinyin.textPinyin);
 	let inputTextPinyin = removePuntuciation(pinyin.inputTextPinyin);
+	let greetingImage = getRandomImage();
 	img = document.getElementById('recording');
 	img.style.display = 'none';
 	if (textPinyin.localeCompare(inputTextPinyin, undefined, { sensitivity: 'accent' }) === 0) {
 		img = document.getElementById('great');
-		greatImage = getRandomImage();
-		img.src = greatImage;
+		img.src = greetingImage.great;
 		img.style.display = 'block';
 	} else {
 		img = document.getElementById('try-again');
+		img.src = greetingImage.wrong;
 		img.style.display = 'block';
 	}
 	document.getElementById('recognization').style.display = 'block'
@@ -204,11 +205,19 @@ function checkPinyin(pinyin) {
  * @returns 
  */
 function getRandomImage() {
-	const imageURLs = ['images/site/talk-yellow.jpg', 'images/site/talk-purple.jpg', 'images/site/talk-pink.jpg']
+	let images = GREETING_IMAGES.find(item => item.category == currentCategory);
+	if (images === undefined) {
+		images = GREETING_IMAGES.find(item => item.category == 'All');
+	}
 	let min = Math.ceil(0);
-	let max = Math.floor(2);
-	let num = Math.floor(Math.random() * (max - min + 1) + min);
-	return imageURLs[num];
+	let max = Math.floor(images.great.length);
+	let idx = Math.floor(Math.random() * (max - min + 1) + min);
+	let greetingImages = {
+		wrong: GREETING_IMG_DIR + images.wrong,
+		ok: GREETING_IMG_DIR + images.ok,
+		great: GREETING_IMG_DIR + images.great[idx]
+	}
+	return greetingImages;
 }
 
 /**
@@ -316,5 +325,9 @@ function showRecError(message) {
 	document.getElementById('rec-error').style.display = 'block';
 	document.getElementById('great').style.display = 'none';
 	document.getElementById('recording').style.display = 'none';
-	document.getElementById('try-again').style.display = 'block';
+
+	let greetingImage = getRandomImage();
+	let tryAgain = document.getElementById('try-again');
+	tryAgain.src = greetingImage.wrong;
+	tryAgain.style.display = 'block';
 }
