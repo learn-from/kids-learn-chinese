@@ -388,7 +388,7 @@ const GREETING_IMAGES = [
 		category: 'Body',
 		wrong: 'try-again-1.jpg',
 		ok: 'try-again-1.jpg',
-		great: ['cocomelon-jj', 'cocolemon-tomtom.jpg', 'cocolemon-yoyo.jpg', 'cocolemon-cece.jpg']
+		great: ['cocomelon-jj.jpg', 'cocolemon-tomtom.jpg', 'cocolemon-yoyo.jpg', 'cocolemon-cece.jpg']
 	},
 	{
 		category: 'Food',
