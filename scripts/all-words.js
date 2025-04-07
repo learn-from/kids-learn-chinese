@@ -369,43 +369,43 @@ const GREETING_IMAGES = [
 	{
 		category: 'All',
 		wrong: 'try-again-1.jpg',
-		ok: 'try-again-1.jpg',
+		ok: 'talk-okay.jpg',
 		great: ['two-thumbs-up-yellow.jpg', 'two-thumbs-up-purple.jpg', 'two-thumbs-up-pink.jpg']
 	},
 	{
 		category: 'Number',
 		wrong: 'try-again-1.jpg',
-		ok: 'try-again-1.jpg',
+		ok: 'talk-okay.jpg',
 		great: ['two-thumbs-up-yellow.jpg', 'two-thumbs-up-purple.jpg', 'two-thumbs-up-pink.jpg']
 	},
 	{
 		category: 'Family',
 		wrong: 'try-again-1.jpg',
-		ok: 'try-again-1.jpg',
+		ok: 'talk-okay.jpg',
 		great: ['bluey-bluey.jpg', 'bluey-bingo.jpg', 'bluey-bendit.jpg', 'bluey-chilli.jpg', 'bluey-bingo-bluey.jpg']
 	},
 	{
 		category: 'Body',
 		wrong: 'try-again-1.jpg',
-		ok: 'try-again-1.jpg',
+		ok: 'talk-okay.jpg',
 		great: ['cocomelon-jj.jpg', 'cocomelon-tomtom.jpg', 'cocomelon-yoyo.jpg', 'cocomelon-cece.jpg']
 	},
 	{
 		category: 'Food',
 		wrong: 'try-again-1.jpg',
-		ok: 'try-again-1.jpg',
+		ok: 'talk-okay.jpg',
 		great: ['cats-1.jpg', 'cats-2.jpg', 'cats-3.jpg']
 	},
 	{
 		category: 'Toy',
 		wrong: 'try-again-1.jpg',
-		ok: 'try-again-1.jpg',
+		ok: 'talk-okay.jpg',
 		great: ['dogs-1.jpg', 'dogs-2.jpg', 'dogs-3.jpg']
 	},
 	{
 		category: 'Stationery',
 		wrong: 'try-again-1.jpg',
-		ok: 'try-again-1.jpg',
+		ok: 'talk-okay.jpg',
 		great: ['disney-cinderella.jpg', 'disney-jasmine.jpg', 'disney-mulan.jpg', 'disney-snowwhite.jpg']
 	},
 ];

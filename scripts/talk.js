@@ -113,7 +113,8 @@ function sayHighlighted() {
 async function speechCheck(id) {
 	clearSpeechSection();
 	document.getElementById('speech-check').style.display = 'block';
-	document.getElementById('recording').style.display = 'block';
+	let img = document.getElementById('recording');
+	img.src = RECORDING_IMG;
 	let text = document.getElementById(id).textContent;
 
 	console.log("Calling recognition ...");

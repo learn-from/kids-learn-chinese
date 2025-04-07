@@ -12,7 +12,7 @@ const TRANSLATOR_URL = 'https://translate.googleapis.com/translate_a/single?clie
 
 // The URL of the default image
 const DEFAULT_IMG = 'images/site/question-mark.png';
-
+const RECORDING_IMG = "images/greetings/talk-recording.jpg";
 
 // Global variables
 let currentCategory = '';
@@ -177,27 +177,35 @@ function setCategory(category) {
  * Exactly same or there are some wrong tones.
  */
 function checkPinyin(pinyin) {
-	// TODO improve the comparison method
 	// check tones
-	let img = null;
 	let textPinyin = removePuntuciation(pinyin.textPinyin);
 	let inputTextPinyin = removePuntuciation(pinyin.inputTextPinyin);
+	let textPinyinToneless = removeTones(textPinyin);
+	let inputTextPinyinToneless = removeTones(inputTextPinyin);
 	let greetingImage = getRandomImage();
-	img = document.getElementById('recording');
-	img.style.display = 'none';
+	let img = document.getElementById('recording');
 	if (textPinyin.localeCompare(inputTextPinyin, undefined, { sensitivity: 'accent' }) === 0) {
-		img = document.getElementById('great');
 		img.src = greetingImage.great;
-		img.style.display = 'block';
+	} else if (textPinyinToneless.localeCompare(inputTextPinyinToneless, undefined, { sensitivity: 'accent' }) === 0) {
+		img.src = greetingImage.ok;
 	} else {
-		img = document.getElementById('try-again');
 		img.src = greetingImage.wrong;
-		img.style.display = 'block';
 	}
 	document.getElementById('recognization').style.display = 'block'
 	document.getElementById('input-text').textContent = pinyin.inputText;
 	document.getElementById('input-pinyin').textContent = pinyin.inputTextPinyin;
 	document.getElementById('rec-error').textContent = '';
+}
+
+/**
+ * Removes tones from a pinyin string.
+ * @param pinyin 
+ * @returns 
+ */
+function removeTones(pinyin) {
+	return pinyin
+		.normalize("NFD") // Normalize Unicode
+		.replace(/[\u0300-\u036f]/g, "");
 }
 
 /**
@@ -210,7 +218,7 @@ function getRandomImage() {
 		images = GREETING_IMAGES.find(item => item.category == 'All');
 	}
 	let min = Math.ceil(0);
-	let max = Math.floor(images.great.length-1);
+	let max = Math.floor(images.great.length - 1);
 	let idx = Math.floor(Math.random() * (max - min + 1) + min);
 	let greetingImages = {
 		wrong: GREETING_IMG_DIR + images.wrong,
@@ -240,8 +248,6 @@ function removePuntuciation(text) {
  */
 function clearSpeechSection() {
 	document.getElementById('speech-check').style.display = 'none';
-	document.getElementById('try-again').style.display = 'none';
-	document.getElementById('great').style.display = 'none';
 	document.getElementById('recognization').style.display = 'none';
 	showError('');
 }
