@@ -48,7 +48,7 @@ async function pagesToPDF() {
 
 	// restore the original page
 	body.innerHTML = origPage;
-	initPages();
+	initHeader();
 	setAnimation(true);
 	buildCategories();
 	buildWordList();
@@ -94,7 +94,7 @@ function setFontSizes() {
  * Hides some elements so that they will not be printed.
  */
 function hideSymbols() {
-	const classNames = ['speaker', 'mandarin', 'cantonese', 'sidebar'];
+	const classNames = ['speaker', 'mandarin', 'cantonese'];
 	const iDs = ['header', 'category-words', 'word-search', 'category-row', 'usage-row', 'speech-check', 'error-message', 'textCanvas'];
 
 	let element = null;

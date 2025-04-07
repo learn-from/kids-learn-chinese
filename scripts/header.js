@@ -1,5 +1,5 @@
 
-document.addEventListener('DOMContentLoaded', initPages);
+// document.addEventListener('DOMContentLoaded', initHeader);
 
 /**
  * Checks the device is a mobile device (iPhone or Android phone)
@@ -26,7 +26,7 @@ function isMobile() {
 /**
  * Initializes the header, listeners and the content pages.
  */
-async function initPages() {
+async function initHeader() {
 
 	await fetch("htmls/header.html")
 		.then(response => response.text())
@@ -36,11 +36,7 @@ async function initPages() {
 	// Use some mobile specific elements
 	if (isMobile()) {
 		document.getElementById('hamburger').style.display = 'block';
-		document.getElementById('mobile-category-row').style.display = 'block';
-
-		updatePage('1-1');
-		createSidebar();
-		buildCategories();
+		// document.getElementById('mobile-category-row').style.display = 'block';
 		return;
 	}
 
@@ -62,13 +58,13 @@ async function initPages() {
 	});
 	document.addEventListener('mouseup', sayHighlighted);
 	document.addEventListener('keyup', sayHighlighted);
+
 	// add a hideMenuRows event to the document to hide the category menu when click on anywhere of the page.
 	document.addEventListener("click", function () {
 		document.getElementById('category-row').style.display = 'none';
 	});
 
-	updatePage('1-1');
-	createSidebar();
+	// build the category list
 	buildCategories();
 }
 
@@ -104,7 +100,8 @@ function buildCategories() {
 	let numCol;
 	if (isMobile()) {
 		categoryTagId = 'mobile-category-row';
-		numCol = 2;
+		document.getElementById(categoryTagId).style.display = 'block';
+		numCol = 4;
 	} else {
 		categoryTagId = 'category-row';
 		numCol = 6;
@@ -126,7 +123,11 @@ function buildCategories() {
 			col = document.createElement(colTagName);
 			col.id = id;
 			col.className = colTagClass;
-			col.textContent = cname + ' - ' + id;
+			if (isMobile()) {
+				col.textContent = id;
+			} else {
+				col.textContent = cname + ' - ' + id;
+			}
 			col.onclick = function () { setCategory(this.id); };
 			row.appendChild(col);
 		}

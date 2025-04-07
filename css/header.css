@@ -25,7 +25,7 @@ img.binner {
 
 .category-box {
 	width: 92%;
-	margin-top: -10px;
+	margin-top: -8px;
 	margin-left: 10px;
 }
 
@@ -154,7 +154,8 @@ p.search-error {
 	table.category {
 		width: 96%;
 		margin-top: 20px;
-		padding: 4px;
+		margin-left: 6px;
+		padding-left: 4px;
 		font-size: 14px;
 		background-color: antiquewhite;
 		table-layout: fixed;

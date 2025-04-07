@@ -25,7 +25,7 @@ async function draw(word) {
 			for (let i = 0; i < chars.length; i++) {
 				writer = HanziWriter.create('character', chars[i], {
 					width: charSize,
-					height: charSize,
+					height: charSize * 0.9,
 					padding: 5,
 					strokeColor: '#006400',
 					showOutline: true,

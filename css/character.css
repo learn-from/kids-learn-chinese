@@ -54,6 +54,10 @@ div.sidebar ul {
 	padding: 0;
 }
 
+div.word-card {
+	margin-left:6px;
+}
+
 p.word-category {
 	font-family: 'Times New Roman', Times, serif;
 	font-weight: bold;
@@ -209,8 +213,8 @@ li:hover {
 
 	div.character-card {
 		float: left;
-		width: 50%;
-		margin-top: -10px;
+		width: 46%;
+		/* margin-top: -10px; */
 	}
 
 	div.picture-card {
