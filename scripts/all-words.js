@@ -388,7 +388,7 @@ const GREETING_IMAGES = [
 		category: 'Body',
 		wrong: 'try-again-1.jpg',
 		ok: 'try-again-1.jpg',
-		great: ['cocomelon-jj.jpg', 'cocolemon-tomtom.jpg', 'cocolemon-yoyo.jpg', 'cocolemon-cece.jpg']
+		great: ['cocomelon-jj.jpg', 'cocomelon-tomtom.jpg', 'cocomelon-yoyo.jpg', 'cocomelon-cece.jpg']
 	},
 	{
 		category: 'Food',
@@ -406,6 +406,6 @@ const GREETING_IMAGES = [
 		category: 'Stationery',
 		wrong: 'try-again-1.jpg',
 		ok: 'try-again-1.jpg',
-		great: ['disney-chinerella.jpg', 'disney-jasmine.jpg', 'disney-mulan.jpg', 'disney-snowwhite.jpg']
+		great: ['disney-cinderella.jpg', 'disney-jasmine.jpg', 'disney-mulan.jpg', 'disney-snowwhite.jpg']
 	},
 ];
