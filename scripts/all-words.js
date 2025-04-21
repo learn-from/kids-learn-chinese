@@ -462,6 +462,6 @@ const GREETING_IMAGES = [
 		wrong: 'try-again-1.jpg',
 		ok: 'talk-okay.jpg',
 		icon: 'Bluey/Mort.png',
-		great: ['Bluey/Mort.png', 'Bluey/Muffin.png', 'Bluey/Nana.png', 'Bluey/Red.png']
+		great: ['Bluey/Mort.png', 'Bluey/Muffin.png', 'Bluey/Nana.png', 'Bluey/Rad.png']
 	},
 ];

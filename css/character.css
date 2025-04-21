@@ -33,6 +33,8 @@ div.picture-card {
 div.speech-sign-card {
 	float: left;
 	width: 25%;
+	padding-right: 15px;
+	text-align: right;
 }
 
 div.speech-check-card {
@@ -142,7 +144,7 @@ li:hover {
 }
 
 .recording {
-	height: 80px;
+	height: 100px;
 	cursor: pointer;
 }
 
@@ -245,7 +247,8 @@ li:hover {
 	}
 
 	.recording {
-		height: 60px;
+		height: 80px;
+		float:right;
 		cursor: pointer;
 	}
 
