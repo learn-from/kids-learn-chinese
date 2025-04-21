@@ -15,7 +15,12 @@ const DEFAULT_IMG = 'images/site/question-mark.png';
 const RECORDING_IMG = "images/greetings/talk-recording.jpg";
 
 // Global variables
-let currentCategory = '';
+let CURRENT_WORD = {
+	"category": '',
+	"cname": '',
+	"word": null
+};
+
 let recognizedText = null;
 
 // Turn on/off the animation while drawing a character
@@ -24,24 +29,16 @@ let animation = true;
 /**
  * Updates the page when all the words are ready to use
  */
-function updatePage(id) {
-	let names = id.split('-');
-	let chinese = names[0];
-	let english = names[1];
-	const intervalId = setInterval(() => {
-		if (ALL_WORDS.length > 0) {
-			clearInterval(intervalId);
-			clearSpeechSection();
-			let word = findWord(chinese, english);
-			if (word == null) {
-				let sentence = document.getElementById('sentence');
-				sentence.textContent = "Refresh the page";
-				return;
-			}
-			buildWordEntry(word);
-			draw(word);
-		}
-	}, 100);
+function updatePage() {
+	let word = CURRENT_WORD.word;
+	if (word == null) {
+		let sentence = document.getElementById('sentence');
+		sentence.textContent = "Refresh the page";
+		return;
+	}
+	clearSpeechSection();
+	buildWordEntry(word);
+	draw(word);
 }
 
 /**
@@ -142,37 +139,6 @@ function buildWordCard(cardId, word) {
 }
 
 /**
- * Finds the Chinese character from the current category object
- */
-function findWord(chinese, english) {
-	if (ALL_WORDS.length == 0) {
-		return null;
-	}
-
-	let category = ALL_WORDS.find(item => item.category == currentCategory);
-	if (category) {
-		let word = category.words.find(item => item.chinese == chinese && item.english == english);
-		if (word != null) {
-			currentCategory = category.category;
-			return word;
-		}
-	}
-	currentCategory = ALL_WORDS[0].category;
-	return ALL_WORDS[0].words[0];
-}
-
-/**
- * Sets the current catagory, rebuild the word entry and side bar
- */
-function setCategory(category) {
-	currentCategory = category;
-	let categoryObject = ALL_WORDS.find(item => item.category == currentCategory);
-	let id = categoryObject.words[0].chinese + '-' + categoryObject.words[0].english;
-	updatePage(id);
-	buildWordList();
-}
-
-/**
  * Checks if the pinyins of two texts are same.
  * Exactly same or there are some wrong tones.
  */
@@ -213,7 +179,7 @@ function removeTones(pinyin) {
  * @returns 
  */
 function getRandomImage() {
-	let images = GREETING_IMAGES.find(item => item.category == currentCategory);
+	let images = GREETING_IMAGES.find(item => item.category == CURRENT_WORD.category);
 	if (images === undefined) {
 		images = GREETING_IMAGES.find(item => item.category == 'All');
 	}
@@ -227,6 +193,19 @@ function getRandomImage() {
 	}
 	console.log(greetingImages);
 	return greetingImages;
+}
+
+/**
+ * Gets a gatgory icon image URL.
+ * @returns 
+ */
+function getCategoryIcon(category) {
+	let images = GREETING_IMAGES.find(item => item.category == category);
+	if (images === undefined) {
+		images = GREETING_IMAGES.find(item => item.category == 'All');
+	}
+	// console.log(images);
+	return GREETING_IMG_DIR + images.icon;
 }
 
 /**
@@ -330,7 +309,6 @@ function showRecError(message) {
 	document.getElementById('input-pinyin').textContent = '';
 	document.getElementById('rec-error').textContent = message;
 	document.getElementById('rec-error').style.display = 'block';
-	document.getElementById('great').style.display = 'none';
 	document.getElementById('recording').style.display = 'none';
 
 	let greetingImage = getRandomImage();

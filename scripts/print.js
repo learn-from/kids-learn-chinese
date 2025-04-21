@@ -1,3 +1,4 @@
+
 /**
  * Prints all words of the current category into a PDF file
  */
@@ -5,7 +6,7 @@ async function pagesToPDF() {
 	let body = document.body;
 	let origPage = body.innerHTML;
 
-	let category = ALL_WORDS.find(item => item.category == currentCategory);
+	let category = ALL_WORDS.find(item => item.category == CURRENT_WORD.category);
 	let pdfHolder = document.createElement('div');
 	let word, div, contents = null;
 

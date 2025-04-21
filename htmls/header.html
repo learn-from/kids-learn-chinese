@@ -1,35 +1,38 @@
 <!-- The header with a binner, a herizontal menu bar and a search box -->
-<img class="binner" src="images/site/banner.jpg" />
-<nav class="nav justify-content-start menu-bar">
-	<a id='category-btn' class="nav-link link menu-btn" href="#">🗃️ Categories</a>
-	<a id='print-btn' class="nav-link link menu-btn" href="#"
-		title="Print 4x6 cards of the current category to a printer or a PDF file">🖨️ Cards</a>
-	<a id='usage-btn' class="nav-link link menu-btn" href="#">🙋‍♂️ Usage</a>
-	<a id='home-btn' class="nav-link link menu-btn" href="./index.html">🏠 Home</a>
-</nav>
-<div id='word-search' class="search-word">
-	<input type="text" id="search-word" name="word" onkeypress="return enterKeyPressed(event)">
-	<span class='search' onclick="searchWord()">🔍</span>
-	<p id="search-error" class="search-error"></p>
-</div>
+<div id='klc-header'>
+	<img class="binner" src="images/site/banner.jpg" />
+	<nav class="nav justify-content-start menu-bar">
+		<a id='category-btn' class="nav-link link menu-btn" href="/">🗃️ Categories</a>
+		<a id='print-btn' class="nav-link link menu-btn" href="#"
+			title="Print 4x6 cards of the current category to a printer or a PDF file">🖨️ Cards</a>
+		<a id='usage-btn' class="nav-link link menu-btn" href="/">🙋‍♂️ Usage</a>
+		<a id='home-btn' class="nav-link link menu-btn" href="#character">🏠 Home</a>
+	</nav>
+	<div id='word-search' class="search-word">
+		<input type="text" id="search-word" name="word" onkeypress="return enterKeyPressed(event)">
+		<span class='search' onclick="searchWord()">🔍</span>
+		<p id="search-error" class="search-error"></p>
+	</div>
 
-<!-- The next two rows are for menu selections (categories and usage)
+	<!-- The next two rows are for menu selections (categories and usage)
 		 The menu area overlaps the main content area -->
-<div class="category-box">
-	<table id='category-row' class="category">
-		<tbody></tbody>
-	</table>
+	<div class="category-box">
+		<table id='category-row' class="category">
+			<tbody></tbody>
+		</table>
+	</div>
+	<ul id='usage-row' class="usage">
+		<li>🏠 home - back to the first page</li>
+		<li>🗃️ categories - select a category</li>
+		<li>🖨️ cards - print cards to PDF</li>
+		<li><span class="fa-solid fa-computer-mouse mouse-color"></span> character - redraw</li>
+		<li><span class="fa-solid fa-computer-mouse mouse-color"></span> picture - show/hide</li>
+		<li><span class="fa-solid fa-computer-mouse mouse-color"></span> word(s) - talk to App</li>
+		<li><span class="fa-solid fa-volume-high speaker-color-green"></span> - speak Mandarin</li>
+		<li><span class="fa-solid fa-volume-low speaker-color-blue"></span> - speak Cantonese</li>
+		<li><span class="fa-solid fa-play speaker-color-green"></span> - speak English</li>
+	</ul>
+	<!-- Hamburger sidebar for mobile devices -->
+	<button id="hamburger" class="hamburger" onclick="toggleMenu()">☰</button>
+
 </div>
-<ul id='usage-row' class="usage">
-	<li>🏠 home - back to the first page</li>
-	<li>🗃️ categories - select a category</li>
-	<li>🖨️ cards - print cards to PDF</li>
-	<li><span class="fa-solid fa-computer-mouse mouse-color"></span> character - redraw</li>
-	<li><span class="fa-solid fa-computer-mouse mouse-color"></span> picture - show/hide</li>
-	<li><span class="fa-solid fa-computer-mouse mouse-color"></span> word(s) - talk to App</li>
-	<li><span class="fa-solid fa-volume-high speaker-color-green"></span> - speak Mandarin</li>
-	<li><span class="fa-solid fa-volume-low speaker-color-blue"></span> - speak Cantonese</li>
-	<li><span class="fa-solid fa-play speaker-color-green"></span> - speak English</li>
-</ul>
-<!-- Hamburger sidebar for mobile devices -->
-<button id="hamburger" class="hamburger" onclick="toggleMenu()">☰</button>

@@ -3,10 +3,10 @@
  * Redraws a Chinese character in the standard strok order.
  */
 function redraw() {
-	let chinese = document.getElementById('chinese');
-	let english = document.getElementById('english');
-	let word = findWord(chinese.textContent, english.textContent);
-	draw(word);
+	// let chinese = document.getElementById('chinese');
+	// let english = document.getElementById('english');
+	// let word = findWord(chinese.textContent, english.textContent);
+	draw(CURRENT_WORD.word);
 }
 
 /**
@@ -36,6 +36,7 @@ async function draw(word) {
 					writer.animateCharacter();
 				}
 			}
+			console.log("draw() completed");
 			resolve();
 		}, 300);
 	});

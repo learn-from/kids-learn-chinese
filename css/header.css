@@ -79,7 +79,7 @@ img.binner {
 	padding: 0px;
 	margin: 0;
 	border-collapse: collapse;
-	width: 16%;
+	width: 18.5%;
 	/* border: 1px solid black; */
 }
 
@@ -157,7 +157,7 @@ p.search-error {
 		margin-left: 6px;
 		padding-left: 4px;
 		font-size: 14px;
-		background-color: antiquewhite;
+		/* background-color: antiquewhite; */
 		table-layout: fixed;
 	}
 
@@ -167,7 +167,7 @@ p.search-error {
 		padding: 0px;
 		margin: 0;
 		border-collapse: collapse;
-		width: 200px;
+		width: 160px;
 	}
 
 	/* Hamburger Button */

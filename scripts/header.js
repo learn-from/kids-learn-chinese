@@ -28,6 +28,9 @@ function isMobile() {
  */
 async function initHeader() {
 
+	if (document.getElementById('klc-header') != null)
+		return;
+
 	await fetch("htmls/header.html")
 		.then(response => response.text())
 		.then(data => document.getElementById("header").innerHTML = data)
@@ -54,7 +57,7 @@ async function initHeader() {
 		hideMenuRows('usage-row');
 	});
 	printBtn.addEventListener("click", function () {
-		pagesToPDF(false);
+		pagesToPDF();
 	});
 	document.addEventListener('mouseup', sayHighlighted);
 	document.addEventListener('keyup', sayHighlighted);
@@ -104,11 +107,11 @@ function buildCategories() {
 		numCol = 4;
 	} else {
 		categoryTagId = 'category-row';
-		numCol = 6;
+		numCol = 5;
 	}
 
 	// build HTML elements for the clickable categories
-	let id, cname, row, col;
+	let id, cname, row, col, link, icon;
 	let colIdx = 0;
 	let table = document.getElementById(categoryTagId);
 	let div = table.getElementsByTagName('tbody')[0];
@@ -123,12 +126,14 @@ function buildCategories() {
 			col = document.createElement(colTagName);
 			col.id = id;
 			col.className = colTagClass;
-			if (isMobile()) {
-				col.textContent = id;
-			} else {
-				col.textContent = cname + ' - ' + id;
-			}
-			col.onclick = function () { setCategory(this.id); };
+			link = document.createElement('a');
+			link.href = '#character/' + id;
+			icon = document.createElement('img');
+			icon.src = getCategoryIcon(id);
+			icon.className = 'category-icon';
+			link.textContent = ' ' + (isMobile() ? id : cname + ' - ' + id);
+			col.appendChild(icon);
+			col.appendChild(link);
 			row.appendChild(col);
 		}
 		div.appendChild(row);
@@ -145,24 +150,23 @@ function searchWord() {
 	let error = document.getElementById('search-error');
 	error.textContent = '';
 
-	let category, words, word;
+	let category, words, word = null;
 	if (ALL_WORDS.length == 0) {
 		error.textContent = 'Refresh the page.';
 		return null;
 	}
-	for (let i = 0; i < ALL_WORDS.length; i++) {
+	for (let i = 0; i < ALL_WORDS.length && word == null; i++) {
 		category = ALL_WORDS[i];
 		words = category.words;
 		word = words.find(item => (item.chinese == value || item.english.toLowerCase() == value.toLowerCase()));
-		if (word != null) {
-			currentCategory = category.category;
-			break;
-		}
 	}
 
 	if (word == null) {
 		error.textContent = 'No this word: ' + value;
 	} else {
+		CURRENT_WORD.category = category.category;
+		CURRENT_WORD.cname = category.cname;
+		CURRENT_WORD.word = word;
 		buildWordEntry(word);
 		draw(word);
 		buildWordList();
