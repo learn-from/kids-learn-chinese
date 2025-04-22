@@ -1,11 +1,17 @@
 
-// document.addEventListener('DOMContentLoaded', initHeader);
 
 /**
  * Checks the device is a mobile device (iPhone or Android phone)
  */
 function isMobile() {
 	const userAgent = navigator.userAgent.toLowerCase();
+	// let now = new Date();
+	// let time = now.getMinutes() + ":" + now.getSeconds();
+	// console.log(time, "userAgent", userAgent, "android", /android/.test(userAgent),
+	// 	"iphone|ipod", (/iphone|ipod/.test(userAgent)), "ipad", /ipad/.test(userAgent));
+
+	return (/iphone|ipod/.test(userAgent) || /android/.test(userAgent));
+
 	// const isTouch = 'ontouchstart' in window;
 	// const width = window.innerWidth;
 
@@ -14,10 +20,6 @@ function isMobile() {
 	// let isMobile = (/iphone|ipod/.test(userAgent) || /android/.test(userAgent) || isTouch && width <= 768 || isTouch && width > 768);
 
 	// console.log("isTouch", isTouch, "width", width);
-	console.log("userAgent", userAgent, "android", /android/.test(userAgent),
-		"iphone|ipod", (/iphone|ipod/.test(userAgent)), "ipad", /ipad/.test(userAgent));
-
-	return (/iphone|ipod/.test(userAgent) || /android/.test(userAgent));
 	// return (/iphone|ipod/.test(userAgent) || /android/.test(userAgent) || isTouch && width <= 768 || isTouch && width > 768);
 	// return (mobile && !iPad);
 	// return false;
@@ -35,6 +37,9 @@ async function initHeader() {
 		.then(response => response.text())
 		.then(data => document.getElementById("header").innerHTML = data)
 		.catch(error => console.error("Error loading header:", error));
+
+	// build category menu
+	buildCategories();
 
 	// Use some mobile specific elements
 	if (isMobile()) {
@@ -67,9 +72,6 @@ async function initHeader() {
 	document.addEventListener("click", function () {
 		document.getElementById('category-row').style.display = 'none';
 	});
-
-	// build the category list
-	buildCategories();
 }
 
 /**

@@ -187,9 +187,9 @@ function getRandomImage() {
 	let max = Math.floor(images.great.length - 1);
 	let idx = Math.floor(Math.random() * (max - min + 1) + min);
 	let greetingImages = {
-		wrong: GREETING_IMG_DIR + images.wrong,
-		ok: GREETING_IMG_DIR + images.ok,
-		great: GREETING_IMG_DIR + images.great[idx]
+		wrong: GREETING_IMG_DIR + images.wrong + "?t=" + Date.now(),
+		ok: GREETING_IMG_DIR + images.ok + "?t=" + Date.now(),
+		great: GREETING_IMG_DIR + images.great[idx] + "?t=" + Date.now()
 	}
 	console.log(greetingImages);
 	return greetingImages;

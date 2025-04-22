@@ -36,7 +36,7 @@ async function draw(word) {
 					writer.animateCharacter();
 				}
 			}
-			console.log("draw() completed");
+			// console.log("draw() completed");
 			resolve();
 		}, 300);
 	});

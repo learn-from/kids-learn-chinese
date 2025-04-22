@@ -16,6 +16,7 @@ function createSidebar() {
 	icon.src = getCategoryIcon(id);
 	icon.className = 'category-icon';
 	let text = document.createTextNode(' ' + id + ' (' + category.words.length + ')');
+	p.innerHTML = '';
 	p.appendChild(icon);
 	p.appendChild(text);
 
@@ -36,5 +37,4 @@ function createSidebar() {
 			ul.appendChild(li);
 		}
 	}
-	return category.words[0].chinese;
 }

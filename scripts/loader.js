@@ -1,6 +1,7 @@
 
+
 window.addEventListener("hashchange", loadPage);
-window.addEventListener("load", loadPage);
+window.addEventListener("DOMContentLoaded", loadPage);
 
 /**
  * Loads header, sidebar and content dynamically according to the value of window.location.hash.
@@ -12,17 +13,16 @@ async function loadPage() {
   console.log('page URL:', pageUrl);
 
   try {
-    await initHeader();
     let app = document.getElementById("app");
     let response = await fetch(pageUrl);
     if (!response.ok)
       throw new Error("Page not found:", pageUrl);
     let html = await response.text();
     app.innerHTML = html;
-    buildCategories();
     switch (pageName) {
       case 'character':
-        updatePage('1-1');
+        await initHeader();
+        updatePage();
         createSidebar();
         break;
       case 'practice':
