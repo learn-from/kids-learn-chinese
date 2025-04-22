@@ -61,13 +61,13 @@ const ALL_WORDS =
 			"words": [
 				{ "chinese": "爸", "english": "Father", "pinyin": "Bà", "phrase": ["爸爸"], "sentence": "爸爸的爸爸叫爷爷，爸爸的妈妈叫奶奶。", "image": "images/chars/Family/dad.jpg" },
 				{ "chinese": "妈", "english": "Mother", "pinyin": "Mā", "phrase": ["妈妈"], "sentence": "妈妈的爸爸叫外公，妈妈的妈妈叫外婆。", "image": "images/chars/Family/mother.jpg" },
-				{ "chinese": "爷", "english": "Grandpa", "pinyin": "Yé", "phrase": ["爷爷", "爷们儿"], "sentence": "爸爸的爸爸叫爷爷，爸爸的妈妈叫奶奶。", "image": "images/chars/Family/grandpa-f.jpg" },
-				{ "chinese": "奶", "english": "Grandma", "pinyin": "Nǎi", "phrase": ["奶奶", "牛奶"], "sentence": "爸爸的爸爸叫爷爷，爸爸的妈妈叫奶奶。", "image": "images/chars/Family/grandma-f.jpg" },
+				{ "chinese": "爷", "english": "Grand-Father", "pinyin": "Yé", "phrase": ["爷爷", "爷们儿"], "sentence": "爸爸的爸爸叫爷爷，爸爸的妈妈叫奶奶。", "image": "images/chars/Family/grandpa-f.jpg" },
+				{ "chinese": "奶", "english": "Grand-Mother", "pinyin": "Nǎi", "phrase": ["奶奶", "牛奶"], "sentence": "爸爸的爸爸叫爷爷，爸爸的妈妈叫奶奶。", "image": "images/chars/Family/grandma-f.jpg" },
 				{ "chinese": "公", "english": "Grandpa", "pinyin": "Gōng", "phrase": ["外公", "天公"], "sentence": "妈妈的爸爸叫外公，妈妈的妈妈叫外婆。", "image": "images/chars/Family/grandpa-m.jpg" },
 				{ "chinese": "婆", "english": "Grandma", "pinyin": "Pó", "phrase": ["外婆", "婆婆"], "sentence": "妈妈的爸爸叫外公，妈妈的妈妈叫外婆。", "image": "images/chars/Family/grandma-m.webp" },
 				{ "chinese": "姐", "english": "Sister", "pinyin": "Jiě", "phrase": ["姐姐", "姐妹"], "sentence": "我是姐姐，我的弟弟叫胡文思。", "image": "images/chars/Family/elder-sister.jpg" },
-				{ "chinese": "弟", "english": "Brother", "pinyin": "Dì", "phrase": ["弟弟", "兄弟"], "sentence": "我是弟弟，我的姐姐叫胡清。", "image": "images/chars/Family/younger-brother.jpg" },
-				{ "chinese": "哥", "english": "Brother", "pinyin": "Gē", "phrase": ["哥哥", "哥们"], "sentence": "我没有哥哥，因为我是老大。", "image": "images/chars/Family/elder-brother.webp" },
+				{ "chinese": "弟", "english": "Younger-Brother", "pinyin": "Dì", "phrase": ["弟弟", "兄弟"], "sentence": "我是弟弟，我的姐姐叫胡清。", "image": "images/chars/Family/younger-brother.jpg" },
+				{ "chinese": "哥", "english": "Elder-Brother", "pinyin": "Gē", "phrase": ["哥哥", "哥们"], "sentence": "我没有哥哥，因为我是老大。", "image": "images/chars/Family/elder-brother.webp" },
 				{ "chinese": "妹", "english": "Sister", "pinyin": "Mèi", "phrase": ["妹妹", "姐妹"], "sentence": "我没有妹妹，但我有个弟弟。", "image": "images/chars/Family/younger-sister.webp" }
 			]
 		},
