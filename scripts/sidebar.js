@@ -11,7 +11,6 @@ function createSidebar() {
 	let id = category.category;
 
 	// update the P element as the category title
-	// TODO add a category icon
 	let p = document.getElementById('word-category');
 	let icon = document.createElement('img');
 	icon.src = getCategoryIcon(id);

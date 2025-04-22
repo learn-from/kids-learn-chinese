@@ -21,6 +21,8 @@ img.binner {
 	font-weight: bold;
 	font-size: 16px;
 	font-family: 'Times New Roman', Times, serif;
+	margin-right: 20px;
+	cursor: pointer;
 }
 
 .category-box {
@@ -39,6 +41,10 @@ img.binner {
 	margin: 0;
 	font-size: 14px;
 	background-color: antiquewhite;
+}
+
+.category-icon {
+	height: 20px;
 }
 
 .usage {

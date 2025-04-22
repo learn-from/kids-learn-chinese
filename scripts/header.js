@@ -45,11 +45,12 @@ async function initHeader() {
 
 	// for desktop only
 	let categoryBtn = document.getElementById('category-btn');
+	let usageBtn = document.getElementById('usage-btn');
+	let printBtn = document.getElementById('print-btn');
+
 	categoryBtn.addEventListener("mouseover", function () {
 		showMenuRow('category-row');
 	});
-	let usageBtn = document.getElementById('usage-btn');
-	let printBtn = document.getElementById('print-btn');
 	usageBtn.addEventListener("mouseover", function () {
 		showMenuRow('usage-row');
 	});

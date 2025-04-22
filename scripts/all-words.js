@@ -370,98 +370,98 @@ const GREETING_IMAGES = [
 		category: 'All',
 		wrong: 'try-again-1.jpg',
 		ok: 'talk-okay.jpg',
-		icon: 'Thumbs/two-thumbs-up-icon.png',
+		icon: 'Icons/TwoThumbs.png',
 		great: ['Thumbs/two-thumbs-up-yellow.jpg', 'Thumbs/two-thumbs-up-purple.jpg', 'Thumbs/two-thumbs-up-pink.jpg']
 	},
 	{
 		category: 'Number',
 		wrong: 'try-again-1.jpg',
 		ok: 'talk-okay.jpg',
-		icon: 'Thumbs/two-thumbs-up-icon.png',
+		icon: 'Icons/TwoThumbs.png',
 		great: ['Thumbs/two-thumbs-up-yellow.jpg', 'Thumbs/two-thumbs-up-purple.jpg', 'Thumbs/two-thumbs-up-pink.jpg']
 	},
 	{
 		category: 'Color',
 		wrong: 'try-again-1.jpg',
 		ok: 'talk-okay.jpg',
-		icon: 'Bluey/Bob.png',
+		icon: 'Icons/Bob.png',
 		great: ['Bluey/Bob.png', 'Bluey/Brandy.png', 'Bluey/Calypso.png', 'Bluey/Chloe.png']
 	},
 	{
 		category: 'Shape',
 		wrong: 'try-again-1.jpg',
 		ok: 'talk-okay.jpg',
-		icon: 'CocoMelon/CeCe.png',
+		icon: 'Icons/CeCe.png',
 		great: ['CocoMelon/CeCe.png', 'CocoMelon/Cody.png', 'CocoMelon/Nina.png', 'CocoMelon/Bella.png']
 	},
 	{
 		category: 'Family',
 		wrong: 'try-again-1.jpg',
 		ok: 'talk-okay.jpg',
-		icon: 'Bluey/Bluey.png',
+		icon: 'Icons/Bluey.png',
 		great: ['Bluey/Bluey.png', 'Bluey/Bingo.png', 'Bluey/Bandit.png', 'Bluey/Chilli.png']
 	},
 	{
 		category: 'Body',
 		wrong: 'try-again-1.jpg',
 		ok: 'talk-okay.jpg',
-		icon: 'CocoMelon/JJ.png',
+		icon: 'Icons/JJ.png',
 		great: ['CocoMelon/JJ.png', 'CocoMelon/TomTom.png', 'CocoMelon/YoYo.png']
 	},
 	{
 		category: 'Food',
 		wrong: 'try-again-1.jpg',
 		ok: 'talk-okay.jpg',
-		icon: 'Animal/cats-icon.png',
+		icon: 'Icons/Cats.png',
 		great: ['Animal/cats-1.jpg', 'Animal/cats-2.jpg', 'Animal/cats-3.jpg']
 	},
 	{
 		category: 'Tableware',
 		wrong: 'try-again-1.jpg',
 		ok: 'talk-okay.jpg',
-		icon: 'Bluey/Coco.png',
+		icon: 'Icons/Coco.png',
 		great: ['Bluey/Coco.png', 'Bluey/Frisky.png', 'Bluey/Honey.png', 'Bluey/Indy.png']
 	},
 	{
 		category: 'Furniture',
 		wrong: 'try-again-1.jpg',
 		ok: 'talk-okay.jpg',
-		icon: 'CocoMelon/AppBarry.png',
+		icon: 'Icons/AppBarry.png',
 		great: ['CocoMelon/AppBarry.png', 'CocoMelon/Bingo.png', 'CocoMelon/Dad.png', 'CocoMelon/Mom.png']
 	},
 	{
 		category: 'Clothes',
 		wrong: 'try-again-1.jpg',
 		ok: 'talk-okay.jpg',
-		icon: 'Bluey/Jack.png',
+		icon: 'Icons/Jack.png',
 		great: ['Bluey/Jack.png', 'Bluey/Luchy.png', 'Bluey/Machenzie.png', 'Bluey/Missy.png']
 	},
 	{
 		category: 'Toy',
 		wrong: 'try-again-1.jpg',
 		ok: 'talk-okay.jpg',
-		icon: 'Animal/dogs-icon.png',
+		icon: 'Icons/Dogs.png',
 		great: ['Animal/dogs-1.jpg', 'Animal/dogs-2.jpg', 'Animal/dogs-3.jpg']
 	},
 	{
 		category: 'Toiletry',
 		wrong: 'try-again-1.jpg',
 		ok: 'talk-okay.jpg',
-		icon: 'CocoMelon/Grandma.png',
+		icon: 'Icons/Grandma.png',
 		great: ['CocoMelon/Grandma.png', 'CocoMelon/Grandpa.png', 'CocoMelon/Nico.png']
 	},
 	{
 		category: 'Stationery',
 		wrong: 'try-again-1.jpg',
 		ok: 'talk-okay.jpg',
-		icon: 'Disney/Jasmine.png',
+		icon: 'Icons/Jasmine.png',
 		great: ['Disney/Cinderella.png', 'Disney/Jasmine.png', 'Disney/Mulan.png', 'Disney/Snowwhite.png']
 	},
 	{
 		category: 'Verb-1',
 		wrong: 'try-again-1.jpg',
 		ok: 'talk-okay.jpg',
-		icon: 'Bluey/Mort.png',
+		icon: 'Icons/Mort.png',
 		great: ['Bluey/Mort.png', 'Bluey/Muffin.png', 'Bluey/Nana.png', 'Bluey/Rad.png']
 	},
 ];

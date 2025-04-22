@@ -204,7 +204,6 @@ function getCategoryIcon(category) {
 	if (images === undefined) {
 		images = GREETING_IMAGES.find(item => item.category == 'All');
 	}
-	// console.log(images);
 	return GREETING_IMG_DIR + images.icon;
 }
 

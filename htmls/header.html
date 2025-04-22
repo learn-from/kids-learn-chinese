@@ -1,13 +1,13 @@
 <!-- The header with a binner, a herizontal menu bar and a search box -->
 <div id='klc-header'>
 	<img class="binner" src="images/site/banner.jpg" />
-	<nav class="nav justify-content-start menu-bar">
-		<a id='category-btn' class="nav-link link menu-btn" href="/">🗃️ Categories</a>
-		<a id='print-btn' class="nav-link link menu-btn" href="#"
-			title="Print 4x6 cards of the current category to a printer or a PDF file">🖨️ Cards</a>
-		<a id='usage-btn' class="nav-link link menu-btn" href="/">🙋‍♂️ Usage</a>
-		<a id='home-btn' class="nav-link link menu-btn" href="#character">🏠 Home</a>
-	</nav>
+	<p class="menu-bar">
+		<span id='category-btn' class="menu-btn">🗃️ Categories</span>
+		<span id='print-btn' class="menu-btn"
+			title="Print 4x6 cards of the current category to a printer or a PDF file">🖨️ Cards</span>
+		<span id='usage-btn' class="menu-btn">🙋‍♂️ Usage</span>
+		<a id='home-btn' class="menu-btn" href="#" title="Back to Home">🏠 Home</a>
+	</p>
 	<div id='word-search' class="search-word">
 		<input type="text" id="search-word" name="word" onkeypress="return enterKeyPressed(event)">
 		<span class='search' onclick="searchWord()">🔍</span>

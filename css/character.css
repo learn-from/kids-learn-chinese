@@ -160,10 +160,6 @@ li:hover {
 	cursor: pointer;
 }
 
-.category-icon {
-	height: 16px;
-}
-
 .error-message {
 	margin-top: 20px;
 	font-family: 'Times New Roman', Times, serif;
