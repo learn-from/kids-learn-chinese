@@ -86,7 +86,7 @@ const ALL_WORDS =
 				{ "chinese": "鼻", "english": "Nose", "pinyin": "Bí", "phrase": ["鼻子", "鼻尖", "嗤之以鼻"], "sentence": "大象有一条很长的鼻子。", "image": "images/chars/Body/nose.png" },
 				{ "chinese": "眉", "english": "Eyebrow", "pinyin": "Méi", "phrase": ["眉毛", "眉眼", "扬眉吐气"], "sentence": "她有两条细长的眉毛。", "image": "images/chars/Body/eyebrow.png" },
 				{ "chinese": "发", "english": "Hair", "pinyin": "Fā", "phrase": ["头发", "长发", "千钧一发"], "sentence": "我有一头很长的黑发。", "image": "images/chars/Body/hair.png" },
-				{ "chinese": "肚", "english": "Du", "pinyin": "Dù", "phrase": ["肚子", "腿肚子", "牵肠挂肚"], "sentence": "一大腕面条，把肚子吃饱了。", "image": "images/chars/Body/abdomen.png" },
+				{ "chinese": "肚", "english": "Stomach", "pinyin": "Dù", "phrase": ["肚子", "腿肚子", "牵肠挂肚"], "sentence": "一大腕面条，把肚子吃饱了。", "image": "images/chars/Body/abdomen.png" },
 				{ "chinese": "臂", "english": "Arm", "pinyin": "Bì", "phrase": ["手臂", "长臂猿"], "sentence": "他很高，手臂很长。", "image": "images/chars/Body/arm.png" },
 				{ "chinese": "腿", "english": "Leg", "pinyin": "Tuǐ", "phrase": ["大腿", "桌子腿", "花拳绣腿"], "sentence": "长颈鹿脖子很长，还有四条大长腿。", "image": "images/chars/Body/leg.png" },
 				{ "chinese": "屁", "english": "Butt", "pinyin": "Pì", "phrase": ["屁股", "放屁"], "sentence": "他一屁股坐在沙发上。", "image": "images/chars/Body/butt.png" }
