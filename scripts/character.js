@@ -191,7 +191,7 @@ function getRandomImage() {
 		ok: GREETING_IMG_DIR + images.ok + "?t=" + Date.now(),
 		great: GREETING_IMG_DIR + images.great[idx] + "?t=" + Date.now()
 	}
-	console.log(greetingImages);
+	// console.log(greetingImages);
 	return greetingImages;
 }
 
@@ -246,7 +246,7 @@ async function getPinyin(text, inputText) {
 	response = await fetch(urlInputText);
 	data = await response.json();
 	let inputTextPinyin = data[0].map(sentence => sentence[3]).join(" ");
-	console.log("pinyinText, pinyinInputText:[" + textPinyin + '], [' + inputTextPinyin + ']');
+	// console.log("pinyinText, pinyinInputText:[" + textPinyin + '], [' + inputTextPinyin + ']');
 
 	let pinyin = {
 		'text': text,

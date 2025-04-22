@@ -117,7 +117,7 @@ async function speechCheck(id) {
 	img.src = RECORDING_IMG;
 	let text = document.getElementById(id).textContent;
 
-	console.log("Calling recognition ...");
+	// console.log("Calling recognition ...");
 	recognizeSpeech(text);
 }
 
@@ -150,12 +150,12 @@ async function recognizeSpeech(text) {
 
 		// Start recording
 		mediaRecorder.start();
-		console.log("Recording started...");
+		// console.log("Recording started...");
 
 		// Stop recording after waitTime seconds (adjust as needed)
 		setTimeout(() => {
 			mediaRecorder.stop();
-			console.log("Recording stopped.");
+			// console.log("Recording stopped.");
 		}, waitTime);
 	} catch (error) {
 		console.error("Error accessing microphone:", error);
@@ -215,11 +215,11 @@ async function transcribeAudio(text, base64Audio) {
 		}
 
 		let data = await response.json();
-		console.log("Speech to text result:", data);
+		// console.log("Speech to text result:", data);
 
 		if (data.results) {
 			let inputText = data.results.map(result => result.alternatives[0].transcript).join(" ");
-			console.log("Recognized Speech: " + inputText);
+			// console.log("Recognized Speech: " + inputText);
 			getPinyin(text, inputText);
 		} else {
 			console.error("No speech detected!");

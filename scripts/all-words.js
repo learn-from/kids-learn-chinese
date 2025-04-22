@@ -385,7 +385,7 @@ const GREETING_IMAGES = [
 		wrong: 'try-again-1.jpg',
 		ok: 'talk-okay.jpg',
 		icon: 'Icons/Bob.png',
-		great: ['Bluey/Bob.png', 'Bluey/Brandy.png', 'Bluey/Calypso.png', 'Bluey/Chloe.png']
+		great: ['Bluey/Bob-Calypso.png', 'Bluey/Brandy-Honey.png', 'Bluey/Coco-Chloe.png']
 	},
 	{
 		category: 'Shape',
@@ -399,7 +399,7 @@ const GREETING_IMAGES = [
 		wrong: 'try-again-1.jpg',
 		ok: 'talk-okay.jpg',
 		icon: 'Icons/Bluey.png',
-		great: ['Bluey/Bluey.png', 'Bluey/Bingo.png', 'Bluey/Bandit.png', 'Bluey/Chilli.png']
+		great: ['Bluey/Bingo-Bluey.png', 'Bluey/Family.png', 'Bluey/Bandit-Chilli.png']
 	},
 	{
 		category: 'Body',
@@ -420,7 +420,7 @@ const GREETING_IMAGES = [
 		wrong: 'try-again-1.jpg',
 		ok: 'talk-okay.jpg',
 		icon: 'Icons/Coco.png',
-		great: ['Bluey/Coco.png', 'Bluey/Frisky.png', 'Bluey/Honey.png', 'Bluey/Indy.png']
+		great: ['Bluey/Luchy-Jack.png', 'Bluey/Frisky-Indy.png', 'Missy-Machenzie.png']
 	},
 	{
 		category: 'Furniture',
@@ -434,7 +434,7 @@ const GREETING_IMAGES = [
 		wrong: 'try-again-1.jpg',
 		ok: 'talk-okay.jpg',
 		icon: 'Icons/Jack.png',
-		great: ['Bluey/Jack.png', 'Bluey/Luchy.png', 'Bluey/Machenzie.png', 'Bluey/Missy.png']
+		great: ['Bluey/Mort-Muffin.png', 'Bluey/Nana-Missy.png', 'Bluey/Rusty-Snicker.png']
 	},
 	{
 		category: 'Toy',
@@ -462,6 +462,6 @@ const GREETING_IMAGES = [
 		wrong: 'try-again-1.jpg',
 		ok: 'talk-okay.jpg',
 		icon: 'Icons/Mort.png',
-		great: ['Bluey/Mort.png', 'Bluey/Muffin.png', 'Bluey/Nana.png', 'Bluey/Rad.png']
+		great: ['Bluey/Socks-Stripe.png', 'Bluey/Trixie-Winton.png', 'Bluey/Terr.png']
 	},
 ];
