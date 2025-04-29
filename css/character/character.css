@@ -14,6 +14,7 @@ div.picture-row {
 }
 
 div.contents {
+	margin-top: 10px;
 	width: 92%;
 	z-index: 1;
 }

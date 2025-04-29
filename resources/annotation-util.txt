@@ -1,0 +1,90 @@
+// Annotated Character.js
+
+import { PageContent } from "../pagecontent.js";
+import { ChineseSpeaker } from "../utils/speaker.js";
+import { VoiceRecognizer } from "../utils/voice.js";
+import { StrokePlayer } from "../utils/stroke.js";
+
+export class Character extends PageContent {
+  constructor() {
+    super();
+    this.category = "Number"; // Suggest making these configurable for reuse
+    this.item = 0;
+    this.speaker = new ChineseSpeaker();
+    this.recognizer = new VoiceRecognizer();
+    this.strokePlayer = new StrokePlayer();
+  }
+
+  buildPage() {
+    this.buildHeader("Character");
+    this.buildCategoryMenu();
+    this.loadCharacter();
+  }
+
+  buildCategoryMenu() {
+    let menuRow = document.getElementById("category-row");
+    menuRow.innerHTML = ""; // Good reset.
+
+    // Suggest putting categories in a static array
+    const categories = ["Number", "Color", "Shape", "Family", "Body"];
+    for (let category of categories) {
+      let td = document.createElement("td");
+      td.className = "clickable";
+      td.innerText = category;
+      td.onclick = () => {
+        this.category = category;
+        this.item = 0;
+        this.loadCharacter();
+      };
+      menuRow.appendChild(td);
+    }
+  }
+
+  async loadCharacter() {
+    const content = document.getElementById("content");
+    const character = await this.getCharacter(); // Presumably this fetches your data?
+
+    // Consider using a template string for cleaner HTML block creation
+    content.innerHTML = `
+      <div class="character-block">
+        <div class="char-display">
+          <img src="${character.image}" alt="${character.meaning}"/>
+          <h2>${character.char}</h2>
+        </div>
+        <div class="char-tools">
+          <button onclick="playAudio('${character.char}')">🔊</button>
+          <button onclick="startRecognition('${character.char}')">🎤</button>
+          <button onclick="showStroke('${character.char}')">✏️</button>
+        </div>
+      </div>
+    `;
+  }
+
+  async getCharacter() {
+    // Suggest error handling if API or source fails
+    let list = await this.loadCharacterList(this.category);
+    return list[this.item];
+  }
+
+  async loadCharacterList(category) {
+    // Loading from API, JSON or static? Clarify later.
+    let response = await fetch(`data/${category}.json`);
+    if (!response.ok) {
+      console.error("Failed to load characters");
+    }
+    return await response.json();
+  }
+}
+
+// Example functions could be factored into a helper module
+function playAudio(char) {
+  console.log("Playing audio for", char);
+}
+
+function startRecognition(char) {
+  console.log("Recognizing", char);
+}
+
+function showStroke(char) {
+  console.log("Showing stroke", char);
+}

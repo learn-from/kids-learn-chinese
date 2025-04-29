@@ -1,0 +1,24 @@
+Project: Kids Learn Chinese
+Kids Learn Chinese is an online educational tool designed to help preschool-aged children (ages 3–5) begin learning basic Chinese characters, with support from their parents.
+
+Chinese is a logographic language, meaning that its writing system is made up of symbols that represent words or ideas rather than sounds. This makes pronunciation difficult to infer from the characters themselves. To support early learners, this tool offers a set of intuitive and engaging utilities:
+
+- Image Association: Each character is paired with an image to help learners understand its meaning.
+
+- Audio Pronunciation: A speaker icon next to each character plays audio using Google’s Text-to-Speech service. This includes both the pronunciation of the character and an example sentence.
+
+- Voice Recognition: Learners can click on characters to activate Google’s Speech-to-Text and Translation services to check their pronunciation.
+
+- Stroke Order Guidance: A writing utility demonstrates the correct stroke order for each character, helping learners develop writing skills.
+
+The core functionality is managed by the Character class, with more interactive features being developed in the Practice class. Navigation and structure are provided by the Home and PageContent classes.
+
+The project also includes:
+
+- A Header class and its subclasses, which manage page headers.
+
+- A utils folder containing utility functions primarily supporting character learning.
+
+- A sample set of character images in the image folder (additional content to be added).
+
+- A layout designed to support both desktop and mobile usage.

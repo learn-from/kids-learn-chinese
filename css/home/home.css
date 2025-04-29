@@ -1,0 +1,28 @@
+
+div.index-row {
+	width: 92%;
+	align-items: stretch;
+}
+
+div.picture-col {
+	float: left;
+	width: 50%;
+	padding: 80px;
+}
+
+.index-title {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.chinese-title {
+	font-family: KaiTi;
+	font-size: 36px;
+	color: darkgreen;
+}
+
+.english-title {
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 32px;
+	color: darkgreen;
+}

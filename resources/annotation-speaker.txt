@@ -1,0 +1,45 @@
+// File: speaker.js
+
+export class Speaker {
+  static ttsRequestUrl = "https://texttospeech.googleapis.com/v1/text:synthesize";
+
+  static async speakText(text, lang, apiKey) {
+    if (!text) return;
+
+    const requestData = {
+      input: { text },
+      voice: {
+        languageCode: lang,
+        ssmlGender: "FEMALE"
+      },
+      audioConfig: {
+        audioEncoding: "MP3"
+      }
+    };
+
+    try {
+      const response = await fetch(`${Speaker.ttsRequestUrl}?key=${apiKey}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(requestData)
+      });
+
+      if (!response.ok) {
+        console.error("Failed to fetch audio.");
+        return;
+      }
+
+      const data = await response.json();
+      Speaker.playAudio(data.audioContent);
+    } catch (error) {
+      console.error("Error during TTS request:", error);
+    }
+  }
+
+  static playAudio(base64Audio) {
+    const audio = new Audio("data:audio/mp3;base64," + base64Audio);
+    audio.play().catch(error => console.error("Audio play failed:", error));
+  }
+}

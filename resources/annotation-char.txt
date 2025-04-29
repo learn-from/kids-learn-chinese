@@ -1,0 +1,42 @@
+// I’ll begin with annotating selected files from your project with comments inline.
+// This will include some improvements, suggestions, and small refactorings.
+// I’ll go through core files like Character.js, PageContent.js, and one utility.
+// Let’s start with Character.js as an example.
+
+// File: js/Character.js
+
+import { PageContent } from "./PageContent.js";
+import { Header } from "./Header.js";
+import { CharUtils } from "../utils/CharUtils.js";
+
+export class Character extends PageContent {
+  constructor() {
+    super();
+    this.header = new Header("Character");
+    // Suggestion: consider caching commonly accessed DOM elements here
+  }
+
+  async load() {
+    // Comment: Good async structure — this method handles page load for this class
+    this.header.load();
+    const data = await CharUtils.loadCharacters();
+    this.renderCharacters(data);
+  }
+
+  renderCharacters(chars) {
+    // Suggestion: extract template into reusable function or template literal outside the loop
+    const container = document.getElementById("content");
+    container.innerHTML = "";
+    chars.forEach((char) => {
+      const charBlock = document.createElement("div");
+      charBlock.className = "char-block";
+      // Consider accessibility: use alt for images, roles for buttons
+      charBlock.innerHTML = `
+        <p>${char.character}</p>
+        <img src="img/${char.image}" alt="${char.meaning}" />
+        <button onclick="AudioUtil.play('${char.character}')">🔊</button>
+      `;
+      container.appendChild(charBlock);
+    });
+  }
+}
