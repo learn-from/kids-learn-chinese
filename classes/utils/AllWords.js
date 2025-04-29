@@ -193,7 +193,7 @@ export class AllWords {
 					{ "chinese": "书", "english": "Book", "pinyin": "Shū", "phrase": ["读书", "书法", "博览群书"], "sentence": "桌上放着好几本书。", "image": "images/chars/Stationery/book.jpg" },
 					{ "chinese": "本", "english": "Notebook", "pinyin": "Běn", "phrase": ["书本", "根本", "本来面目"], "sentence": "你可以在本子上写字。", "image": "images/chars/Stationery/notebook.jpg" },
 					{ "chinese": "笔", "english": "Pen", "pinyin": "Bǐ", "phrase": ["铅笔", "钢笔", "生花妙笔"], "sentence": "用笔可以画画，也可以写字。", "image": "images/chars/Stationery/pen.jpg" },
-					{ "chinese": "纸", "english": "Paper", "pinyin": "Zhǐ", "phrase": ["白纸", "手纸", "纸上谈兵"], "sentence": "在白纸写字、画画。", "image": "images/chars/Stationery/paper.jpg" },
+					{ "chinese": "纸", "english": "Paper", "pinyin": "Zhǐ", "phrase": ["白纸", "手纸", "纸上谈兵"], "sentence": "在白纸上写字、画画。", "image": "images/chars/Stationery/paper.jpg" },
 					{ "chinese": "电", "english": "Electricity", "pinyin": "Diàn", "phrase": ["电脑", "电话", "电视"], "sentence": "电脑很有用。", "image": "images/chars/Stationery/computer.jpg" },
 					{ "chinese": "机", "english": "Machine", "pinyin": "Jī", "phrase": ["手机", "机器", "机不可失"], "sentence": "出门要带上手机。", "image": "images/chars/Stationery/smartphone.jpg" }
 				]
@@ -307,7 +307,7 @@ export class AllWords {
 				"category": "Verb-1",
 				"cname": "动词",
 				"words": [
-					{ "chinese": "走", "english": "Walk", "pinyin": "Zǒu", "phrase": ["走路", "行走", "走南闯北"], "sentence": "她正在向公园走去。", "image": "images/chars/Verb1/walk.png" },
+					{ "chinese": "走", "english": "Walk", "pinyin": "Zǒu", "phrase": ["学走路", "行走", "走南闯北"], "sentence": "她正在向公园走去。", "image": "images/chars/Verb1/walk.png" },
 					{ "chinese": "跑", "english": "Run", "pinyin": "Pǎo", "phrase": ["跑步", "逃跑", "东跑西颠"], "sentence": "慢点跑，小心摔跟头。", "image": "images/chars/Verb1/run.png" },
 					{ "chinese": "跳", "english": "Jump", "pinyin": "Tiào", "phrase": ["跳高", "跳舞", "心惊肉跳"], "sentence": "她一下跳到沙坑里去了。", "image": "images/chars/Verb1/jump.png" },
 					{ "chinese": "看", "english": "See", "pinyin": "Kàn", "phrase": ["看书", "看电视", "刮目相看"], "sentence": "她看见天上有两只小鸟。", "image": "images/chars/Verb1/see.png" },
@@ -321,8 +321,8 @@ export class AllWords {
 					{ "chinese": "喝", "english": "Drink", "pinyin": "Hē", "phrase": ["喝水", "吃喝", "大吃大喝"], "sentence": "渴了吧？喝一杯水。", "image": "images/chars/Verb1/drink.png" },
 					{ "chinese": "扔", "english": "Throw", "pinyin": "Rēng", "phrase": ["扔了", "扔东西"], "sentence": "她把球扔得很远。", "image": "images/chars/Verb1/throw.png" },
 					{ "chinese": "打", "english": "Beat", "pinyin": "Dǎ", "phrase": ["打开", "打鼓", "打草惊蛇"], "sentence": "她拿了根棍子打地上的树叶子。", "image": "images/chars/Verb1/beat.png" },
-					{ "chinese": "翻", "english": "Turn", "pinyin": "Fān", "phrase": ["翻篇", "掀翻", "翻箱倒柜"], "sentence": "在公园的草地上，她翻了个跟头。", "image": "images/chars/Verb1/turn.png" },
-					{ "chinese": "躺", "english": "Lie", "pinyin": "Tǎng", "phrase": ["躺下", "平躺", "横躺竖卧"], "sentence": "我躺在床上听妈妈讲故事。", "image": "images/chars/Verb1/lie.png" }
+					{ "chinese": "翻", "english": "Turn", "pinyin": "Fān", "phrase": ["翻身", "掀翻", "翻箱倒柜"], "sentence": "在公园的草地上，她翻了个跟头。", "image": "images/chars/Verb1/turn.png" },
+					{ "chinese": "躺", "english": "Lie", "pinyin": "Tǎng", "phrase": ["平躺", "躺下", "横躺竖卧"], "sentence": "我躺在床上听妈妈讲故事。", "image": "images/chars/Verb1/lie.png" }
 				]
 			},
 			{
@@ -336,12 +336,12 @@ export class AllWords {
 					{ "chinese": "拉", "english": "Pull", "pinyin": "Lā", "phrase": ["拉手", "拉车", "东拉西扯"], "sentence": "弟弟把他的狗拉进屋。", "image": "images/chars/Verb2/pull.png" },
 					{ "chinese": "拿", "english": "Take", "pinyin": "Ná", "phrase": ["拿走", "拿过来", "十拿九稳"], "sentence": "他从书架上拿了一本书。", "image": "images/chars/Verb2/take.png" },
 					{ "chinese": "玩", "english": "Play", "pinyin": "Wán", "phrase": ["玩游戏", "开玩笑", "游山玩水"], "sentence": "姐姐和弟弟在玩积木。", "image": "images/chars/Verb2/play.png" },
-					{ "chinese": "脱", "english": "Take off", "pinyin": "Tuō", "phrase": ["脱衣", "脱离", "脱口而出"], "sentence": "弟弟进屋以后，把外衣脱了下来。", "image": "images/chars/Verb2/takeoff.png" },
+					{ "chinese": "脱", "english": "Take off", "pinyin": "Tuō", "phrase": ["脱衣服", "脱离", "脱口而出"], "sentence": "弟弟进屋以后，把外衣脱了下来。", "image": "images/chars/Verb2/takeoff.png" },
 					{ "chinese": "端", "english": "Hold", "pinyin": "Duān", "phrase": ["端着", "端正", "变化多端"], "sentence": "我用双手把一个蛋糕端到桌子上去。", "image": "images/chars/Verb2/hold.png" },
 					{ "chinese": "敲", "english": "Knock", "pinyin": "Qiāo", "phrase": ["敲门", "推敲", "敲山振虎"], "sentence": "有人敲门，爸爸去看谁来了。", "image": "images/chars/Verb2/knock.png" },
-					{ "chinese": "洗", "english": "Wash", "pinyin": "Xǐ", "phrase": ["洗手", "清洗", "碧空如洗"], "sentence": "吃饭前，把手洗干净。", "image": "images/chars/Verb2/wash.png" },
+					{ "chinese": "洗", "english": "Wash", "pinyin": "Xǐ", "phrase": ["洗脸", "清洗", "碧空如洗"], "sentence": "吃饭前，把手洗干净。", "image": "images/chars/Verb2/wash.png" },
 					{ "chinese": "梳", "english": "Comb", "pinyin": "Shū", "phrase": ["梳头", "梳理", "梳洗打扮"], "sentence": "早上起床后，要把头发梳好。", "image": "images/chars/Verb2/comb.png" },
-					{ "chinese": "擦", "english": "Wipe", "pinyin": "Cā", "phrase": ["擦洗", "摩擦", "摩拳擦掌"], "sentence": "咱们去把窗户擦干净。", "image": "images/chars/Verb2/wipe.png" },
+					{ "chinese": "擦", "english": "Wipe", "pinyin": "Cā", "phrase": ["擦桌子", "摩擦", "摩拳擦掌"], "sentence": "咱们去把窗户擦干净。", "image": "images/chars/Verb2/wipe.png" },
 					{ "chinese": "来", "english": "Come", "pinyin": "Lái", "phrase": ["过来", "起来", "后来居上"], "sentence": "姐姐笑着朝我走过来。", "image": "images/chars/Verb2/come.png" },
 					{ "chinese": "去", "english": "Go", "pinyin": "Qù", "phrase": ["回去", "去年", "扬长而去"], "sentence": "她向校车走过去。", "image": "images/chars/Verb2/go.png" },
 					{ "chinese": "洒", "english": "Spill", "pinyin": "Sā", "phrase": ["洒水", "泼洒", "挥洒自如"], "sentence": "我把一整瓶水都洒在桌上了。", "image": "images/chars/Verb2/spill.png" },
