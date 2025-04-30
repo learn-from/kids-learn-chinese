@@ -5,12 +5,10 @@ import { Character } from '../pages/Character.js';
 
 /**
  * This is a printer utility to print character cards to printer/PDF.
- * TODO not fully tested yet.
  */
 export class Printer {
 
 	constructor() {
-		// this.painter = new Painter();
 		this.character = new Character();
 	}
 
@@ -81,7 +79,7 @@ export class Printer {
 		// console.log(body.innerHTML);
 		window.print();
 
-		// restore the original page by using the saved window.location.hash
+		// restore the original page
 		body.innerHTML = bodyOrig;
 		location.reload();
 		Painter.setAnimation(true);
