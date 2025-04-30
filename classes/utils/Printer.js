@@ -1,5 +1,7 @@
 
 import { AllWords } from '../utils/AllWords.js';
+import { Painter } from '../utils/Painter.js';
+import { Character } from '../pages/Character.js';
 
 /**
  * This is a printer utility to print character cards to printer/PDF.
@@ -7,7 +9,10 @@ import { AllWords } from '../utils/AllWords.js';
  */
 export class Printer {
 
-	constructor() { }
+	constructor() {
+		// this.painter = new Painter();
+		this.character = new Character();
+	}
 
 	/**
 	 * Creates an instance of this class to implement the lazy singleton pattern
@@ -19,23 +24,22 @@ export class Printer {
 		}
 		return Printer._instance;
 	}
-	
-	static print() {
+
+	static printPages() {
 		const printer = Printer.getInstance();
 		printer.pagesToPDF();
 	}
 
 	/**
 	 * Prints all words of the current category into a PDF file
-	 * TODO create a Character class for altering the character pages.
-	 * TODO may not need the Character class, just change window.location.hash back to 
-	 * where the printing started at the end of printing method.
 	 */
 	async pagesToPDF() {
-		let body = document.body;
-		let origPage = body.innerHTML;
 
-		let category = ALL_WORDS.find(item => item.category == CURRENT_WORD.category);
+		// save the current page <body> to restore after printing
+		let body = document.body;
+		let bodyOrig = body.innerHTML;
+
+		let category = AllWords.getCategory(AllWords.getCurrentWord().category);
 		let pdfHolder = document.createElement('div');
 		let word, div, contents = null;
 
@@ -60,10 +64,10 @@ export class Printer {
 			word = category.words[i];
 			this.setFontSizes();
 			this.hideSymbols();
-			// TODO use Character class here
-			buildWordEntry(word);
-			await draw(word);
-			await showPicture();
+			AllWords.setCurrentWord3(category.category, category.cname, word);
+			this.character.buildWordEntry();
+			await Painter.draw();
+			await Character.showPicture();
 			contents = document.getElementById('contents').parentElement.cloneNode(true);
 			div = document.createElement('div');
 			div.replaceChildren(...contents.children);
@@ -71,18 +75,16 @@ export class Printer {
 			pdfHolder.appendChild(div);
 		}
 
-		// print the pages
+		// push all cards into the <body> tag and print the pages
 		body.innerHTML = '';
 		body.appendChild(pdfHolder);
 		// console.log(body.innerHTML);
 		window.print();
 
-		// restore the original page
-		body.innerHTML = origPage;
-		initHeader();
+		// restore the original page by using the saved window.location.hash
+		body.innerHTML = bodyOrig;
+		location.reload();
 		Painter.setAnimation(true);
-		buildCategories();
-		buildWordList();
 	}
 
 	/**

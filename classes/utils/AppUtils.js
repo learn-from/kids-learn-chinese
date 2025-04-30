@@ -1,3 +1,4 @@
+import { AllWords } from '../utils/AllWords.js';
 
 export class AppUtils {
 
@@ -19,4 +20,14 @@ export class AppUtils {
 		window.location.hash = hash;
 	}
 
+	/**
+	 * Builds a Character specific window.location.hash to repload a Character page (e.g. searchWord())
+	 * The full window.location.hash looks like this #pageName/category/english/chinese
+	 * @returns
+	 */
+	static buildHash(pageName) {
+		let word = AllWords.getCurrentWord();
+		let hash = '#' + pageName + '/' + word.category + '/' + word.word.english + '/' + word.word.chinese;
+		return hash;
+	}
 }

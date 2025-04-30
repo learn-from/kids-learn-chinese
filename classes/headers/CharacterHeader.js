@@ -2,6 +2,7 @@
 import { Header } from './Header.js';
 import { AllWords } from '../utils/AllWords.js';
 import { AppUtils } from '../utils/AppUtils.js';
+import { Printer } from '../utils/Printer.js';
 
 /**
  * Initializes the header for the character page.
@@ -33,10 +34,10 @@ export class CharacterHeader extends Header {
 			this.hideMenuRows();
 		});
 
-		// let printBtn = document.getElementById('print-btn');
-		// printBtn.addEventListener("click", () => {
-		// 	Printer.print();
-		// });
+		let printBtn = document.getElementById('print-btn');
+		printBtn.addEventListener("click", () => {
+			Printer.printPages();
+		});
 
 		// add a hideMenuRows event to the document to hide the category menu when click on anywhere of the page.
 		document.addEventListener("click", function () {
@@ -56,10 +57,7 @@ export class CharacterHeader extends Header {
 	 * @returns
 	 */
 	static buildHash() {
-		// the full window.location.hash looks like this #pageName/category/english/chinese
-		let word = AllWords.getCurrentWord();
-		let hash = '#character/' + word.category + '/' + word.word.english + '/' + word.word.chinese;
-		return hash;
+		return AppUtils.buildHash('character');
 	}
 
 	/**
