@@ -1,6 +1,5 @@
 
 import { Header } from './Header.js';
-import { AllWords } from '../utils/AllWords.js';
 import { AppUtils } from '../utils/AppUtils.js';
 import { Printer } from '../utils/Printer.js';
 
@@ -41,7 +40,10 @@ export class CharacterHeader extends Header {
 
 		// add a hideMenuRows event to the document to hide the category menu when click on anywhere of the page.
 		document.addEventListener("click", function () {
-			document.getElementById('category-row').style.display = 'none';
+			let tag = document.getElementById('category-row');
+			if (tag) {
+				tag.style.display = 'none';
+			}
 		});
 
 		console.log(this.pageName, ' events are set');
@@ -73,25 +75,13 @@ export class CharacterHeader extends Header {
 	}
 
 	/**
-	 * Builds a list of actions to be added to a category link. Implemented by a child class.
+	 * Shows/hides the hamburger siderar for mobile devices. Implemented by a child class
 	 */
-	buildCategoryActions(category) {
-		let actions = [];
-		let icon = document.createElement('img');
-		icon.src = AllWords.getCategoryIcon(category.category);
-		icon.className = 'category-icon';
-		let link = document.createElement('a');
-		link.href = '#character/' + category.category;
-		link.textContent = ' ' + (AppUtils.isMobile() ? id : category.cname + ' - ' + category.category);
-		actions.push(icon);
-		actions.push(link);
-		return actions;
-	}
-
-	buildHamburgerList() {
+	static toggleMenu() {
 		if (AppUtils.isMobile()) {
-			document.getElementById('hamburger').style.display = 'block';
-			return;
+			let sidebar = document.getElementById("sidebar");
+			let isOn = sidebar.style.display == 'block';
+			sidebar.style.display = (isOn ? 'none' : 'block');
 		}
 	}
 }

@@ -5,8 +5,8 @@ import { PageContent } from './PageContent.js';
 
 import { AllWords } from '../utils/AllWords.js';
 import { Painter } from '../utils/Painter.js';
-import { Printer } from '../utils/Printer.js';
 import { Speaker } from '../utils/Speaker.js';
+import { AppUtils } from '../utils/AppUtils.js';
 
 export class Character extends PageContent {
 
@@ -25,6 +25,29 @@ export class Character extends PageContent {
 	isContentEmpty() {
 		let tag = document.getElementById("contents");
 		return tag == null;
+	}
+
+	/**
+	 * Builds a list of actions to be added to a category link. Implemented by a child class.
+	 */
+	buildCategoryActions(category) {
+		let actions = [];
+		let icon = document.createElement('img');
+		icon.src = AllWords.getCategoryIcon(category.category);
+		icon.className = 'category-icon';
+		let link = document.createElement('a');
+		link.href = '#character/' + category.category;
+		link.textContent = ' ' + (AppUtils.isMobile() ? category.category : category.cname + ' - ' + category.category);
+		actions.push(icon);
+		actions.push(link);
+		return actions;
+	}
+
+	buildHamburgerList() {
+		if (AppUtils.isMobile()) {
+			document.getElementById('hamburger').style.display = 'block';
+			return;
+		}
 	}
 
 	/**

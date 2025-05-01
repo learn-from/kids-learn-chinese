@@ -422,7 +422,7 @@ export class AllWords {
 			category: 'Tableware',
 			wrong: 'try-again-1.jpg',
 			ok: 'talk-okay.jpg',
-			icon: 'Icons/Coco.png',
+			icon: 'Icons/Jack.png',
 			great: ['Bluey/Luchy-Jack.png', 'Bluey/Frisky-Indy.png', 'Bluey/Missy-Machenzie.png']
 		},
 		{
@@ -436,7 +436,7 @@ export class AllWords {
 			category: 'Clothes',
 			wrong: 'try-again-1.jpg',
 			ok: 'talk-okay.jpg',
-			icon: 'Icons/Jack.png',
+			icon: 'Icons/Mort.png',
 			great: ['Bluey/Mort-Muffin.png', 'Bluey/Nana-Missy.png', 'Bluey/Rusty-Snickers.png']
 		},
 		{
@@ -464,7 +464,7 @@ export class AllWords {
 			category: 'Verb-1',
 			wrong: 'try-again-1.jpg',
 			ok: 'talk-okay.jpg',
-			icon: 'Icons/Mort.png',
+			icon: 'Icons/Socks.png',
 			great: ['Bluey/Socks-Stripe.png', 'Bluey/Trixie-Winton.png', 'Bluey/Terr.png']
 		},
 	];

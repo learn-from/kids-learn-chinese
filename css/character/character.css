@@ -58,7 +58,7 @@ div.sidebar ul {
 }
 
 div.word-card {
-	margin-left:6px;
+	margin-left: 6px;
 }
 
 p.word-category {
@@ -225,6 +225,19 @@ li:hover {
 		width: 50%;
 	}
 
+
+	div.word-card {
+		margin-left: 16px;
+	}
+
+	.english {
+		font-family: 'Times New Roman', Times, serif;
+		font-size: 32px;
+		font-weight: bold;
+		margin-left: 16px;
+		color: darkgreen;
+	}
+
 	div.speech-sign-card {
 		float: left;
 		width: 40%;
@@ -245,7 +258,7 @@ li:hover {
 
 	.recording {
 		height: 80px;
-		float:right;
+		float: right;
 		cursor: pointer;
 	}
 

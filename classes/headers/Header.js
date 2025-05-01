@@ -20,11 +20,6 @@ export class Header {
 				.catch(error => console.error("Error loading header:", error));
 
 			console.log(this.pageName, 'is loaded');
-			// build category menu
-			this.buildCategories();
-
-			// build a hamburger list for a mobile device
-			this.buildHamburgerList();
 		}
 	}
 
@@ -33,65 +28,6 @@ export class Header {
 	 */
 	isHeaderEmpty() { }
 
-	/**
-	 * Builds a category list into a table for some pages.
-	 */
-	buildCategories() {
-		console.log('Start building categories');
-		let category = null;
-		let categoryTagId;
-		let rowTagName = 'tr';
-		let colTagName = 'td';
-		let colTagClass = 'clickable';
-		let numCol;
-		if (AppUtils.isMobile()) {
-			categoryTagId = 'mobile-category-row';
-			document.getElementById(categoryTagId).style.display = 'block';
-			numCol = 4;
-		} else {
-			categoryTagId = 'category-row';
-			numCol = 5;
-		}
-
-		// build HTML elements for the clickable categories
-		let id, row, col;
-		let colIdx = 0;
-		let table = document.getElementById(categoryTagId);
-		let div = table.getElementsByTagName('tbody')[0];
-		let links = null;
-		div.innerHTML = '';
-		let allWords = AllWords.getAllWords();
-		for (let i = 0; i < allWords.length; i += numCol) {
-			row = document.createElement(rowTagName);
-			for (let j = 0; (j < numCol && colIdx < (allWords.length - 1)); j++) {
-				colIdx = i + j;
-				category = allWords[colIdx];
-				id = category.category;
-				col = document.createElement(colTagName);
-				col.id = id;
-				col.className = colTagClass;
-				links = this.buildCategoryActions(category);
-				for (let k = 0; k < links.length; k++) {
-					col.appendChild(links[k]);
-				}
-				row.appendChild(col);
-			}
-			div.appendChild(row);
-		}
-		// console.log(div.outerHTML);
-	}
-
-	/**
-	 * Builds a list of actions to be added to a category link. Implemented by a child class.
-	 */
-	buildCategoryActions() {
-	}
-
-	/**
-	 * Builds a hamburger item list for a mobild device. Implemented by a child class.
-	 */
-	buildHamburgerList() {
-	}
 
 	/**
 	 * Hides all meun rows and shows the specified one.
@@ -122,8 +58,7 @@ export class Header {
 			error.textContent = 'No this word: ' + value;
 		} else {
 			let hash = this.buildHash();
-			window.location.hash = hash;
-			// this.rebuildWordEntry();
+			AppUtils.setWindowHash(hash);
 		}
 	}
 
@@ -140,17 +75,6 @@ export class Header {
 	static enterKeyPressed(event) {
 		if (event.keyCode == 13) {
 			this.searchWord();
-		}
-	}
-
-	/**
-	 * Shows/hides the hamburger siderar for mobile devices. Implemented by a child class
-	 */
-	static toggleMenu() {
-		if (AppUtils.isMobile()) {
-			let sidebar = document.getElementById("sidebar");
-			let isOn = sidebar.style.display == 'block';
-			sidebar.style.display = (isOn ? 'none' : 'block');
 		}
 	}
 }

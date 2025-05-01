@@ -19,6 +19,12 @@ export class Home extends PageContent {
 	}
 
 	/**
+	 * Builds category selections (empty)
+	 */
+	buildCategories() {
+	}
+
+	/**
 	 * Updates the page with the data from the CurrentWord
 	 */
 	updatePage() {
