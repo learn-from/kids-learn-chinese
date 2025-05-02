@@ -1,5 +1,6 @@
 
 import { AllWords } from './AllWords.js';
+import { CSSManager } from './CSSManager.js';
 import { Home } from '../home/Home.js';
 import { Character } from '../character/Character.js';
 import { Practice } from '../practice/Practice.js';
@@ -24,7 +25,6 @@ export class Loader {
   static async loadPage() {
     const loader = Loader.getInstance();
     let pageName = loader.initPageInfo();
-    // let pageUrl = 'htmls/' + pageName + '/' + pageName + '.html';
     console.log('page name:', pageName);
 
     try {
@@ -43,6 +43,7 @@ export class Loader {
           content.loadPage();
           break;
       }
+      CSSManager.load(pageName);
     } catch (err) {
       console.error(err);
     }

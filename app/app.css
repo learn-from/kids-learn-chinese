@@ -2,6 +2,12 @@
  * The commonly used style rules, mostly for the header
  * and items of the header like search box and menu bar.
  */
+body {
+	width: 960px;
+	margin: 0 auto;
+	min-height: 700px;
+}
+
 div.header {
 	width: 100%;
 	padding: 10px;
@@ -132,7 +138,7 @@ p.search-error {
 		margin-top: -24px;
 		margin-left: 28%;
 	}
-	
+
 	#category-btn {
 		display: none;
 	}

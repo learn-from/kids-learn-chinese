@@ -1,25 +1,25 @@
 div.index-row {
 	width: 80%;
 	margin-left: 6%;
-	padding-top: 6%;
+	padding-top: 2%;
 	align-items: stretch;
 }
 
 div.picture-col {
 	float: left;
 	width: 50%;
-	padding: 2%;
 }
 
 .picture {
 	display: block;
-	width: 78%;
+	width: 80%;
 	margin: auto;
 	cursor: pointer;
 }
 
 .index-title {
 	margin-top: 20px;
+	padding: 1%;
 	text-align: center;
 }
 
