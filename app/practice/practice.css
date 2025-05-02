@@ -1,49 +1,230 @@
-div.index-row {
-	width: 80%;
-	margin-left: 6%;
-	padding-top: 2%;
-	align-items: stretch;
+
+div.contents {
+	margin-top: 10px;
+	width: 100%;
+	z-index: 1;
 }
 
-div.picture-col {
+/** character row styles */
+div.character-row {
+	width: 100%;
+	align-items: stretch;
+	display: block;
+	margin-top: 2%;
+	margin-bottom: 4%;
+}
+
+.character-row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+div.character-card {
 	float: left;
-	width: 50%;
+	width: 30%;
+	/* margin-top: 20px; */
+}
+
+div.word-card {
+	float: left;
+	width: 70%;
+	padding-right: 20px;
+}
+
+.speech-check {
+	width: 80%;
+	border: 2px solid lightgray;
+	border-radius: 15px;
+	min-height: 96px;
+	padding: 4px;
+}
+
+.speech-check:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+div.speech-sign-card {
+	float: left;
+	width: 25%;
+	padding-right: 15px;
+	text-align: right;
+}
+
+div.speech-check-card {
+	float: left;
+	width: 75%;
+}
+
+/** the contents styles */
+.chinese {
+	font-family: KaiTi;
+	font-size: 28px;
+	color: darkgreen;
+	cursor: pointer;
+}
+
+.english {
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 28px;
+	font-weight: bold;
+	margin-left: 64px;
+	color: darkgreen;
+}
+
+.pinyin {
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 28px;
+	color: darkgreen;
+}
+
+.phrase {
+	font-family: KaiTi;
+	font-size: 28px;
+	color: darkgreen;
+	cursor: pointer;
+}
+
+.sentence {
+	font-family: KaiTi;
+	font-size: 28px;
+	color: darkgreen;
+	cursor: pointer;
+}
+
+.speaker {
+	font-size: 20px;
+	color: darkgreen;
+	margin-left: 12px;
+	cursor: pointer;
+}
+
+.mandarin {
+	font-size: 18px;
+	color: darkblue;
+	margin-left: 12px;
+	cursor: pointer;
+}
+
+.cantonese {
+	font-size: 20px;
+	color: darkgreen;
+	margin-left: 12px;
+	cursor: pointer;
+}
+
+.recording {
+	height: 100px;
+	cursor: pointer;
+}
+
+.error-message {
+	margin-top: 20px;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 16px;
+	color: brown;
+	display: none;
+}
+
+.no-show {
+	display: none;
+}
+
+.break-line {
+	display: inline;
+}
+
+.hamburger {
+	display: none;
+}
+
+/** the picture row styles */
+div.picture-row {
+	width: 100%;
+	display: block;
+	align-items: stretch;
+	margin-top: 50px;
 }
 
 .picture {
-	display: block;
-	width: 80%;
+	float: left;
+	width: 25%;
+}
+
+.picture-choice {
+	width: 90%;
 	margin: auto;
 	cursor: pointer;
 }
 
-.index-title {
-	margin-top: 20px;
-	padding: 1%;
-	text-align: center;
-}
-
-.chinese-title {
-	font-family: KaiTi;
-	font-size: 36px;
-	color: darkgreen;
-}
-
-.english-title {
-	font-family: 'Times New Roman', Times, serif;
-	font-size: 32px;
-	color: darkgreen;
-}
+/* @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) { */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-	div.index-row {
-		width: 98%;
+	body {
+		width: 100%;
+	}
+
+	div.picture-row {
 		align-items: stretch;
 	}
 
-	div.picture-col {
-		float: left;
+	div.contents {
 		width: 100%;
-		padding: 20px;
+	}
+
+	div.character-card {
+		float: left;
+		width: 46%;
+		/* margin-top: -10px; */
+	}
+
+	div.picture-card {
+		float: left;
+		width: 50%;
+	}
+
+
+	div.word-card {
+		margin-left: 16px;
+	}
+
+	.english {
+		font-family: 'Times New Roman', Times, serif;
+		font-size: 32px;
+		font-weight: bold;
+		margin-left: 16px;
+		color: darkgreen;
+	}
+
+	div.speech-sign-card {
+		float: left;
+		width: 40%;
+	}
+
+	div.speech-check-card {
+		float: left;
+		width: 60%;
+	}
+
+	.speech-check {
+		width: 98%;
+		border: 2px solid lightgray;
+		border-radius: 15px;
+		min-height: 84px;
+		padding: 4px;
+	}
+
+	.recording {
+		height: 80px;
+		float: right;
+		cursor: pointer;
+	}
+
+	.break-line::before {
+		content: "\A";
+		/* \A represents a line break */
+		white-space: pre;
 	}
 }

@@ -1,17 +1,12 @@
 
-div.container-position {
-	position: absolute;
-	margin-top: -20px;
-}
-
-div.picture-row {
-	align-items: stretch;
-}
-
 div.contents {
 	margin-top: 10px;
 	width: 92%;
 	z-index: 1;
+}
+
+div.picture-row {
+	align-items: stretch;
 }
 
 div.character-card {
@@ -195,10 +190,6 @@ li:hover {
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 	body {
 		width: 100%;
-	}
-
-	div.container-position {
-		position: relative;
 	}
 
 	div.picture-row {

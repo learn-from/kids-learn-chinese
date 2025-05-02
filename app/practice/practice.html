@@ -1,6 +1,6 @@
 <!-- The main contents section -->
 <div id='practice' class="contents">
-    <div class="talk-row">
+    <div id='character-row' class="character-row">
         <div id='character-card' class="character-card">
             <p>
                 <span id='character' onclick="Painter.draw()" title="click to redraw the character"></span>
@@ -14,23 +14,25 @@
 
         <!-- The word card phrases and sentence -->
         <div id='word-card' class='word-card'>
+            <!-- The word row: phrases, sentence and their pronunciations -->
             <p>
                 <span id="phrase1" class="phrase break-line" title="Talk to App"
-                    onclick="Speaker.speechCheck('phrase')"></span>
+                    onclick="Speaker.speechCheck('phrase1')"></span>
                 <span class="fa-solid fa-volume-high mandarin" title="Speak Mandarin"
-                    onclick="Speaker.say('zh-CN', 'phrase')"></span>
+                    onclick="Speaker.say('zh-CN', 'phrase1')"></span>
                 <span class="fa-solid fa-volume-low cantonese" title="Speak Cantonese"
-                    onclick="Speaker.say('yue-HK', 'phrase')"></span>
+                    onclick="Speaker.say('yue-HK', 'phrase1')"></span>
                 <span style='margin-right:40px' )"> </span>
 
                 <span id="phrase2" class="phrase break-line" title="Talk to App"
-                    onclick="Speaker.speechCheck('phrase')"></span>
+                    onclick="Speaker.speechCheck('phrase2')"></span>
                 <span class="fa-solid fa-volume-high mandarin" title="Speak Mandarin"
-                    onclick="Speaker.say('zh-CN', 'phrase')"></span>
+                    onclick="Speaker.say('zh-CN', 'phrase2')"></span>
                 <span class="fa-solid fa-volume-low cantonese" title="Speak Cantonese"
-                    onclick="Speaker.say('yue-HK', 'phrase')"></span>
+                    onclick="Speaker.say('yue-HK', 'phrase2')"></span>
                 <span style='margin-right:40px' )"> </span>
-
+            </p>
+            <p>
                 <span id="sentence" class="sentence break-line" title="Talk to App"
                     onclick="Speaker.speechCheck('sentence')"></span>
                 <span class="fa-solid fa-volume-high mandarin" title="Speak Mandarin"
@@ -38,33 +40,37 @@
                 <span class="fa-solid fa-volume-low cantonese" title="Speak Cantonese"
                     onclick="Speaker.say('yue-HK', 'sentence')"></span>
             </p>
-        </div>
 
-        <!-- This element is for getting voice and check pronunciation -->
-        <div id='speech-check' class="speech-check no-show">
-            <div id='speech-sign-card' class='speech-sign-card' onclick="Speaker.clearSpeechSection()">
-                <!-- a list of img tags here, only one is set to display -->
-                <img id='recording' class="recording" title='recording' src="" />
+            <!-- This element is for getting voice and check pronunciation -->
+            <div id='speech-check' class="speech-check">
+                <div id='speech-sign-card' class='speech-sign-card' onclick="Speaker.clearSpeechSection()">
+                    <!-- a list of img tags here, only one is set to display -->
+                    <img id='recording' class="recording" title='recording' src="" />
+                </div>
+                <div id='recognization' class='speech-check-card sentence'>
+                    <span id="input-text" class="sentence"></span><br>
+                    <span id="input-pinyin" class="pinyin"></span>
+                    <p id="rec-error" class='error-message'></p>
+                </div>
+                <!-- This is for the error messages -->
+                <div id='error-message' class="error-message" onclick="Speaker.showError('')"
+                    title="Click to hide the error message">
+                </div>
             </div>
-            <div id='recognization' class='speech-check-card sentence no-show'>
-                <span id="input-text" class="sentence"></span><br>
-                <span id="input-pinyin" class="pinyin"></span>
-                <p id="rec-error" class='error-message'></p>
-            </div>
-        </div>
-
-        <!-- This is for the error messages -->
-        <div id='error-message' class="error-message" onclick="Speaker.showError('')"
-            title="Click to hide the error message">
         </div>
     </div>
+</div>
 
-    <!-- This element is for multiple choice selections (pictures) -->
-    <div id='multi-choice-row' class="picture-card">
-        <p>
-            <img id="picture-default" src="" class="picture-default no-show" onclick="Character.showPicture()" />
-            <img id="picture" src="" class="picture no-show" onclick="Character.showPicture()" />
-        </p>
+<!-- This element is for multiple choice selections (pictures) -->
+<div class="contents">
+    <div id='multi-choice-row' class="picture-row">
+        <div id=" picture1" class="picture"><img src='assets/images/chars/Number/number-0.png' class='picture-choice' />
+        </div>
+        <div id="picture2" class="picture"><img src='assets/images/chars/Number/number-7.png' class='picture-choice' />
+        </div>
+        <div id="picture3" class="picture"><img src='assets/images/chars/Number/number-3.png' class='picture-choice' />
+        </div>
+        <div id="picture4" class="picture"><img src='assets/images/chars/Number/number-10.png' class='picture-choice' />
+        </div>
     </div>
-
 </div>
