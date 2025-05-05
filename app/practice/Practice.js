@@ -14,6 +14,7 @@ export class Practice extends PageContent {
 		this.painter = new Painter();
 		this.speaker = new Speaker();
 		Painter.setAnimation(false);
+		Painter.setCharSizeRate(0.6);
 	}
 
 	/**
@@ -21,6 +22,22 @@ export class Practice extends PageContent {
 	 */
 	async loadPage() {
 		super.loadPage();
+	}
+
+	/**
+	 * Checks if the character content section is empty
+	 * @returns
+	 */
+	isContentEmpty() {
+		let tag = document.getElementById("practice");
+		return tag == null;
+	}
+
+	/**
+	 * Pre-loads the greeting images.
+	 */
+	preloadImages() {
+		this.speaker.preloadRecImages('speech-sign-card');
 	}
 
 	/**
@@ -56,9 +73,7 @@ export class Practice extends PageContent {
 		let word = AllWords.getCurrentWord().word;
 		let english = document.getElementById('english');
 		english.textContent = word.english.trim();
-		// this.painter.buildPicture();
 		this.buildWordCard('word-card', word);
-		// Speaker.clearSpeechSection();
 	}
 
 	/**
@@ -66,16 +81,25 @@ export class Practice extends PageContent {
 	 */
 	buildWordCard(cardId, word) {
 		let wordElement = document.getElementById(cardId);
+		let chinese = document.getElementById('chinese');
+		let pinyin = wordElement.querySelector('#pinyin');
 		let phrase1 = wordElement.querySelector('#phrase1');
 		let phrase2 = wordElement.querySelector('#phrase2');
 		let sentence = wordElement.querySelector('#sentence');
+		chinese.textContent = word.chinese.trim();
+		pinyin.textContent = word.pinyin.trim();
 		phrase1.textContent = word.phrase[0].trim();
 		phrase2.textContent = word.phrase[1].trim();
 		sentence.textContent = word.sentence.trim();
 	}
 
-	isContentEmpty() {
-		let tag = document.getElementById("practice");
-		return tag == null;
+	/**
+	 * Finds the next character of the current category and set it as the current one
+	 */
+	static nextCharacter() {
+		AllWords.setNextWord();
+		let hash = AppUtils.buildHash('practice');
+		AppUtils.setWindowHash(hash);
 	}
 }
+window.Practice = Practice;

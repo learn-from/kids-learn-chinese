@@ -10,6 +10,7 @@ export class Painter {
 
 	static animation = true;
 	static waitTime = 300;
+	static charSizeRate = 1.0;
 
 	constructor() { }
 
@@ -30,6 +31,14 @@ export class Painter {
 	 */
 	static setAnimation(animation) {
 		this.animation = animation;
+	}
+
+	/**
+	 * Sets this to start/stop animation for drawing a character.
+	 * @param {} animation 
+	 */
+	static setCharSizeRate(rate) {
+		this.charSizeRate = rate;
 	}
 
 	/**
@@ -181,7 +190,7 @@ export class Painter {
 		} else {
 			switch (charLength) {
 				case 1:
-					charSize = 280;
+					charSize = 320;
 					break;
 				case 2:
 					charSize = 140;
@@ -193,7 +202,7 @@ export class Painter {
 					charSize = 32;
 			};
 		}
-		return charSize;
+		return (charSize * Painter.charSizeRate);
 	}
 }
 

@@ -28,6 +28,13 @@ export class Character extends PageContent {
 	}
 
 	/**
+	 * Pre-loads the greeting images.
+	 */
+	preloadImages() {
+		this.speaker.preloadRecImages('speech-sign-card');
+	}
+
+	/**
 	 * Builds a list of actions to be added to a category link. Implemented by a child class.
 	 */
 	buildCategoryActions(category) {
@@ -57,6 +64,7 @@ export class Character extends PageContent {
 		this.buildWordEntry();
 		this.createSidebar();
 		Speaker.clearSpeechSection();
+		Painter.setCharSizeRate(1.0);
 		Painter.draw();
 	}
 

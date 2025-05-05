@@ -1,3 +1,4 @@
+import { AppUtils } from '../utils/AppUtils.js';
 /**
  * This class is for storing a word collection and provides some static
  * methods to access the collection.
@@ -29,18 +30,18 @@ export class AllWords {
 				"category": "Color",
 				"cname": "颜色",
 				"words": [
-					{ "chinese": "红", "english": "Red", "pinyin": "Hóng", "phrase": ["红色", "红豆", "万紫千红，"], "sentence": "天上飘着一个红气球。", "image": "assets/images/chars/Color/red.png" },
-					{ "chinese": "橙", "english": "Orange", "pinyin": "Chéng", "phrase": ["橙色", "橙子", " 橙黄桔绿"], "sentence": "街上开过来一辆橙色的汽车。", "image": "assets/images/chars/Color/orange.png" },
-					{ "chinese": "黄", "english": "Yellow", "pinyin": "Huáng", "phrase": ["黄色", "蛋黄", "黄梁一梦"], "sentence": "屋里有一扇黄色的大门。", "image": "assets/images/chars/Color/yellow.png" },
-					{ "chinese": "绿", "english": "Green", "pinyin": "Lǜ", "phrase": ["绿色", "绿叶", "绿水青山"], "sentence": "在绿色的草地上，小姑娘正玩得高兴。", "image": "assets/images/chars/Color/green.png" },
-					{ "chinese": "青", "english": "Cayan", "pinyin": "Qīng", "phrase": ["青色", "青年", "青出于蓝"], "sentence": "一个青色的大球浮在空中。", "image": "assets/images/chars/Color/cyan.png" },
-					{ "chinese": "蓝", "english": "Blue", "pinyin": "Lán", "phrase": ["蓝色", "蓝天", "青出于蓝"], "sentence": "一辆深蓝色的火车开进站来。", "image": "assets/images/chars/Color/blue.png" },
-					{ "chinese": "紫", "english": "Purple", "pinyin": "Zǐ", "phrase": ["紫色", "紫红", "紫气东来"], "sentence": "那个紫色的冰棍为什么飘在空中？", "image": "assets/images/chars/Color/purple.png" },
-					{ "chinese": "粉", "english": "Pink", "pinyin": "Fěn", "phrase": ["粉色", "花粉", "粉墨登场"], "sentence": "那边有一大堆粉色的气球。", "image": "assets/images/chars/Color/pink.png" },
-					{ "chinese": "黑", "english": "Black", "pinyin": "Hēi", "phrase": ["黑色", "黑天", "黑白分明"], "sentence": "桌上有一支特别大的黑蜡笔。", "image": "assets/images/chars/Color/black.png" },
-					{ "chinese": "白", "english": "White", "pinyin": "Bái", "phrase": ["白色", "白天", "一青二白"], "sentence": "一大团白纸升在了空中。", "image": "assets/images/chars/Color/white.png" },
-					{ "chinese": "灰", "english": "Gray", "pinyin": "Huī", "phrase": ["灰色", "灰尘", "灰头土脸"], "sentence": "一个小女孩和一幢灰色的房子。", "image": "assets/images/chars/Color/gray.png" },
-					{ "chinese": "虹", "english": "Rainbow", "pinyin": "Hóng", "phrase": ["彩虹", "气贯长虹"], "sentence": "雨后，天上有一道彩虹。", "image": "assets/images/chars/Color/rainbow.png" }
+					{ "chinese": "红", "english": "Red", "pinyin": "Hóng", "phrase": ["红豆", "红色", "万紫千红，"], "sentence": "天上飘着一个红气球。", "image": "assets/images/chars/Color/red.png" },
+					{ "chinese": "橙", "english": "Orange", "pinyin": "Chéng", "phrase": ["橙子", "橙色", " 橙黄桔绿"], "sentence": "一辆橙色的汽车。", "image": "assets/images/chars/Color/orange.png" },
+					{ "chinese": "黄", "english": "Yellow", "pinyin": "Huáng", "phrase": ["蛋黄", "黄色", "黄梁一梦"], "sentence": "一扇黄色的大门。", "image": "assets/images/chars/Color/yellow.png" },
+					{ "chinese": "绿", "english": "Green", "pinyin": "Lǜ", "phrase": ["绿叶", "绿色", "绿水青山"], "sentence": "在绿色的草地上。", "image": "assets/images/chars/Color/green.png" },
+					{ "chinese": "青", "english": "Cayan", "pinyin": "Qīng", "phrase": ["青年", "青色", "青出于蓝"], "sentence": "一个青色的大球。", "image": "assets/images/chars/Color/cyan.png" },
+					{ "chinese": "蓝", "english": "Blue", "pinyin": "Lán", "phrase": ["蓝天", "蓝色", "青出于蓝"], "sentence": "一辆深蓝色的火车。", "image": "assets/images/chars/Color/blue.png" },
+					{ "chinese": "紫", "english": "Purple", "pinyin": "Zǐ", "phrase": ["紫红", "紫色", "紫气东来"], "sentence": "天上有个紫色的冰棍。", "image": "assets/images/chars/Color/purple.png" },
+					{ "chinese": "粉", "english": "Pink", "pinyin": "Fěn", "phrase": ["花粉", "粉色", "粉墨登场"], "sentence": "一大堆粉色的气球。", "image": "assets/images/chars/Color/pink.png" },
+					{ "chinese": "黑", "english": "Black", "pinyin": "Hēi", "phrase": ["黑天", "黑色", "黑白分明"], "sentence": "一支特别大的黑蜡笔。", "image": "assets/images/chars/Color/black.png" },
+					{ "chinese": "白", "english": "White", "pinyin": "Bái", "phrase": ["白天", "白色", "一青二白"], "sentence": "空中有一大团白纸。", "image": "assets/images/chars/Color/white.png" },
+					{ "chinese": "灰", "english": "Gray", "pinyin": "Huī", "phrase": ["灰尘", "灰色", "灰头土脸"], "sentence": "一个小女孩和一幢灰色的房子。", "image": "assets/images/chars/Color/gray.png" },
+					{ "chinese": "虹", "english": "Rainbow", "pinyin": "Hóng", "phrase": ["彩虹", "气贯长虹"], "sentence": "天上有一道彩虹。", "image": "assets/images/chars/Color/rainbow.png" }
 				]
 			},
 			{
@@ -62,16 +63,16 @@ export class AllWords {
 				"category": "Family",
 				"cname": "家庭",
 				"words": [
-					{ "chinese": "爸", "english": "Father", "pinyin": "Bà", "phrase": ["爸爸"], "sentence": "爸爸的爸爸叫爷爷，爸爸的妈妈叫奶奶。", "image": "assets/images/chars/Family/dad.jpg" },
-					{ "chinese": "妈", "english": "Mother", "pinyin": "Mā", "phrase": ["妈妈"], "sentence": "妈妈的爸爸叫外公，妈妈的妈妈叫外婆。", "image": "assets/images/chars/Family/mother.jpg" },
-					{ "chinese": "爷", "english": "Grand-Father", "pinyin": "Yé", "phrase": ["爷爷", "爷们儿"], "sentence": "爸爸的爸爸叫爷爷，爸爸的妈妈叫奶奶。", "image": "assets/images/chars/Family/grandpa-f.jpg" },
-					{ "chinese": "奶", "english": "Grand-Mother", "pinyin": "Nǎi", "phrase": ["奶奶", "牛奶"], "sentence": "爸爸的爸爸叫爷爷，爸爸的妈妈叫奶奶。", "image": "assets/images/chars/Family/grandma-f.jpg" },
-					{ "chinese": "公", "english": "Grandpa", "pinyin": "Gōng", "phrase": ["外公", "天公"], "sentence": "妈妈的爸爸叫外公，妈妈的妈妈叫外婆。", "image": "assets/images/chars/Family/grandpa-m.jpg" },
-					{ "chinese": "婆", "english": "Grandma", "pinyin": "Pó", "phrase": ["外婆", "婆婆"], "sentence": "妈妈的爸爸叫外公，妈妈的妈妈叫外婆。", "image": "assets/images/chars/Family/grandma-m.webp" },
-					{ "chinese": "姐", "english": "Elder-Sister", "pinyin": "Jiě", "phrase": ["姐姐", "姐妹"], "sentence": "我是姐姐，我的弟弟叫胡文思。", "image": "assets/images/chars/Family/elder-sister.jpg" },
-					{ "chinese": "弟", "english": "Younger-Brother", "pinyin": "Dì", "phrase": ["弟弟", "兄弟"], "sentence": "我是弟弟，我的姐姐叫胡清。", "image": "assets/images/chars/Family/younger-brother.jpg" },
-					{ "chinese": "哥", "english": "Elder-Brother", "pinyin": "Gē", "phrase": ["哥哥", "哥们"], "sentence": "我没有哥哥，因为我是老大。", "image": "assets/images/chars/Family/elder-brother.webp" },
-					{ "chinese": "妹", "english": "Younger-Sister", "pinyin": "Mèi", "phrase": ["妹妹", "姐妹"], "sentence": "我没有妹妹，但我有个弟弟。", "image": "assets/images/chars/Family/younger-sister.webp" }
+					{ "chinese": "爸", "english": "Father", "pinyin": "Bà", "phrase": ["爸爸"], "sentence": "爸爸的爸爸叫爷爷。", "image": "assets/images/chars/Family/dad.jpg" },
+					{ "chinese": "妈", "english": "Mother", "pinyin": "Mā", "phrase": ["妈妈"], "sentence": "妈妈的爸爸叫外公。", "image": "assets/images/chars/Family/mother.jpg" },
+					{ "chinese": "爷", "english": "Grand-Father", "pinyin": "Yé", "phrase": ["爷爷", "爷们儿"], "sentence": "爸爸的爸爸叫爷爷。", "image": "assets/images/chars/Family/grandpa-f.jpg" },
+					{ "chinese": "奶", "english": "Grand-Mother", "pinyin": "Nǎi", "phrase": ["奶奶", "牛奶"], "sentence": "爸爸的妈妈叫奶奶。", "image": "assets/images/chars/Family/grandma-f.jpg" },
+					{ "chinese": "公", "english": "Grandpa", "pinyin": "Gōng", "phrase": ["外公", "天公"], "sentence": "妈妈的爸爸叫外公。", "image": "assets/images/chars/Family/grandpa-m.jpg" },
+					{ "chinese": "婆", "english": "Grandma", "pinyin": "Pó", "phrase": ["外婆", "婆婆"], "sentence": "妈妈的妈妈叫外婆。", "image": "assets/images/chars/Family/grandma-m.webp" },
+					{ "chinese": "姐", "english": "Elder-Sister", "pinyin": "Jiě", "phrase": ["姐姐", "姐妹"], "sentence": "我是姐姐，我有个弟弟。", "image": "assets/images/chars/Family/elder-sister.jpg" },
+					{ "chinese": "弟", "english": "Younger-Brother", "pinyin": "Dì", "phrase": ["弟弟", "兄弟"], "sentence": "我是弟弟，我有个姐姐。", "image": "assets/images/chars/Family/younger-brother.jpg" },
+					{ "chinese": "哥", "english": "Elder-Brother", "pinyin": "Gē", "phrase": ["哥哥", "哥们"], "sentence": "我是老大，没有哥哥。", "image": "assets/images/chars/Family/elder-brother.webp" },
+					{ "chinese": "妹", "english": "Younger-Sister", "pinyin": "Mèi", "phrase": ["妹妹", "姐妹"], "sentence": "我没有妹妹，但有个弟弟。", "image": "assets/images/chars/Family/younger-sister.webp" }
 				]
 			},
 			{
@@ -388,7 +389,7 @@ export class AllWords {
 			wrong: 'try-again-1.jpg',
 			ok: 'talk-okay.jpg',
 			icon: 'Icons/Bob.png',
-			great: ['Bluey/Bob-Calypso.png', 'Bluey/Brandy-Honey.png', 'Bluey/Coco-Chloe.png']
+			great: ['Bluey/Bob.png', 'Bluey/Bandit.png', 'Bluey/Chilli.png']
 		},
 		{
 			category: 'Shape',
@@ -402,7 +403,7 @@ export class AllWords {
 			wrong: 'try-again-1.jpg',
 			ok: 'talk-okay.jpg',
 			icon: 'Icons/Bluey.png',
-			great: ['Bluey/Bingo-Bluey.png', 'Bluey/Family.png', 'Bluey/Bandit-Chilli.png']
+			great: ['Bluey/Bluey.png', 'Bluey/Family.png', 'Bluey/Bingo.png']
 		},
 		{
 			category: 'Body',
@@ -423,7 +424,7 @@ export class AllWords {
 			wrong: 'try-again-1.jpg',
 			ok: 'talk-okay.jpg',
 			icon: 'Icons/Jack.png',
-			great: ['Bluey/Luchy-Jack.png', 'Bluey/Frisky-Indy.png', 'Bluey/Missy-Machenzie.png']
+			great: ['Bluey/Jack.png', 'Bluey/Luchy.png', 'Bluey/Machenzie.png']
 		},
 		{
 			category: 'Furniture',
@@ -437,7 +438,7 @@ export class AllWords {
 			wrong: 'try-again-1.jpg',
 			ok: 'talk-okay.jpg',
 			icon: 'Icons/Mort.png',
-			great: ['Bluey/Mort-Muffin.png', 'Bluey/Nana-Missy.png', 'Bluey/Rusty-Snickers.png']
+			great: ['Bluey/Mort.png', 'Bluey/Missy.png', 'Bluey/Snickers.png']
 		},
 		{
 			category: 'Toy',
@@ -465,7 +466,7 @@ export class AllWords {
 			wrong: 'try-again-1.jpg',
 			ok: 'talk-okay.jpg',
 			icon: 'Icons/Socks.png',
-			great: ['Bluey/Socks-Stripe.png', 'Bluey/Trixie-Winton.png', 'Bluey/Terr.png']
+			great: ['Bluey/Socks.png', 'Bluey/Stripe.png', 'Bluey/Terr.png']
 		},
 	];
 
@@ -477,7 +478,13 @@ export class AllWords {
 	}
 
 	// static methods to access the static data
-	static getGreetingImages() {
+	//
+
+	/**
+	 * Creates a list of greating images to cashe
+	 * @returns 
+	 */
+	static loadGreetingImages() {
 		let images = [];
 		let greetingImage, image;
 		for (let i = 0; i < this.GREETING_IMAGES.length; i++) {
@@ -514,7 +521,7 @@ export class AllWords {
 	 * Gets an image ID from an greeting image array randomly.
 	 * @returns 
 	 */
-	static getGreetingImageId(status) {
+	static getGreetingImageId(status, currentImgId) {
 		let category = this.CURRENT_WORD.category;
 		let greetingImage = this.GREETING_IMAGES.find(item => item.category == category);
 		if (greetingImage === undefined) {
@@ -522,9 +529,10 @@ export class AllWords {
 		}
 		let imgId = greetingImage.category + '-' + status;
 		if (status == 'great') {
-			let min = Math.ceil(0);
-			let max = Math.floor(greetingImage.great.length - 1);
-			let idx = Math.floor(Math.random() * (max - min + 1) + min);
+			let idx = -1;
+			while (idx < 0 || currentImgId.endsWith(idx)) {
+				idx = Math.floor(Math.random() * greetingImage.great.length);
+			}
 			imgId += idx;
 		}
 		return imgId;
@@ -536,6 +544,20 @@ export class AllWords {
 
 	static getCurrentWord() {
 		return this.CURRENT_WORD;
+	}
+
+	static setNextWord() {
+		let categoryName = this.CURRENT_WORD.category;
+		let english = this.CURRENT_WORD.word.english;
+		let category = AllWords.getCategory(categoryName);
+		let currentIdx = -1;
+		for (let i = 0; i < category.words.length && currentIdx < 0; i++) {
+			if (category.words[i].english == english) {
+				currentIdx = i;
+			}
+		}
+		let idx = AppUtils.getRandomNumber(0, category.words.length-1, currentIdx);
+		this.CURRENT_WORD.word = category.words[idx];
 	}
 
 	static setCurrentWord3(category, cname, word) {

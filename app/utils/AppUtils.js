@@ -30,4 +30,18 @@ export class AppUtils {
 		let hash = '#' + pageName + '/' + word.category + '/' + word.word.english + '/' + word.word.chinese;
 		return hash;
 	}
+
+	/**
+	 * Gets a random number between [min, max] excluding the specified number.
+	 * @param {} min 
+	 * @param {*} max 
+	 * @param {*} excluded 
+	 */
+	static getRandomNumber(min, max, excluded) {
+		let num = min-1;
+		while (num == excluded || num < min) {
+			num = Math.floor(Math.random() * (max - min + 1) + min);
+		}
+		return num;
+	}
 }

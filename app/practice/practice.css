@@ -1,4 +1,3 @@
-
 div.contents {
 	margin-top: 10px;
 	width: 100%;
@@ -48,14 +47,14 @@ div.word-card {
 
 div.speech-sign-card {
 	float: left;
-	width: 25%;
+	width: 35%;
 	padding-right: 15px;
 	text-align: right;
 }
 
 div.speech-check-card {
 	float: left;
-	width: 75%;
+	width: 65%;
 }
 
 /** the contents styles */
@@ -70,13 +69,20 @@ div.speech-check-card {
 	font-family: 'Times New Roman', Times, serif;
 	font-size: 28px;
 	font-weight: bold;
-	margin-left: 64px;
+	margin-left: 4%;
 	color: darkgreen;
+}
+
+.next-char {
+	font-size: 28px;
+	color: darkgoldenrod;
+	margin-left: 10%;
+	cursor: pointer;
 }
 
 .pinyin {
 	font-family: 'Times New Roman', Times, serif;
-	font-size: 28px;
+	font-size: 20px;
 	color: darkgreen;
 }
 
@@ -114,6 +120,18 @@ div.speech-check-card {
 	margin-left: 12px;
 	cursor: pointer;
 }
+
+/* 
+#next-character {
+	display: flex;
+	flex-wrap: nowrap;
+	margin: 0;
+	padding: 0;
+}
+
+#next-character span:last-child {
+	margin-left: 50%;
+} */
 
 .recording {
 	height: 100px;

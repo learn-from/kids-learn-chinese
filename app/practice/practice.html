@@ -9,12 +9,22 @@
                 <span id='english' class='english'></span>
                 <span class="fa-solid fa-play speaker" title="Speak English"
                     onclick="Speaker.say('en-US', 'english')"></span>
+                <span class="fa-solid fa-hand-point-right next-char" title="Next Character"
+                    onclick="Practice.nextCharacter()"></span>
             </p>
         </div>
 
         <!-- The word card phrases and sentence -->
         <div id='word-card' class='word-card'>
             <!-- The word row: phrases, sentence and their pronunciations -->
+            <p id='next-character'>
+                <span id='chinese' class="chinese" onclick="Speaker.speechCheck('chinese')"
+                    title="Talk to App"></span>&nbsp;&nbsp;【<span id='pinyin' class="pinyin"></span>】
+                <span class="fa-solid fa-volume-high mandarin" title="Speak Mandarin"
+                    onclick="Speaker.say('zh-CN', 'chinese')"></span>
+                <span class="fa-solid fa-volume-low cantonese" title="Speak Cantonese"
+                    onclick="Speaker.say('yue-HK', 'chinese')"></span>
+            </p>
             <p>
                 <span id="phrase1" class="phrase break-line" title="Talk to App"
                     onclick="Speaker.speechCheck('phrase1')"></span>
@@ -43,7 +53,7 @@
 
             <!-- This element is for getting voice and check pronunciation -->
             <div id='speech-check' class="speech-check">
-                <div id='speech-sign-card' class='speech-sign-card' onclick="Speaker.clearSpeechSection()">
+                <div id='speech-sign-card' class='speech-sign-card'>
                     <!-- a list of img tags here, only one is set to display -->
                     <img id='recording' class="recording" title='recording' src="" />
                 </div>

@@ -7,7 +7,8 @@ import { Constants } from '../utils/Constants.js';
  */
 export class Speaker {
 
-	constructor() { }
+	constructor() { 
+	}
 
 	/**
 	 * Creates an instance of this class to implement the lazy singleton pattern
@@ -16,7 +17,6 @@ export class Speaker {
 	static getInstance() {
 		if (!Speaker._instance) {
 			Speaker._instance = new Speaker();
-			Speaker.getInstance().preloadRecImages();
 		}
 		return Speaker._instance;
 	}
@@ -113,10 +113,10 @@ export class Speaker {
 	/**
 	 * Preloads all the voice recognizating images as they occationaly don't show up.
 	 */
-	preloadRecImages() {
-		let signCard = document.getElementById('speech-sign-card');
+	preloadRecImages(elementId) {
+		let signCard = document.getElementById(elementId);
 		if (signCard.getElementsByTagName("IMG").length < 2) {
-			let images = AllWords.getGreetingImages();
+			let images = AllWords.loadGreetingImages();
 			signCard.append(...images);
 		}
 	}
@@ -171,6 +171,21 @@ export class Speaker {
 				images[i].style.display = 'none';
 			}
 		}
+	}
+
+	/**
+	 * Gets the current greeting image id.
+	 */
+	getCurrentGreetingImageId() {
+		let signCard = document.getElementById('speech-sign-card');
+		let images = signCard.getElementsByTagName("IMG");
+		let id = null;
+		for (let i = 0; i < images.length; i++) {
+			if (images[i].style.display == 'block') {
+				id = images[i].id;
+			}
+		}
+		return id;
 	}
 
 	/** 
@@ -321,12 +336,13 @@ export class Speaker {
 		let textPinyinToneless = this.removeTones(textPinyin);
 		let inputTextPinyinToneless = this.removeTones(inputTextPinyin);
 		let greatingImageId;
+		let currentImageId = this.getCurrentGreetingImageId();
 		if (textPinyin.localeCompare(inputTextPinyin, undefined, { sensitivity: 'accent' }) === 0) {
-			greatingImageId = AllWords.getGreetingImageId('great');
+			greatingImageId = AllWords.getGreetingImageId('great', currentImageId);
 		} else if (textPinyinToneless.localeCompare(inputTextPinyinToneless, undefined, { sensitivity: 'accent' }) === 0) {
-			greatingImageId = AllWords.getGreetingImageId('ok');
+			greatingImageId = AllWords.getGreetingImageId('ok', currentImageId);
 		} else {
-			greatingImageId = AllWords.getGreetingImageId('wrong');
+			greatingImageId = AllWords.getGreetingImageId('wrong', currentImageId);
 		}
 		this.showGreetingImage(greatingImageId);
 

@@ -46,6 +46,8 @@ export class PageContent {
 			// build a hamburger list for a mobile device
 			this.buildHamburgerList();
 
+			// pre-load the greeting images
+			this.preloadImages();
 		}
 
 		this.updatePage();
@@ -55,6 +57,11 @@ export class PageContent {
 	 * Checks if the content section is empty
 	 */
 	isContentEmpty() { }
+
+	/**
+	 * Pre-loads the greeting images
+	 */
+	preloadImages() { }
 
 	/**
 	 * Builds a category list into a table for some pages.
