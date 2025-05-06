@@ -413,6 +413,13 @@ export class AllWords {
 			great: ['CocoMelon/JJ.png', 'CocoMelon/TomTom.png', 'CocoMelon/YoYo.png']
 		},
 		{
+			category: 'Nature',
+			wrong: 'try-again-1.jpg',
+			ok: 'talk-okay.jpg',
+			icon: 'Icons/Coco.png',
+			great: ['Bluey/Coco.png', 'Bluey/Chloe.png', 'Bluey/Calypso.png']
+		},
+		{
 			category: 'Food',
 			wrong: 'try-again-1.jpg',
 			ok: 'talk-okay.jpg',
@@ -467,7 +474,7 @@ export class AllWords {
 			ok: 'talk-okay.jpg',
 			icon: 'Icons/Socks.png',
 			great: ['Bluey/Socks.png', 'Bluey/Stripe.png', 'Bluey/Terr.png']
-		},
+		}
 	];
 
 	// The current word
