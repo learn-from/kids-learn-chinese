@@ -67,4 +67,3 @@ export class Loader {
     return pageName;
   }
 }
-

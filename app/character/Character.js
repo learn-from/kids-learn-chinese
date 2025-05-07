@@ -16,6 +16,8 @@ export class Character extends PageContent {
 		this.header = new CharacterHeader('character');
 		this.painter = new Painter();
 		this.speaker = new Speaker();
+		Painter.setAnimation(true);
+		Painter.setCharSizeRate(1.0);
 	}
 
 	/**

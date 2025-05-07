@@ -87,9 +87,8 @@ export class PageContent {
 		let id, row, col;
 		let colIdx = 0;
 		let table = document.getElementById(categoryTagId);
-		let div = table.getElementsByTagName('tbody')[0];
 		let links = null;
-		div.innerHTML = '';
+		table.innerHTML = '';
 		let allWords = AllWords.getAllWords();
 		for (let i = 0; i < allWords.length; i += numCol) {
 			row = document.createElement(rowTagName);
@@ -106,9 +105,9 @@ export class PageContent {
 				}
 				row.appendChild(col);
 			}
-			div.appendChild(row);
+			table.appendChild(row);
 		}
-		// console.log(div.outerHTML);
+		// console.log(table.outerHTML);
 	}
 
 	/**

@@ -1,6 +1,7 @@
 
 
 import { Header } from '../abstract/Header.js';
+import { AppUtils } from '../utils/AppUtils.js';
 
 /**
  * Initializes the header for the practice page.
@@ -52,4 +53,13 @@ export class PracticeHeader extends Header {
 		let tag = document.getElementById("practice-header");
 		return tag == null;
 	}
+
+	/**
+	 * Builds a Practice specific window.location.hash to repload a Practice page (e.g. searchWord())
+	 * @returns
+	 */
+	static buildHash() {
+		return AppUtils.buildHash('practice');
+	}
 }
+window.PracticeHeader = PracticeHeader;

@@ -148,16 +148,18 @@ export class Practice extends PageContent {
 	/**
 	 * Shows 4 pictures of the current category randomly, one of them matches the current word.
 	 */
-	static checkSelection(id) {
+	static checkSelection(selected) {
 		let english = AllWords.CURRENT_WORD.word.english;
-		let greetingImage = AllWords.GREETING_IMAGES.find(item => item.category == 'All');
-		let greetingImageId;
-		if (english === id) {
-			greetingImageId = greetingImage.great[0];
+		let categoryIdx = Math.floor(Math.random() * (AllWords.GREETING_IMAGES.length));
+		let category = AllWords.GREETING_IMAGES[categoryIdx];
+		let wordIdx = Math.floor(Math.random() * (category.great.length));
+		let greetingImageSrc;
+		if (english === selected) {
+			greetingImageSrc = AllWords.GREETING_IMAGES[categoryIdx].great[wordIdx];
 		} else {
-			greetingImageId = greetingImage.wrong;
+			greetingImageSrc = AllWords.GREETING_IMAGES[categoryIdx].wrong;
 		}
-		this.showGreetingImage(greetingImageId);
+		this.showGreetingImage(greetingImageSrc);
 	}
 
 	/**
