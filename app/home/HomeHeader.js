@@ -15,7 +15,7 @@ export class HomeHeader extends Header {
 	}
 	
 	isHeaderEmpty() {
-		let tag = document.getElementById("home-header-id");
+		let tag = document.getElementById("home-header");
 		return tag == null;
 	}
 

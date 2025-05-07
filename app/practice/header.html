@@ -1,9 +1,9 @@
 <!-- The header with a binner, a herizontal menu bar and a search box -->
-<div id='klc-header'>
+<div id='practice-header'>
 	<img class="binner" src="assets/images/site/banner.jpg" />
 	<p class="menu-bar">
-		<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 		<span id='category-btn' class="menu-btn">🗃️ Categories</span>
+		<span id='usage-btn' class="menu-btn">🙋‍♂️ Usage</span>
 		<a id='home-btn' class="menu-btn" href="#" title="Back to Home">🏠 Home</a>
 	</p>
 	<div id='word-search' class="search-word">
@@ -18,7 +18,18 @@
 			<tbody></tbody>
 		</table>
 	</div>
-	
+
+	<!-- The usage -->
+	<ul id='usage-row' class="usage">
+		<li>🏠 home - back to the first page</li>
+		<li>🗃️ categories - select a category</li>
+		<li><span class="fa-solid fa-computer-mouse mouse-color"></span> character - multi-choice</li>
+		<li><span class="fa-solid fa-computer-mouse mouse-color"></span> word(s) - talk to App</li>
+		<li><span class="fa-solid fa-volume-high speaker-color-green"></span> - speak Mandarin</li>
+		<li><span class="fa-solid fa-volume-low speaker-color-blue"></span> - speak Cantonese</li>
+		<li><span class="fa-solid fa-play speaker-color-green"></span> - speak English</li>
+	</ul>
+
 	<!-- Hamburger sidebar for mobile devices -->
 	<button id="hamburger" class="hamburger" onclick="toggleMenu()">☰</button>
 

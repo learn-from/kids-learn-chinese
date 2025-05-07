@@ -78,6 +78,10 @@ li:hover {
 }
 
 /** the contents styles */
+.character {
+	cursor: pointer;
+}
+
 .chinese {
 	font-family: KaiTi;
 	font-size: 36px;

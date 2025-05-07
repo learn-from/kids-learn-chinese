@@ -3,11 +3,13 @@
     <div class="picture-row">
         <div id='character-card' class="character-card">
             <p>
-                <span id='character' onclick="Painter.draw()" title="click to redraw the character"></span>
+                <span id='character' class='character' onclick="Painter.draw()"
+                    title="click to redraw the character"></span>
             </p>
             <p>
                 <span id='english' class='english'></span>
-                <span class="fa-solid fa-play speaker" title="Speak English" onclick="Speaker.say('en-US', 'english')"></span>
+                <span class="fa-solid fa-play speaker" title="Speak English"
+                    onclick="Speaker.say('en-US', 'english')"></span>
             </p>
         </div>
 
@@ -37,7 +39,8 @@
                 onclick="Speaker.say('yue-HK', 'chinese')"></span>
             <span style='margin-right:40px' )"> </span>
 
-            <span id="phrase" class="phrase break-line" title="Talk to App" onclick="Speaker.speechCheck('phrase')"></span>
+            <span id="phrase" class="phrase break-line" title="Talk to App"
+                onclick="Speaker.speechCheck('phrase')"></span>
             <span class="fa-solid fa-volume-high mandarin" title="Speak Mandarin"
                 onclick="Speaker.say('zh-CN', 'phrase')"></span>
             <span class="fa-solid fa-volume-low cantonese" title="Speak Cantonese"
@@ -67,7 +70,8 @@
     </div>
 
     <!-- This is for the error messages -->
-    <div id='error-message' class="error-message" onclick="Speaker.showError('')" title="Click to hide the error message">
+    <div id='error-message' class="error-message" onclick="Speaker.showError('')"
+        title="Click to hide the error message">
     </div>
 
     <!-- The category selector for mobile -->

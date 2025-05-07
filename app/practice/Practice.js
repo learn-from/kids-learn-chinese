@@ -42,7 +42,6 @@ export class Practice extends PageContent {
 
 	/**
 	 * Builds a list of actions to be added to a category link. Implemented by a child class.
-	 * TODO redo this function for the Practice class.
 	 */
 	buildCategoryActions(category) {
 		let actions = [];
@@ -50,7 +49,7 @@ export class Practice extends PageContent {
 		icon.src = AllWords.getCategoryIcon(category.category);
 		icon.className = 'category-icon';
 		let link = document.createElement('a');
-		// link.href = '#character/' + category.category;
+		link.href = '#practice/' + category.category;
 		link.textContent = ' ' + (AppUtils.isMobile() ? category.category : category.cname + ' - ' + category.category);
 		actions.push(icon);
 		actions.push(link);
@@ -62,7 +61,8 @@ export class Practice extends PageContent {
 	 */
 	updatePage() {
 		this.buildWordEntry();
-		// Speaker.clearSpeechSection();
+		document.getElementById('multi-choice').innerHTML = '';
+		Speaker.clearSpeechSection();
 		Painter.draw();
 	}
 
@@ -100,6 +100,85 @@ export class Practice extends PageContent {
 		AllWords.setNextWord();
 		let hash = AppUtils.buildHash('practice');
 		AppUtils.setWindowHash(hash);
+	}
+
+	/**
+	 * Shows 4 pictures of the current category randomly, one of them matches the current word.
+	 */
+	static showMultiChoices() {
+		let category = AllWords.getCategory(AllWords.CURRENT_WORD.category);
+		let word = category.words.find(item => item.english == AllWords.CURRENT_WORD.word.english);
+		let result = [word];
+
+		// Make a copy of the array to avoid mutating the original
+		let shuffled = category.words.filter(item => item.english !== AllWords.CURRENT_WORD.word.english);;
+
+		// Fisher-Yates Shuffle
+		let j;
+		for (let i = shuffled.length - 1; i > 0; i--) {
+			j = Math.floor(Math.random() * (i + 1));
+			[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+		}
+		result.push(...shuffled.slice(0, 3));
+
+		// Shuffle the final result of 4 items
+		for (let i = result.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[result[i], result[j]] = [result[j], result[i]];
+		}
+
+		// create multiple images as choices
+		let choice, image = null;
+		let choiceTag = document.getElementById('multi-choice');
+		choiceTag.innerHTML = '';
+		for (let i = 0; i < result.length; i++) {
+			image = document.createElement('IMG');
+			image.className = 'picture-choice';
+			image.src = result[i].image;
+			image.id = result[i].english;
+			image.onclick = function() { Practice.checkSelection(this.id); };
+			choice = document.createElement('DIV');
+			choice.className = 'picture';
+			choice.appendChild(image);
+			choiceTag.appendChild(choice);
+		}
+		choiceTag.style.display = 'block';
+	}
+
+	/**
+	 * Shows 4 pictures of the current category randomly, one of them matches the current word.
+	 */
+	static checkSelection(id) {
+		let english = AllWords.CURRENT_WORD.word.english;
+		let greetingImage = AllWords.GREETING_IMAGES.find(item => item.category == 'All');
+		let greetingImageId;
+		if (english === id) {
+			greetingImageId = greetingImage.great[0];
+		} else {
+			greetingImageId = greetingImage.wrong;
+		}
+		this.showGreetingImage(greetingImageId);
+	}
+
+	/**
+	 * Turns all greeting images except the specified one.
+	 * @param {*} src 
+	 */
+	static showGreetingImage(src) {
+		let signCard = document.getElementById('speech-sign-card');
+		let images = signCard.getElementsByTagName("IMG");
+		for (let i = 0; i < images.length; i++) {
+			images[i].style.display = 'none';
+		}
+		for (let i = 0; i < images.length; i++) {
+			if (images[i].src.endsWith(src)) {
+				images[i].style.display = 'block';
+				break;
+			}
+		}
+		document.getElementById('speech-check').style.display = 'block';
+		document.getElementById('recognization').style.display = 'none'
+		document.getElementById('rec-error').textContent = '';
 	}
 }
 window.Practice = Practice;

@@ -50,7 +50,7 @@ export class CharacterHeader extends Header {
 	}
 
 	isHeaderEmpty() {
-		let tag = document.getElementById("usage-row");
+		let tag = document.getElementById("character-header");
 		return tag == null;
 	}
 
@@ -67,11 +67,9 @@ export class CharacterHeader extends Header {
 	 */
 	hideMenuRows() {
 		document.getElementById('category-row').style.display = 'none';
-		if (!AppUtils.isMobile()) {
-			let usage = document.getElementById('usage-row');
-			if (usage)
-				usage.style.display = 'none';
-		}
+		let usage = document.getElementById('usage-row');
+		if (usage)
+			usage.style.display = 'none';
 	}
 
 	/**

@@ -11,6 +11,7 @@ div.character-row {
 	display: block;
 	margin-top: 2%;
 	margin-bottom: 4%;
+	min-height: 290px;
 }
 
 .character-row:after {
@@ -37,6 +38,7 @@ div.word-card {
 	border-radius: 15px;
 	min-height: 96px;
 	padding: 4px;
+	display: none;
 }
 
 .speech-check:after {
@@ -58,6 +60,10 @@ div.speech-check-card {
 }
 
 /** the contents styles */
+.character {
+	cursor: pointer;
+}
+
 .chinese {
 	font-family: KaiTi;
 	font-size: 28px;
@@ -121,18 +127,6 @@ div.speech-check-card {
 	cursor: pointer;
 }
 
-/* 
-#next-character {
-	display: flex;
-	flex-wrap: nowrap;
-	margin: 0;
-	padding: 0;
-}
-
-#next-character span:last-child {
-	margin-left: 50%;
-} */
-
 .recording {
 	height: 100px;
 	cursor: pointer;
@@ -163,7 +157,6 @@ div.picture-row {
 	width: 100%;
 	display: block;
 	align-items: stretch;
-	margin-top: 50px;
 }
 
 .picture {
@@ -185,7 +178,10 @@ div.picture-row {
 	}
 
 	div.picture-row {
+		width: 100%;
+		display: block;
 		align-items: stretch;
+		margin-top: 50px;
 	}
 
 	div.contents {
@@ -232,6 +228,7 @@ div.picture-row {
 		border-radius: 15px;
 		min-height: 84px;
 		padding: 4px;
+		display: none;
 	}
 
 	.recording {

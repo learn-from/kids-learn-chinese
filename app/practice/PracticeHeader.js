@@ -21,6 +21,14 @@ export class PracticeHeader extends Header {
 			super.showMenuRow('category-row');
 		});
 
+		let usageBtn = document.getElementById('usage-btn');
+		usageBtn.addEventListener("mouseover", () => {
+			this.showMenuRow('usage-row');
+		});
+		usageBtn.addEventListener("mouseleave", () => {
+			this.hideMenuRows();
+		});
+
 		// add a hideMenuRows event to the document to hide the category menu when click on anywhere of the page.
 		document.addEventListener("click", function () {
 			let tag = document.getElementById('category-row');
@@ -30,7 +38,18 @@ export class PracticeHeader extends Header {
 		});
 	}
 
+	/**
+	 * Hides all menu rows.
+	 */
+	hideMenuRows() {
+		document.getElementById('category-row').style.display = 'none';
+		let usage = document.getElementById('usage-row');
+		if (usage)
+			usage.style.display = 'none';
+	}
+
 	isHeaderEmpty() {
-		return true;
+		let tag = document.getElementById("practice-header");
+		return tag == null;
 	}
 }

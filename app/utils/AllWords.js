@@ -82,17 +82,17 @@ export class AllWords {
 					{ "chinese": "手", "english": "Hand", "pinyin": "Shǒu", "phrase": ["双手", "手术", "手足之情"], "sentence": "我有一双手。", "image": "assets/images/chars/Body/hand.png" },
 					{ "chinese": "脚", "english": "Foot", "pinyin": "Jiǎo", "phrase": ["脚趾", "脚下", "手脚并用"], "sentence": "弟弟有两只大脚。", "image": "assets/images/chars/Body/foot.png" },
 					{ "chinese": "头", "english": "Head", "pinyin": "Tóu", "phrase": ["头发", "头疼", "头重脚轻"], "sentence": "他们的头发全湿了。", "image": "assets/images/chars/Body/head.png" },
-					{ "chinese": "脸", "english": "Face", "pinyin": "Liǎn", "phrase": ["洗脸", "脸色", "愁眉苦脸"], "sentence": "刷牙、洗脸，然后照照镜子。", "image": "assets/images/chars/Body/face.png" },
+					{ "chinese": "脸", "english": "Face", "pinyin": "Liǎn", "phrase": ["洗脸", "脸色", "愁眉苦脸"], "sentence": "刷牙、洗脸，照镜子。", "image": "assets/images/chars/Body/face.png" },
 					{ "chinese": "眼", "english": "Eye", "pinyin": "Yǎn", "phrase": ["眼睛", "闭眼", "手疾眼快"], "sentence": "她有一双大眼睛。", "image": "assets/images/chars/Body/eye.png" },
 					{ "chinese": "嘴", "english": "Mouth", "pinyin": "Zuǐ", "phrase": ["张嘴", "壶嘴", "七嘴八舌"], "sentence": "她张开嘴笑了。", "image": "assets/images/chars/Body/mouth.png" },
-					{ "chinese": "舌", "english": "Tongue", "pinyin": "Shé", "phrase": ["舌头", "舌尖", "张口结舌"], "sentence": "天热，小狗把舌头伸了出来。", "image": "assets/images/chars/Body/tongue.png" },
+					{ "chinese": "舌", "english": "Tongue", "pinyin": "Shé", "phrase": ["舌头", "舌尖", "张口结舌"], "sentence": "小狗把舌头伸了出来。", "image": "assets/images/chars/Body/tongue.png" },
 					{ "chinese": "牙", "english": "Teeth", "pinyin": "Yá", "phrase": ["牙齿", "门牙", "虎口拔牙"], "sentence": "他掉了一颗门牙。", "image": "assets/images/chars/Body/teeth.png" },
 					{ "chinese": "鼻", "english": "Nose", "pinyin": "Bí", "phrase": ["鼻子", "鼻尖", "嗤之以鼻"], "sentence": "大象有一条很长的鼻子。", "image": "assets/images/chars/Body/nose.png" },
 					{ "chinese": "眉", "english": "Eyebrow", "pinyin": "Méi", "phrase": ["眉毛", "眉眼", "扬眉吐气"], "sentence": "她有两条细长的眉毛。", "image": "assets/images/chars/Body/eyebrow.png" },
 					{ "chinese": "发", "english": "Hair", "pinyin": "Fā", "phrase": ["头发", "长发", "千钧一发"], "sentence": "我有一头很长的黑发。", "image": "assets/images/chars/Body/hair.png" },
 					{ "chinese": "肚", "english": "Stomach", "pinyin": "Dù", "phrase": ["肚子", "腿肚子", "牵肠挂肚"], "sentence": "一大腕面条，把肚子吃饱了。", "image": "assets/images/chars/Body/abdomen.png" },
 					{ "chinese": "臂", "english": "Arm", "pinyin": "Bì", "phrase": ["手臂", "长臂猿"], "sentence": "他很高，手臂很长。", "image": "assets/images/chars/Body/arm.png" },
-					{ "chinese": "腿", "english": "Leg", "pinyin": "Tuǐ", "phrase": ["大腿", "桌子腿", "花拳绣腿"], "sentence": "长颈鹿脖子很长，还有四条大长腿。", "image": "assets/images/chars/Body/leg.png" },
+					{ "chinese": "腿", "english": "Leg", "pinyin": "Tuǐ", "phrase": ["大腿", "桌子腿", "花拳绣腿"], "sentence": "长颈鹿有四条大长腿。", "image": "assets/images/chars/Body/leg.png" },
 					{ "chinese": "屁", "english": "Butt", "pinyin": "Pì", "phrase": ["屁股", "放屁"], "sentence": "他一屁股坐在沙发上。", "image": "assets/images/chars/Body/butt.png" }
 				]
 			},
@@ -103,7 +103,7 @@ export class AllWords {
 					{ "chinese": "天", "english": "Sky", "pinyin": "Tiān", "phrase": ["天空", "明天", "天下太平"], "sentence": "今天的天气真好。", "image": "assets/images/chars/Nature/sky.jpg" },
 					{ "chinese": "地", "english": "Earth", "pinyin": "Dì", "phrase": ["土地", "地下", "地广人稀"], "sentence": "地上长满了草。", "image": "assets/images/chars/Nature/earth.jpg" },
 					{ "chinese": "阳", "english": "Sun", "pinyin": "Yáng", "phrase": ["太阳", "阳光", "阳春白雪"], "sentence": "早上，太阳从东边升起来。", "image": "assets/images/chars/Nature/sun.jpg" },
-					{ "chinese": "月", "english": "Moon", "pinyin": " Yuè", "phrase": ["月亮", "一个月", "日月星辰"], "sentence": "每个月有一天晚上，月亮特别圆。", "image": "assets/images/chars/Nature/moon.jpg" },
+					{ "chinese": "月", "english": "Moon", "pinyin": " Yuè", "phrase": ["月亮", "一个月", "日月星辰"], "sentence": "今天晚上，月亮特别圆。", "image": "assets/images/chars/Nature/moon.jpg" },
 					{ "chinese": "星", "english": "Star", "pinyin": "Xīng", "phrase": ["星星", "明星", "星罗棋布"], "sentence": "夜里，天上有好多星星。", "image": "assets/images/chars/Nature/star.jpg" },
 					{ "chinese": "云", "english": "Cloud", "pinyin": "Yún", "phrase": ["云彩", "白云", "风云变幻"], "sentence": "蓝天上有几朵白云。", "image": "assets/images/chars/Nature/cloud.jpg" },
 					{ "chinese": "风", "english": "Wind", "pinyin": "Fēng", "phrase": ["刮风", "风雨", "风调雨顺"], "sentence": "大风把树都吹弯了。", "image": "assets/images/chars/Nature/wind.jpg" },
@@ -125,7 +125,7 @@ export class AllWords {
 					{ "chinese": "糖", "english": "Sugar", "pinyin": "Táng", "phrase": ["白糖", "糖果", "糖衣炮弹"], "sentence": "别吃太多的糖，对牙齿不好。", "image": "assets/images/chars/Food/suger.jpg" },
 					{ "chinese": "奶", "english": "Milk", "pinyin": "Nǎi", "phrase": ["牛奶", "豆奶", "奶声奶气"], "sentence": "你每天早上喝牛奶吗？", "image": "assets/images/chars/Food/milk.jpg" },
 					{ "chinese": "菜", "english": "Vegetable", "pinyin": "Cài", "phrase": ["蔬菜", "做菜", "面有菜色"], "sentence": "要吃肉，也要吃蔬菜和水果。", "image": "assets/images/chars/Food/vegitable.jpg" },
-					{ "chinese": "果", "english": "Fruit", "pinyin": "Guǒ", "phrase": ["水果", "果实", "前因后果"], "sentence": "桌子上摆的水果有苹果，香蕉和葡萄。", "image": "assets/images/chars/Food/fruit.jpg" },
+					{ "chinese": "果", "english": "Fruit", "pinyin": "Guǒ", "phrase": ["水果", "果实", "前因后果"], "sentence": "桌子上摆的有苹果，香蕉和葡萄。", "image": "assets/images/chars/Food/fruit.jpg" },
 					{ "chinese": "肉", "english": "Meat", "pinyin": "Ròu", "phrase": ["鸡肉", "牛肉", "心惊肉跳"], "sentence": "今天的晚饭有肉，也有菜。", "image": "assets/images/chars/Food/meat.jpg" }
 				]
 			},
@@ -155,7 +155,7 @@ export class AllWords {
 					{ "chinese": "桌", "english": "Table", "pinyin": "Zhuō", "phrase": ["饭桌", "书桌", "圆桌会议"], "sentence": "书桌上有一些笔和纸。", "image": "assets/images/chars/Furniture/table.jpg" },
 					{ "chinese": "椅", "english": "Chair", "pinyin": "Yǐ", "phrase": ["椅子", "躺椅", "桌椅板凳"], "sentence": "书桌旁边有两把椅子。", "image": "assets/images/chars/Furniture/chair.jpg" },
 					{ "chinese": "凳", "english": "Stool", "pinyin": "Dèng", "phrase": ["凳子", "高凳", "坐冷板凳"], "sentence": "厨房里有几个木头凳子。", "image": "assets/images/chars/Furniture/stool.jpg" },
-					{ "chinese": "柜", "english": "Cabinet", "pinyin": "Guì", "phrase": ["书柜", "碗柜", "翻箱倒柜"], "sentence": "厨房的碗柜里有好多碗和盘子。", "image": "assets/images/chars/Furniture/cabinet.jpg" },
+					{ "chinese": "柜", "english": "Cabinet", "pinyin": "Guì", "phrase": ["书柜", "碗柜", "翻箱倒柜"], "sentence": "厨房的碗柜里有好多碗。", "image": "assets/images/chars/Furniture/cabinet.jpg" },
 					{ "chinese": "灯", "english": "Light", "pinyin": "Dēng", "phrase": ["台灯", "路灯", "万家灯火"], "sentence": "桌子上放着一盏台灯。", "image": "assets/images/chars/Furniture/light.jpg" },
 					{ "chinese": "画", "english": "Painting", "pinyin": "Huà", "phrase": ["油画", "国画", "画龙点睛"], "sentence": "墙上挂着两幅画。", "image": "assets/images/chars/Furniture/painting.jpg" }
 				]
@@ -180,8 +180,8 @@ export class AllWords {
 				"cname": "洗漱",
 				"words": [
 					{ "chinese": "盆", "english": "Bath", "pinyin": "Pén", "phrase": ["澡盆", "脸盆", "倾盆大雨"], "sentence": "大澡盆里面有只小鸭子。", "image": "assets/images/chars/Toiletry/bath.jpg" },
-					{ "chinese": "巾", "english": "Towel", "pinyin": "Jīn", "phrase": ["毛巾", "浴巾", "巾帼英雄"], "sentence": "洗完澡后，用毛巾把身上擦干。", "image": "assets/images/chars/Toiletry/towel.jpg" },
-					{ "chinese": "油", "english": "Cream", "pinyin": "Yóu", "phrase": ["擦脸油", "春雨贵如油"], "sentence": "要经常在手上、脸上擦点油。", "image": "assets/images/chars/Toiletry/cream.jpg" },
+					{ "chinese": "巾", "english": "Towel", "pinyin": "Jīn", "phrase": ["毛巾", "浴巾", "巾帼英雄"], "sentence": "用毛巾把身上擦干。", "image": "assets/images/chars/Toiletry/towel.jpg" },
+					{ "chinese": "油", "english": "Cream", "pinyin": "Yóu", "phrase": ["擦脸油", "春雨贵如油"], "sentence": "要经常在脸上擦点油。", "image": "assets/images/chars/Toiletry/cream.jpg" },
 					{ "chinese": "梳", "english": "Comb", "pinyin": "Shū", "phrase": ["梳子", "梳头", "梳洗打扮"], "sentence": "吃早饭前，要把头发梳好。", "image": "assets/images/chars/Toiletry/comb.jpg" },
 					{ "chinese": "刷", "english": "Brush", "pinyin": "Shuā", "phrase": ["牙刷", "刷子"], "sentence": "起床后，先把牙刷干净。", "image": "assets/images/chars/Toiletry/toothbrush.jpg" },
 					{ "chinese": "膏", "english": "Paste", "pinyin": "Gāo", "phrase": ["牙膏", "唇膏"], "sentence": "刷牙时要用牙膏。", "image": "assets/images/chars/Toiletry/toothpaste.jpg" }
@@ -220,7 +220,7 @@ export class AllWords {
 					{ "chinese": "兔", "english": "Rabbit", "pinyin": "Tù", "phrase": ["兔子", "白兔", "龟兔赛跑"], "sentence": "我妈妈和弟弟都是属兔的。", "image": "assets/images/chars/Mammal/rabbit.jpg" },
 					{ "chinese": "猴", "english": "Monkey", "pinyin": "Hóu", "phrase": ["猴子", "猴精", "猴年马月"], "sentence": "猴子很聪明，也很调皮。", "image": "assets/images/chars/Mammal/monkey.jpg" },
 					{ "chinese": "马", "english": "Horse", "pinyin": "Mǎ", "phrase": ["白马", "马车", "马到成功"], "sentence": "马跑得特别快。", "image": "assets/images/chars/Mammal/horse.jpg" },
-					{ "chinese": "羊", "english": "Sheep", "pinyin": "Yáng", "phrase": ["山羊", "绵羊", "亡羊补牢"], "sentence": "早晨，他到山上去放羊。", "image": "assets/images/chars/Mammal/sheep.jpg" },
+					{ "chinese": "羊", "english": "Sheep", "pinyin": "Yáng", "phrase": ["山羊", "绵羊", "亡羊补牢"], "sentence": "他到山上去放羊。", "image": "assets/images/chars/Mammal/sheep.jpg" },
 					{ "chinese": "猫", "english": "Cat", "pinyin": "Māo", "phrase": ["花猫", "猫步", "照猫画虎"], "sentence": "我养了一只黑色的猫。", "image": "assets/images/chars/Mammal/cat.jpg" },
 					{ "chinese": "鼠", "english": "Mouse", "pinyin": "Shǔ", "phrase": ["老鼠", "田鼠", "胆小如鼠"], "sentence": "我家里没有老鼠。", "image": "assets/images/chars/Mammal/mouse.jpg" },
 					{ "chinese": "鹿", "english": "Deer", "pinyin": "Lù", "phrase": ["小鹿", "梅花鹿", "指鹿为马"], "sentence": "有一只鹿在河边喝水。", "image": "assets/images/chars/Mammal/deer.jpg" },
@@ -235,9 +235,9 @@ export class AllWords {
 				"words": [
 					{ "chinese": "鱼", "english": "Fish", "pinyin": "Yú", "phrase": ["金鱼", "钓鱼", "如鱼得水"], "sentence": "一条红鲤鱼在河里游。", "image": "assets/images/chars/Fish/fish.jpg" },
 					{ "chinese": "虾", "english": "Shrimp", "pinyin": "Xiā", "phrase": ["河虾", "对虾", "虾兵蟹将"], "sentence": "水下有三只青色的虾。", "image": "assets/images/chars/Fish/shrimp.jpg" },
-					{ "chinese": "蟹", "english": "Crab", "pinyin": "Xiè", "phrase": ["螃蟹", "海蟹", "河蟹"], "sentence": "螃蟹有八条腿，横着走路。", "image": "assets/images/chars/Fish/crab.jpg" },
+					{ "chinese": "蟹", "english": "Crab", "pinyin": "Xiè", "phrase": ["螃蟹", "海蟹", "河蟹"], "sentence": "螃蟹有八条腿。", "image": "assets/images/chars/Fish/crab.jpg" },
 					{ "chinese": "龟", "english": "Turtle", "pinyin": "Guī", "phrase": ["乌龟", "海龟", "龟兔赛跑"], "sentence": "河边有两只乌龟。", "image": "assets/images/chars/Fish/turtle.jpg" },
-					{ "chinese": "蛙", "english": "Frog", "pinyin": "Wā", "phrase": ["青蛙", "牛蛙", "井底之蛙"], "sentence": "夜晚，池塘里青蛙在叫。", "image": "assets/images/chars/OtherAnimal/frog.jpg" },
+					{ "chinese": "蛙", "english": "Frog", "pinyin": "Wā", "phrase": ["青蛙", "牛蛙", "井底之蛙"], "sentence": "池塘里青蛙在叫。", "image": "assets/images/chars/OtherAnimal/frog.jpg" },
 					{ "chinese": "鲨", "english": "Shark", "pinyin": "Shā", "phrase": ["鲨鱼", "大白鲨"], "sentence": "鲨鱼很大，非常凶猛。", "image": "assets/images/chars/Fish/shark.jpg" },
 					{ "chinese": "鲸", "english": "Whale", "pinyin": "Jīng", "phrase": ["鲸鱼", "蓝鲸", "虎头鲸"], "sentence": "鲸鱼在海里生活，非常大。", "image": "assets/images/chars/Fish/whale.jpg" }
 				]
@@ -248,10 +248,10 @@ export class AllWords {
 				"words": [
 					{ "chinese": "鸟", "english": "Bird", "pinyin": "Niǎo", "phrase": ["小鸟", "鸟叫", "笨鸟先飞"], "sentence": "树上落着一只小鸟。", "image": "assets/images/chars/Bird/birds.jpg" },
 					{ "chinese": "鸡", "english": "Chicken", "pinyin": "Jī", "phrase": ["公鸡", "鸡蛋", "鸡犬升天"], "sentence": "公鸡早上会打鸣。", "image": "assets/images/chars/Bird/roster.jpg" },
-					{ "chinese": "鸭", "english": "Duck", "pinyin": "Yā", "phrase": ["鸭子", "鸭蛋", "赶鸭子上架"], "sentence": "鸡、鸭、鹅都是鸟，但都不会飞了。", "image": "assets/images/chars/Bird/duck.jpg" },
-					{ "chinese": "鹅", "english": "Goose", "pinyin": "É", "phrase": ["鹅蛋", "烤鹅", "鹅毛大雪"], "sentence": "鸡、鸭、鹅都是鸟，但都不会飞了。", "image": "assets/images/chars/Bird/gooses.jpg" },
-					{ "chinese": "鹰", "english": "Eagle", "pinyin": "Yīng", "phrase": ["山鹰", "老鹰", "鹰击长空"], "sentence": "鹰是一种大鸟，飞得很高。", "image": "assets/images/chars/Bird/eagle.jpg" },
-					{ "chinese": "燕", "english": "Swallow", "pinyin": "Yàn", "phrase": ["燕子", "雨燕", "莺歌燕舞"], "sentence": "燕子是一种小鸟，飞得很远。", "image": "assets/images/chars/Bird/swallow.jpg" }
+					{ "chinese": "鸭", "english": "Duck", "pinyin": "Yā", "phrase": ["鸭子", "鸭蛋", "赶鸭子上架"], "sentence": "鸡、鸭、鹅都是鸟。", "image": "assets/images/chars/Bird/duck.jpg" },
+					{ "chinese": "鹅", "english": "Goose", "pinyin": "É", "phrase": ["鹅蛋", "烤鹅", "鹅毛大雪"], "sentence": "鸡、鸭、鹅都是鸟。", "image": "assets/images/chars/Bird/gooses.jpg" },
+					{ "chinese": "鹰", "english": "Eagle", "pinyin": "Yīng", "phrase": ["山鹰", "老鹰", "鹰击长空"], "sentence": "鹰是一种大鸟。", "image": "assets/images/chars/Bird/eagle.jpg" },
+					{ "chinese": "燕", "english": "Swallow", "pinyin": "Yàn", "phrase": ["燕子", "雨燕", "莺歌燕舞"], "sentence": "燕子是一种小鸟。", "image": "assets/images/chars/Bird/swallow.jpg" }
 				]
 			},
 			{
@@ -314,15 +314,15 @@ export class AllWords {
 					{ "chinese": "看", "english": "See", "pinyin": "Kàn", "phrase": ["看书", "看电视", "刮目相看"], "sentence": "她看见天上有两只小鸟。", "image": "assets/images/chars/Verb1/see.png" },
 					{ "chinese": "听", "english": "Listen", "pinyin": "Tīng", "phrase": ["听话", "听音乐", "道听途说"], "sentence": "坐在这听一会音乐。", "image": "assets/images/chars/Verb1/listen.png" },
 					{ "chinese": "说", "english": "Say", "pinyin": "Shuō", "phrase": ["说话", "说明", "道听途说"], "sentence": "姐姐在和弟弟说话。", "image": "assets/images/chars/Verb1/say.png" },
-					{ "chinese": "唱", "english": "Sing", "pinyin": "Chàng", "phrase": ["唱歌", "唱词", "一唱一和"], "sentence": "在幼儿园里，老师教我们唱歌。", "image": "assets/images/chars/Verb1/sing.png" },
+					{ "chinese": "唱", "english": "Sing", "pinyin": "Chàng", "phrase": ["唱歌", "唱词", "一唱一和"], "sentence": "老师教我们唱歌。", "image": "assets/images/chars/Verb1/sing.png" },
 					{ "chinese": "喊", "english": "Shout", "pinyin": "Hǎn", "phrase": ["高喊", "喊叫", "摇旗呐喊"], "sentence": "她有时会大喊大叫。", "image": "assets/images/chars/Verb1/shout.png" },
-					{ "chinese": "笑", "english": "Laugh", "pinyin": "Xiào", "phrase": ["微笑", "笑声", "哄堂大笑"], "sentence": "看见巧克力，我高兴地笑了。", "image": "assets/images/chars/Verb1/laugh.png" },
-					{ "chinese": "哭", "english": "Cry", "pinyin": "Kū", "phrase": ["大哭", "哭声", "哭天抢地"], "sentence": "她摔了个跟头，坐在地上哭了。", "image": "assets/images/chars/Verb1/cry.png" },
+					{ "chinese": "笑", "english": "Laugh", "pinyin": "Xiào", "phrase": ["微笑", "笑声", "哄堂大笑"], "sentence": "我高兴地笑了。", "image": "assets/images/chars/Verb1/laugh.png" },
+					{ "chinese": "哭", "english": "Cry", "pinyin": "Kū", "phrase": ["大哭", "哭声", "哭天抢地"], "sentence": "她坐在地上哭了。", "image": "assets/images/chars/Verb1/cry.png" },
 					{ "chinese": "吃", "english": "Eat", "pinyin": "Chī", "phrase": ["吃饭", "口吃", "大吃一惊"], "sentence": "弟弟在学校吃午饭。", "image": "assets/images/chars/Verb1/eat.png" },
 					{ "chinese": "喝", "english": "Drink", "pinyin": "Hē", "phrase": ["喝水", "吃喝", "大吃大喝"], "sentence": "渴了吧？喝一杯水。", "image": "assets/images/chars/Verb1/drink.png" },
 					{ "chinese": "扔", "english": "Throw", "pinyin": "Rēng", "phrase": ["扔了", "扔东西"], "sentence": "她把球扔得很远。", "image": "assets/images/chars/Verb1/throw.png" },
-					{ "chinese": "打", "english": "Beat", "pinyin": "Dǎ", "phrase": ["打开", "打鼓", "打草惊蛇"], "sentence": "她拿了根棍子打地上的树叶子。", "image": "assets/images/chars/Verb1/beat.png" },
-					{ "chinese": "翻", "english": "Turn", "pinyin": "Fān", "phrase": ["翻身", "掀翻", "翻箱倒柜"], "sentence": "在公园的草地上，她翻了个跟头。", "image": "assets/images/chars/Verb1/turn.png" },
+					{ "chinese": "打", "english": "Beat", "pinyin": "Dǎ", "phrase": ["打开", "打鼓", "打草惊蛇"], "sentence": "她拿棍子打地上的树叶子。", "image": "assets/images/chars/Verb1/beat.png" },
+					{ "chinese": "翻", "english": "Turn", "pinyin": "Fān", "phrase": ["翻身", "掀翻", "翻箱倒柜"], "sentence": "在草地上，她翻了个跟头。", "image": "assets/images/chars/Verb1/turn.png" },
 					{ "chinese": "躺", "english": "Lie", "pinyin": "Tǎng", "phrase": ["平躺", "躺下", "横躺竖卧"], "sentence": "我躺在床上听妈妈讲故事。", "image": "assets/images/chars/Verb1/lie.png" }
 				]
 			},
@@ -337,8 +337,8 @@ export class AllWords {
 					{ "chinese": "拉", "english": "Pull", "pinyin": "Lā", "phrase": ["拉手", "拉车", "东拉西扯"], "sentence": "弟弟把他的狗拉进屋。", "image": "assets/images/chars/Verb2/pull.png" },
 					{ "chinese": "拿", "english": "Take", "pinyin": "Ná", "phrase": ["拿走", "拿过来", "十拿九稳"], "sentence": "他从书架上拿了一本书。", "image": "assets/images/chars/Verb2/take.png" },
 					{ "chinese": "玩", "english": "Play", "pinyin": "Wán", "phrase": ["玩游戏", "开玩笑", "游山玩水"], "sentence": "姐姐和弟弟在玩积木。", "image": "assets/images/chars/Verb2/play.png" },
-					{ "chinese": "脱", "english": "Take off", "pinyin": "Tuō", "phrase": ["脱衣服", "脱离", "脱口而出"], "sentence": "弟弟进屋以后，把外衣脱了下来。", "image": "assets/images/chars/Verb2/takeoff.png" },
-					{ "chinese": "端", "english": "Hold", "pinyin": "Duān", "phrase": ["端着", "端正", "变化多端"], "sentence": "我用双手把一个蛋糕端到桌子上去。", "image": "assets/images/chars/Verb2/hold.png" },
+					{ "chinese": "脱", "english": "Take off", "pinyin": "Tuō", "phrase": ["脱衣服", "脱离", "脱口而出"], "sentence": "弟弟把外衣脱了下来。", "image": "assets/images/chars/Verb2/takeoff.png" },
+					{ "chinese": "端", "english": "Hold", "pinyin": "Duān", "phrase": ["端着", "端正", "变化多端"], "sentence": "我把蛋糕端到桌子上去。", "image": "assets/images/chars/Verb2/hold.png" },
 					{ "chinese": "敲", "english": "Knock", "pinyin": "Qiāo", "phrase": ["敲门", "推敲", "敲山振虎"], "sentence": "有人敲门，爸爸去看谁来了。", "image": "assets/images/chars/Verb2/knock.png" },
 					{ "chinese": "洗", "english": "Wash", "pinyin": "Xǐ", "phrase": ["洗脸", "清洗", "碧空如洗"], "sentence": "吃饭前，把手洗干净。", "image": "assets/images/chars/Verb2/wash.png" },
 					{ "chinese": "梳", "english": "Comb", "pinyin": "Shū", "phrase": ["梳头", "梳理", "梳洗打扮"], "sentence": "早上起床后，要把头发梳好。", "image": "assets/images/chars/Verb2/comb.png" },
@@ -362,7 +362,7 @@ export class AllWords {
 					{ "chinese": "脏", "english": "Dirty", "pinyin": "Zàng", "phrase": ["脏东西", "肮脏", "贪脏枉法"], "sentence": "吃完饭，桌上很脏。", "image": "assets/images/chars/Adjective/dirty.png" },
 					{ "chinese": "净", "english": "Clean", "pinyin": "Jìng", "phrase": ["干净", "净场", "一干二净"], "sentence": "桌子上很干净，放着一盘沙拉。", "image": "assets/images/chars/Adjective/clean.png" },
 					{ "chinese": "香", "english": "Fragrant", "pinyin": "Xiāng", "phrase": ["香花", "香气", "香味扑鼻"], "sentence": "奶奶做的面条真香。", "image": "assets/images/chars/Adjective/fragrant.png" },
-					{ "chinese": "臭", "english": "Smelly", "pinyin": "Chòu", "phrase": ["臭味", "臭小子", "臭味相投"], "sentence": "上完厕所把门开着，放放臭味。", "image": "assets/images/chars/Adjective/smelly.png" }
+					{ "chinese": "臭", "english": "Smelly", "pinyin": "Chòu", "phrase": ["臭味", "臭小子", "臭味相投"], "sentence": "把门开着，放放臭味。", "image": "assets/images/chars/Adjective/smelly.png" }
 				]
 			}
 		]);
