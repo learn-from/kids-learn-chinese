@@ -64,6 +64,7 @@ export class Practice extends PageContent {
 		document.getElementById('multi-choice').innerHTML = '';
 		Speaker.clearSpeechSection();
 		Painter.draw();
+		Practice.showMultiChoices();
 	}
 
 	/**
