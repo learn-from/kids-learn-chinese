@@ -12,8 +12,10 @@ window.onclick = function (event) {
 	if (AppUtils.isMobile()) {
 		if (!event.target.matches('.hamburger')) {
 			let sidebar = document.getElementById("sidebar");
-			let isOn = sidebar.style.display = 'block';
-			sidebar.style.display = (isOn ? 'none' : 'block');
+			if (sidebar) {
+				let isOn = sidebar.style.display = 'block';
+				sidebar.style.display = (isOn ? 'none' : 'block');
+			}
 		}
 	}
 }

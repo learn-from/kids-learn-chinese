@@ -177,69 +177,33 @@ div.picture-row {
 		width: 100%;
 	}
 
-	div.picture-row {
-		width: 100%;
-		display: block;
-		align-items: stretch;
-		margin-top: 50px;
-	}
-
 	div.contents {
 		width: 100%;
 	}
 
 	div.character-card {
-		float: left;
-		width: 46%;
-		/* margin-top: -10px; */
+		width: 100%;
+		padding-left: 10px;
 	}
-
-	div.picture-card {
-		float: left;
-		width: 50%;
-	}
-
 
 	div.word-card {
-		margin-left: 16px;
-	}
-
-	.english {
-		font-family: 'Times New Roman', Times, serif;
-		font-size: 32px;
-		font-weight: bold;
-		margin-left: 16px;
-		color: darkgreen;
-	}
-
-	div.speech-sign-card {
-		float: left;
-		width: 40%;
-	}
-
-	div.speech-check-card {
-		float: left;
-		width: 60%;
+		width: 100%;
+		padding-left: 10px;
 	}
 
 	.speech-check {
 		width: 98%;
 		border: 2px solid lightgray;
 		border-radius: 15px;
-		min-height: 84px;
+		min-height: 120px;
 		padding: 4px;
 		display: none;
 	}
 
-	.recording {
-		height: 80px;
-		float: right;
-		cursor: pointer;
-	}
-
-	.break-line::before {
-		content: "\A";
-		/* \A represents a line break */
-		white-space: pre;
+	div.picture-row {
+		width: 100%;
+		padding-left: 10px;
+		display: block;
+		align-items: stretch;
 	}
 }

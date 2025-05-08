@@ -187,6 +187,7 @@ p.search-error {
 		font-size: 14px;
 		/* background-color: antiquewhite; */
 		table-layout: fixed;
+		display: block;
 	}
 
 	.clickable {
