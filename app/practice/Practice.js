@@ -151,14 +151,13 @@ export class Practice extends PageContent {
 	 */
 	static checkSelection(selected) {
 		let english = AllWords.CURRENT_WORD.word.english;
-		let categoryIdx = Math.floor(Math.random() * (AllWords.GREETING_IMAGES.length));
-		let category = AllWords.GREETING_IMAGES[categoryIdx];
-		let wordIdx = Math.floor(Math.random() * (category.great.length));
+		let greetingImage = AllWords.getGreetingImage('MultipleChoice');
+		let imgIdx = Math.floor(Math.random() * (greetingImage.great.length));
 		let greetingImageSrc;
 		if (english === selected) {
-			greetingImageSrc = AllWords.GREETING_IMAGES[categoryIdx].great[wordIdx];
+			greetingImageSrc = greetingImage.great[imgIdx];
 		} else {
-			greetingImageSrc = AllWords.GREETING_IMAGES[categoryIdx].wrong;
+			greetingImageSrc =greetingImage.wrong;
 		}
 		this.showGreetingImage(greetingImageSrc);
 	}

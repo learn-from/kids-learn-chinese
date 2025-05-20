@@ -378,6 +378,13 @@ export class AllWords {
 			great: ['Thumbs/two-thumbs-up-yellow.jpg', 'Thumbs/two-thumbs-up-purple.jpg', 'Thumbs/two-thumbs-up-pink.jpg']
 		},
 		{
+			category: 'MultipleChoice',
+			wrong: 'try-again-1.jpg',
+			ok: 'talk-okay.jpg',
+			icon: 'Icons/TwoThumbs.png',
+			great: ['Thumbs/two-thumbs-up-yellow.jpg', 'CocoMelon/CeCe.png', 'Bluey/Bluey.png', 'Bluey/Bingo.png', 'CocoMelon/JJ.png', 'CocoMelon/TomTom.png', 'CocoMelon/YoYo.png', 'CocoMelon/Bingo.png', 'Bluey/Coco.png', 'Disney/Jasmine.png']
+		},
+		{
 			category: 'Number',
 			wrong: 'try-again-1.jpg',
 			ok: 'talk-okay.jpg',
@@ -545,6 +552,18 @@ export class AllWords {
 		return imgId;
 	}
 
+	/**
+	 * Gets list of greeting images by category.
+	 * @returns 
+	 */
+	static getGreetingImage(category) {
+		let greetingImage = this.GREETING_IMAGES.find(item => item.category == category);
+		if (greetingImage === undefined) {
+			greetingImage = this.GREETING_IMAGES.find(item => item.category == 'All');
+		}
+		return greetingImage;
+	}
+
 	static getAllWords() {
 		return this.ALL_WORDS;
 	}
@@ -563,7 +582,7 @@ export class AllWords {
 				currentIdx = i;
 			}
 		}
-		let idx = AppUtils.getRandomNumber(0, category.words.length-1, currentIdx);
+		let idx = AppUtils.getRandomNumber(0, category.words.length - 1, currentIdx);
 		this.CURRENT_WORD.word = category.words[idx];
 	}
 
