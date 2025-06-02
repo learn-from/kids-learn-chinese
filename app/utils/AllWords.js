@@ -34,7 +34,7 @@ export class AllWords {
 					{ "chinese": "橙", "english": "Orange", "pinyin": "Chéng", "phrase": ["橙子", "橙色", " 橙黄桔绿"], "sentence": "一辆橙色的汽车。", "image": "assets/images/chars/Color/orange.png" },
 					{ "chinese": "黄", "english": "Yellow", "pinyin": "Huáng", "phrase": ["蛋黄", "黄色", "黄梁一梦"], "sentence": "一扇黄色的大门。", "image": "assets/images/chars/Color/yellow.png" },
 					{ "chinese": "绿", "english": "Green", "pinyin": "Lǜ", "phrase": ["绿叶", "绿色", "绿水青山"], "sentence": "在绿色的草地上。", "image": "assets/images/chars/Color/green.png" },
-					{ "chinese": "青", "english": "Cayan", "pinyin": "Qīng", "phrase": ["青年", "青色", "青出于蓝"], "sentence": "一个青色的大球。", "image": "assets/images/chars/Color/cyan.png" },
+					{ "chinese": "青", "english": "Cyan", "pinyin": "Qīng", "phrase": ["青年", "青色", "青出于蓝"], "sentence": "一个青色的大球。", "image": "assets/images/chars/Color/cyan.png" },
 					{ "chinese": "蓝", "english": "Blue", "pinyin": "Lán", "phrase": ["蓝天", "蓝色", "青出于蓝"], "sentence": "一辆深蓝色的火车。", "image": "assets/images/chars/Color/blue.png" },
 					{ "chinese": "紫", "english": "Purple", "pinyin": "Zǐ", "phrase": ["紫红", "紫色", "紫气东来"], "sentence": "天上有个紫色的冰棍。", "image": "assets/images/chars/Color/purple.png" },
 					{ "chinese": "粉", "english": "Pink", "pinyin": "Fěn", "phrase": ["花粉", "粉色", "粉墨登场"], "sentence": "一大堆粉色的气球。", "image": "assets/images/chars/Color/pink.png" },
