@@ -1,0 +1,34 @@
+
+Summary of Conversation – Project Setup and OpenAI API Integration
+
+Date: 2025-06-06
+------------------------------------------------------------
+✅ Your Project Goals
+- Building a browser-based language learning tool that supports:
+  - Translation between English and Chinese.
+  - Text-to-Speech (TTS) and Speech-to-Text (STT).
+  - Preserving HTML formatting during translation.
+
+✅ Your Current Setup
+- You have set up a paid OpenAI developer account with billing.
+- You're using:
+  - `gpt-4o` and `gpt-3.5-turbo` for translation (both tested).
+  - Token-based pricing is understood.
+- You prefer browser-based implementations over server-side.
+
+✅ Technical Accomplishments
+- Successfully used:
+  - OpenAI translation API, with `format: "html"` support.
+  - OpenAI TTS via JavaScript.
+  - OpenAI STT (Whisper) via audio upload.
+- Compared Google Translate vs. ChatGPT for serious content, preferred ChatGPT.
+
+✅ Miscellaneous Technical Topics Covered
+- Filtering object arrays in JavaScript.
+- Recording in `.webm` and converting to `.mp3` using FFmpeg.js (in browser).
+- Dealing with touch events and mobile selection behavior in web apps.
+- Sending emails via EmailJS from the browser.
+- Explored GitHub Pages and Firebase for deployment/backend options.
+
+✅ Next Steps
+- You're ready to start a new conversation focused on UI/UX, architecture, or advanced features.

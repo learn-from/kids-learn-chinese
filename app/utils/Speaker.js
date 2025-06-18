@@ -1,13 +1,19 @@
 
 import { AllWords } from '../utils/AllWords.js';
-import { Constants } from '../utils/Constants.js';
 
 /**
  * This is a speaker utility to use text-to-speech and speech-to-text for speaking and check pronounazation.
  */
 export class Speaker {
 
-	constructor() { 
+	// static PROXY_URL = 'http://127.0.0.1:8080/';
+	static PROXY_URL = 'https://key-manager-462519.uc.r.appspot.com/';
+	static TTS_URL = Speaker.PROXY_URL + 'tts';
+	static STT_URL = Speaker.PROXY_URL + 'stt';
+	static PINYIN_URL = Speaker.PROXY_URL + 'pinyin';
+	static RECORDING_IMAGE = "assets/images/greetings/talk-recording.jpg";
+
+	constructor() {
 	}
 
 	/**
@@ -57,7 +63,7 @@ export class Speaker {
 			langName = 'en-US-Standard-E'
 		}
 
-		let requestBody = {
+		let request = {
 			input: {
 				text: text
 			},
@@ -72,12 +78,12 @@ export class Speaker {
 		};
 
 		try {
-			let response = await fetch(Constants.getTtsUrl(), {
+			const response = await fetch(Speaker.TTS_URL, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
 				},
-				body: JSON.stringify(requestBody)
+				body: JSON.stringify(request)
 			});
 
 			if (!response.ok) {
@@ -97,7 +103,7 @@ export class Speaker {
 			let audioElement = new Audio(audioUrl);
 			audioElement.play().catch(error => {
 				console.error('Error playing audio:', error);
-				this.showError('Error playing audio:' + error.errorText);
+				Speaker.showError('Error playing audio:' + error.errorText);
 			});
 
 			// Remove the audio element after playback ends  
@@ -105,8 +111,7 @@ export class Speaker {
 				URL.revokeObjectURL(audioUrl); // Clean up the URL  
 			});
 		} catch (error) {
-			console.error(error);
-			this.showError(error.errorText);
+			console.error("Error: " + error);
 		}
 	}
 
@@ -149,7 +154,7 @@ export class Speaker {
 		speaker.hideSpeechSection();
 		document.getElementById('speech-check').style.display = 'block';
 		let img = document.getElementById('recording');
-		img.src = Constants.getRecordingImage();
+		img.src = Speaker.RECORDING_IMAGE;
 		img.style.display = 'block';
 		let text = document.getElementById(id).textContent;
 
@@ -190,43 +195,65 @@ export class Speaker {
 
 	/** 
 	 * Gets speech from microphone and recognizes it to a text. 
+	 * Recording time: 3 characters per second, 3 seconds minumum.
 	 */
 	async recognizeSpeech(text) {
-		// 2.5 characters per second, 1 second minumum
-		let waitTime = ((text.length < 3 ? 4 : text.length) / 2.5) * 1000;
+		const speaker = Speaker.getInstance();
+		const waitTime = (text.length < 4 ? 3 : (text.length / 3)) * 1000;
 		try {
+			// Get pinyin of the original text to match the recgnized text 
+			const originalText = await speaker.getPinyin(text);
+
 			// Get microphone access
-			let stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+			const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
 
 			// Create MediaRecorder to capture audio
-			let mediaRecorder = new MediaRecorder(stream);
-			let audioChunks = [];
+			const mediaRecorder = new MediaRecorder(stream);
+			const audioChunks = [];
 
 			mediaRecorder.ondataavailable = (event) => {
 				audioChunks.push(event.data);
 			};
 
 			mediaRecorder.onstop = async () => {
-				// Convert audio to Base64
-				let audioBlob = new Blob(audioChunks, { type: 'audio/ogg; codecs=opus' });
-				let base64Audio = await this.convertBlobToBase64(audioBlob);
+				// Create an audio blob for sending to the STT service (only audio/webm works now)
+				const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+				console.log("Blob size:", audioBlob.size, "type:", audioBlob.type, "rec time:", waitTime / 1000);
 
-				// Send audio to Google Speech-to-Text API
-				this.transcribeAudio(text, base64Audio);
+				// send the audio clip to Google Speech-to-Text API
+				const formData = new FormData();
+				formData.append('file', audioBlob, 'audio.webm');
+				// formData.append('language', 'zh'); // optional but helpful
+				try {
+					const response = await fetch(Speaker.STT_URL, {
+						method: "POST",
+						body: formData
+					});
+					if (response.ok) {
+						const recognizedText = await response.json();
+						speaker.checkPinyin(originalText, recognizedText);
+					} else {
+						console.error("No speech detected, speak louder.", response.statusText);
+						Speaker.showError("No speech detected, speak louder.");
+					}
+				} catch (error) {
+					console.error("Error with Google STT API:", error);
+					Speaker.showError("Error with Google STT API, try again.");
+				}
 			};
 
 			// Start recording
 			mediaRecorder.start();
 			// console.log("Recording started...");
 
-			// Stop recording after waitTime seconds (adjust as needed)
+			// Stop recording after waitTime seconds
 			setTimeout(() => {
 				mediaRecorder.stop();
 				// console.log("Recording stopped.");
 			}, waitTime);
 		} catch (error) {
 			console.error("Error accessing microphone:", error);
-			this.showRecError("Error accessing microphone: " + error.errorText);
+			Speaker.showError("Error accessing microphone, try again.");
 		}
 	}
 
@@ -241,105 +268,53 @@ export class Speaker {
 		});
 	}
 
-	/**
-	 * Sends Base64 audio to Google Speech-to-Text API
+	/** 
+	 * Gets pinyin of the text using Google's translator. 
 	 */
-	async transcribeAudio(text, base64Audio) {
-		// console.log("Base64 Audio (First 100 chars):", base64Audio.substring(0, 100));
-		let requestBody = {
-			config: {
-				"encoding": "WEBM_OPUS",
-				"sampleRateHertz": 48000,
-				languageCode: "zh-CN",
-				speechContexts: [
-					{
-						phrases: ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"],
-						boost: 20.0
-					}
-				]
-			},
-			audio: {
-				content: base64Audio,
-			},
-		};
+	async getPinyin(text) {
+		let pinyin = {
+			status: true,
+			text: '',
+			pinyin: '',
+			error: ''
+		}
+
+		const request = {
+			text: text
+		}
 
 		try {
-			let response = await fetch(Constants.getSttUrl(), {
-				method: "POST",
-				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify(requestBody),
-			})
-			// .then(response => response.json())
-			// // .then(data => console.log("API Response:", data))
-			// .catch(error => console.error("Fetch Error:", error));
-
-			if (!response.ok) {
-				// Get raw response for debugging
-				let errorText = await response.text();
-				console.error("Speech-to-text error response:", errorText);
-				this.showRecError("Speech-to-text error response:" + errorText);
-				throw new Error(`HTTP error! Status: ${response.status}`);
-			}
-
-			let data = await response.json();
-			// console.log("Speech to text result:", data);
-
-			if (data.results) {
-				let inputText = data.results.map(result => result.alternatives[0].transcript).join(" ");
-				// console.log("Recognized Speech: " + inputText);
-				this.getPinyin(text, inputText);
-			} else {
-				console.error("No speech detected!");
-				this.showRecError("No speech detected, try again and speak louder.");
-			}
+			const response = await fetch(Speaker.PINYIN_URL, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(request)
+			});
+			pinyin = await response.json();
 		} catch (error) {
-			console.error("Error transcribing audio:", error);
-			this.showRecError("Speech-to-text error transcribing audio:" + error.errorText);
+			pinyin.status = 'false';
+			pinyin.error = 'Error with Google PINYIN API: ' + error.toString();
+			console.error("Error: " + error.message);
 		}
-	}
-
-	/** 
-	 * Gets pinyins using Google's translator for comparing 
-	 */
-	async getPinyin(text, inputText) {
-		let encodedText = encodeURIComponent(text);
-		let encodedInputText = encodeURIComponent(inputText);
-		let urlText = Constants.getTranslatorUrl() + encodedText;
-		let urlInputText = Constants.getTranslatorUrl() + encodedInputText;
-
-		let response = await fetch(urlText);
-		let data = await response.json();
-		let textPinyin = data[0].map(sentence => sentence[3]).join(" ");
-
-		response = await fetch(urlInputText);
-		data = await response.json();
-		let inputTextPinyin = data[0].map(sentence => sentence[3]).join(" ");
-		// console.log("pinyinText, pinyinInputText:[" + textPinyin + '], [' + inputTextPinyin + ']');
-
-		let pinyin = {
-			'text': text,
-			'textPinyin': textPinyin.trim(),
-			'inputText': inputText,
-			'inputTextPinyin': inputTextPinyin.trim(),
-		}
-		this.checkPinyin(pinyin);
+		return pinyin;
 	}
 
 	/**
 	 * Checks if the pinyins of two texts are same.
 	 * Exactly same or there are some wrong tones.
 	 */
-	checkPinyin(pinyin) {
-		// check tones
-		let textPinyin = this.removePuntuciation(pinyin.textPinyin);
-		let inputTextPinyin = this.removePuntuciation(pinyin.inputTextPinyin);
-		let textPinyinToneless = this.removeTones(textPinyin);
-		let inputTextPinyinToneless = this.removeTones(inputTextPinyin);
+	checkPinyin(text1, text2) {
+		const pinyin1 = this.removePuntuciation(text1.pinyin);
+		const pinyin2 = this.removePuntuciation(text2.pinyin);
+		const pinyin1Toneless = this.removeTones(pinyin1);
+		const pinyin2Toneless = this.removeTones(pinyin2);
+
 		let greatingImageId;
 		let currentImageId = this.getCurrentGreetingImageId();
-		if (textPinyin.localeCompare(inputTextPinyin, undefined, { sensitivity: 'accent' }) === 0) {
+		if (pinyin1.localeCompare(pinyin2, undefined, { sensitivity: 'accent' }) === 0) {
 			greatingImageId = AllWords.getGreetingImageId('great', currentImageId);
-		} else if (textPinyinToneless.localeCompare(inputTextPinyinToneless, undefined, { sensitivity: 'accent' }) === 0) {
+		} else if (pinyin1Toneless.localeCompare(pinyin2Toneless, undefined, { sensitivity: 'accent' }) === 0) {
 			greatingImageId = AllWords.getGreetingImageId('ok', currentImageId);
 		} else {
 			greatingImageId = AllWords.getGreetingImageId('wrong', currentImageId);
@@ -347,8 +322,8 @@ export class Speaker {
 		this.showGreetingImage(greatingImageId);
 
 		document.getElementById('recognization').style.display = 'block'
-		document.getElementById('input-text').textContent = pinyin.inputText;
-		document.getElementById('input-pinyin').textContent = pinyin.inputTextPinyin;
+		document.getElementById('input-text').textContent = text2.text;
+		document.getElementById('input-pinyin').textContent = text2.pinyin;
 		document.getElementById('rec-error').textContent = '';
 	}
 

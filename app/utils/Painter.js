@@ -1,6 +1,5 @@
 
 import { AllWords } from './AllWords.js';
-import { Constants } from './Constants.js';
 import { AppUtils } from './AppUtils.js';
 
 /**
@@ -11,6 +10,8 @@ export class Painter {
 	static animation = true;
 	static waitTime = 300;
 	static charSizeRate = 1.0;
+
+	static DEFAULT_IMAGE = "assets/images/site/question-mark.png";
 
 	constructor() { }
 
@@ -83,7 +84,7 @@ export class Painter {
 	buildPicture() {
 		let word = AllWords.getCurrentWord().word;
 		let defaultPicture = document.getElementById('picture-default');
-		defaultPicture.src = Constants.getDefaultImage();
+		defaultPicture.src = Painter.DEFAULT_IMAGE;
 		defaultPicture.style.display = 'block';
 
 		let picture = document.getElementById('picture');
