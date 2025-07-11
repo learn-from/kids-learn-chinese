@@ -7,7 +7,7 @@ import { AllWords } from '../utils/AllWords.js';
 export class Speaker {
 
 	// static PROXY_URL = 'http://127.0.0.1:8080/';
-	static PROXY_URL = 'https://key-manager-462519.uc.r.appspot.com/';
+	static PROXY_URL = 'https://learner-gateway.uc.r.appspot.com/';
 	static TTS_URL = Speaker.PROXY_URL + 'tts';
 	static STT_URL = Speaker.PROXY_URL + 'stt';
 	static PINYIN_URL = Speaker.PROXY_URL + 'pinyin';
